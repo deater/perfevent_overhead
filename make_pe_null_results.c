@@ -7,15 +7,24 @@ int main(int argc, char **argv) {
   char command[BUFSIZ];
 
   //#define machine "core2"
-  //#define machine "nehalem"
-  #define machine "atom"
+  #define machine "nehalem"
+  //  #define machine "atom"
   //#define machine "cortexA9"
   //#define machine "power6"
 //  #define machine "amd10h"
 //     #define machine "amd0fh"
 
-   #define kernel "3.0-pe-raw"
-  //#define kernel "2.6.32-pe-raw"
+//#define kernel "2.6.32-pe-raw"
+//#define kernel "2.6.33-pe-raw"
+#define kernel "2.6.34-pe-raw"
+//#define kernel "2.6.35-pe-raw"
+//#define kernel "2.6.36-pe-raw"
+//#define kernel "2.6.37-pe-raw"
+//#define kernel "2.6.38-pe-raw"
+//#define kernel "2.6.39-pe-raw"
+// #define kernel "3.0-pe-raw"
+//#define kernel "3.1-pe-raw"
+  
 //#define kernel "2.6.32-perfctr-raw"
 //#define kernel "2.6.30-perfmon2-raw"
 
