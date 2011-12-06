@@ -16,16 +16,16 @@ int main(int argc, char **argv) {
 //  #define machine "amd10h"
 //     #define machine "amd0fh"
 
-//#define kernel "2.6.32-pe-raw"
-//#define kernel "2.6.33-pe-raw"
-//#define kernel "2.6.34-pe-raw"
-//#define kernel "2.6.35-pe-raw"
-//#define kernel "2.6.36-pe-raw"
-//#define kernel "2.6.37-pe-raw"
-//#define kernel "2.6.38-pe-raw"
-//#define kernel "2.6.39-pe-raw"
-//#define kernel "3.0-pe-raw"
-//#define kernel "3.1-pe-raw"
+//#define kernel "2.6.32-pe"
+//#define kernel "2.6.33-pe"
+//#define kernel "2.6.34-pe"
+//#define kernel "2.6.35-pe"
+//#define kernel "2.6.36-pe"
+//#define kernel "2.6.37-pe"
+//#define kernel "2.6.38-pe"
+//#define kernel "2.6.39-pe"
+//#define kernel "3.0-pe"
+#define kernel "3.1-pe"
 //#define kernel "git-bisect-3.0-3.1-1"  
 //#define kernel "git-bisect-3.0-3.1-2"  
 //#define kernel "git-bisect-3.0-3.1-3"  
@@ -57,7 +57,7 @@ int main(int argc, char **argv) {
 //#define kernel "git-bisect-3.0-3.1-gfc92805"
 //#define kernel "git-bisect-3.0-3.1-gbb2a0de"
 //#define kernel "git-bisect-3.0-3.1-g4508378"
-#define kernel "git-bisect-3.0-3.1-g1af8efe"
+//#define kernel "git-bisect-3.0-3.1-g1af8efe"
 
 //#define kernel "2.6.32-perfctr-raw"
 //#define kernel "2.6.30-perfmon2-raw"
@@ -65,11 +65,11 @@ int main(int argc, char **argv) {
   fprintf(stderr,"Working on %s %s: ",machine,kernel);
   for(events=0;events<NUM_EVENTS;events++) {
     fprintf(stderr,"%d ",events);
-    sprintf(command,"mkdir -p results/null_raw/%s/%s/%d/",
+    sprintf(command,"mkdir -p results/rdtsc_null_raw/%s/%s/%d/",
 	    machine,kernel,events);
     system(command);
     for(run=0;run<1024;run++) {
-      sprintf(command,"taskset 0x1 ./hpca_null_pe %s %d > results/null_raw/%s/%s/%d/null_test.%d",
+      sprintf(command,"taskset 0x1 ./rdtsc_null_pe %s %d > results/rdtsc_null_raw/%s/%s/%d/null_test.%d",
 	      machine,events,
 	      machine,kernel,
 	      events,run);

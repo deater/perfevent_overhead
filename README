@@ -8,7 +8,14 @@ for making graphs.
 
   http://web.eecs.utk.edu/~vweaver1/projects/perf-events/benchmarks/
 
+The "prepare_before.sh" script will put the cpufreq governor on
+performance, and the various run scripts set the cpu affinity to 
+core 0.
+
+Kernels 2.6.36 and 2.6.37 won't let you turn off nmi_watchdog with
+/proc/sys/kernel/nmi_watchdog?
+
 Vince Weaver
 vweaver1 _at_ cl320.eecs.utk.edu
-
+28 November 2011
 

@@ -24,8 +24,10 @@ all:	hpca_null_papi hpca_multiplex_papi hpca_overflow_papi \
 	hpca_read_perfmon2 \
 	hpca_read_pe \
 	hpca_read_perfctr \
+	rdtsc_null_pe \
 	make_papi_null_results \
 	make_pe_null_results \
+	make_rdtsc_pe_null_results \
 	make_pe_read_results \
 	make_perfctr_null_results make_perfctr_null_slow_results \
 	make_perfctr_read_results \
@@ -78,6 +80,14 @@ make_pe_null_results:	make_pe_null_results.o
 
 make_pe_null_results.o:	make_pe_null_results.c
 	$(CC) $(CFLAGS) -c make_pe_null_results.c
+
+###
+
+make_rdtsc_pe_null_results:	make_rdtsc_pe_null_results.o
+	$(CC) $(LFLAGS) -o make_rdtsc_pe_null_results make_rdtsc_pe_null_results.o
+
+make_rdtsc_pe_null_results.o:	make_rdtsc_pe_null_results.c
+	$(CC) $(CFLAGS) -c make_rdtsc_pe_null_results.c
 
 ###
 
@@ -166,6 +176,14 @@ hpca_null_pe:	hpca_null_pe.o
 hpca_null_pe.o:	hpca_null_pe.c
 	$(CC) $(CFLAGS) -c hpca_null_pe.c
 
+####
+
+rdtsc_null_pe:	rdtsc_null_pe.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe rdtsc_null_pe.o
+
+rdtsc_null_pe.o:	rdtsc_null_pe.c
+	$(CC) $(CFLAGS) -c rdtsc_null_pe.c
+
 
 ####
 
@@ -221,10 +239,12 @@ clean:
 	hpca_read_perfmon2 \
 	hpca_read_pe \
 	hpca_read_perfctr \
+	rdtsc_null_pe \
 	hpca_multiplex_papi \
 	hpca_overflow_papi \
 	make_papi_null_results \
 	make_pe_null_results \
+	make_rdtsc_pe_null_results \
 	make_pe_read_results \
 	make_perfmon2_null_results \
 	make_perfmon2_read_results \
