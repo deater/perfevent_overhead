@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/utsname.h>
+#include <string.h>
 
 int main(int argc, char **argv) {
 
@@ -25,7 +27,7 @@ int main(int argc, char **argv) {
 //#define kernel "2.6.38-pe"
 //#define kernel "2.6.39-pe"
 //#define kernel "3.0-pe"
-#define kernel "3.1-pe"
+//#define kernel "3.1-pe"
 //#define kernel "git-bisect-3.0-3.1-1"  
 //#define kernel "git-bisect-3.0-3.1-2"  
 //#define kernel "git-bisect-3.0-3.1-3"  
@@ -62,6 +64,14 @@ int main(int argc, char **argv) {
 //#define kernel "2.6.32-perfctr-raw"
 //#define kernel "2.6.30-perfmon2-raw"
 
+  char kernel[BUFSIZ];
+
+  struct utsname uname_info;
+  
+  uname(&uname_info);
+  
+  strncpy(kernel,uname_info.release,BUFSIZ);
+  
   fprintf(stderr,"Working on %s %s: ",machine,kernel);
   for(events=0;events<NUM_EVENTS;events++) {
     fprintf(stderr,"%d ",events);

@@ -1,9 +1,12 @@
 /* by Vince Weaver, vweaver1@eecs.utk.edu                      */
+/* Compile with gcc -O2 -o rdtsc_null_pe rdtsc_null_pe.c       */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+
+#include <sys/utsname.h>
 
 #include <time.h>
 
@@ -178,6 +181,8 @@ int main(int argc, char **argv) {
    int count;
 
    char *machine_name;
+   char kernel_name[BUFSIZ];
+   struct utsname uname_info;
 
    if (argc>2) {
      count=atoi(argv[2]);
@@ -214,6 +219,10 @@ int main(int argc, char **argv) {
       exit(0);
    }
 
+   uname(&uname_info);
+   strncpy(kernel_name,uname_info.release,BUFSIZ);
+
+   printf("Kernel: %s\n",kernel_name);
    
    /* measure init latency */
 
