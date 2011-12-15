@@ -25,9 +25,13 @@ all:	hpca_null_papi hpca_multiplex_papi hpca_overflow_papi \
 	hpca_read_pe \
 	hpca_read_perfctr \
 	rdtsc_null_pe \
+	rdtsc_null_perfctr \
+	rdtsc_null_perfmon2 \
 	make_papi_null_results \
 	make_pe_null_results \
 	make_rdtsc_pe_null_results \
+	make_rdtsc_perfctr_null_results \
+	make_rdtsc_perfmon2_null_results \
 	make_pe_read_results \
 	make_perfctr_null_results make_perfctr_null_slow_results \
 	make_perfctr_read_results \
@@ -88,6 +92,22 @@ make_rdtsc_pe_null_results:	make_rdtsc_pe_null_results.o
 
 make_rdtsc_pe_null_results.o:	make_rdtsc_pe_null_results.c
 	$(CC) $(CFLAGS) -c make_rdtsc_pe_null_results.c
+
+###
+
+make_rdtsc_perfctr_null_results:	make_rdtsc_perfctr_null_results.o
+	$(CC) $(LFLAGS) -o make_rdtsc_perfctr_null_results make_rdtsc_perfctr_null_results.o
+
+make_rdtsc_perfctr_null_results.o:	make_rdtsc_perfctr_null_results.c
+	$(CC) $(CFLAGS) -c make_rdtsc_perfctr_null_results.c
+
+###
+
+make_rdtsc_perfmon2_null_results:	make_rdtsc_perfmon2_null_results.o
+	$(CC) $(LFLAGS) -o make_rdtsc_perfmon2_null_results make_rdtsc_perfmon2_null_results.o
+
+make_rdtsc_perfmon2_null_results.o:	make_rdtsc_perfmon2_null_results.c
+	$(CC) $(CFLAGS) -c make_rdtsc_perfmon2_null_results.c
 
 ###
 
@@ -184,6 +204,21 @@ rdtsc_null_pe:	rdtsc_null_pe.o
 rdtsc_null_pe.o:	rdtsc_null_pe.c
 	$(CC) $(CFLAGS) -c rdtsc_null_pe.c
 
+####
+
+rdtsc_null_perfctr:	rdtsc_null_perfctr.o perfctr/libperfctr.a
+	$(CC) $(LFLAGS) -o rdtsc_null_perfctr rdtsc_null_perfctr.o perfctr/libperfctr.a
+
+rdtsc_null_perfctr.o:	rdtsc_null_perfctr.c perfctr/perfctr.h perfctr/libperfctr.h
+	$(CC) $(CFLAGS) -I./perfctr -c rdtsc_null_perfctr.c
+
+####
+
+rdtsc_null_perfmon2:	rdtsc_null_perfmon2.o ./perfmon2/libpfm.a
+	$(CC) $(LFLAGS) -o rdtsc_null_perfmon2 rdtsc_null_perfmon2.o ./perfmon2/libpfm.a
+
+rdtsc_null_perfmon2.o:	rdtsc_null_perfmon2.c
+	$(CC) $(CFLAGS) -I./perfmon2 -c rdtsc_null_perfmon2.c
 
 ####
 
@@ -240,11 +275,15 @@ clean:
 	hpca_read_pe \
 	hpca_read_perfctr \
 	rdtsc_null_pe \
+	rdtsc_null_perfctr \
+	rdtsc_null_perfmon2 \
 	hpca_multiplex_papi \
 	hpca_overflow_papi \
 	make_papi_null_results \
 	make_pe_null_results \
 	make_rdtsc_pe_null_results \
+	make_rdtsc_perfctr_null_results \
+	make_rdtsc_perfmon2_null_results \
 	make_pe_read_results \
 	make_perfmon2_null_results \
 	make_perfmon2_read_results \
