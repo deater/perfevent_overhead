@@ -1,5 +1,5 @@
-/* by Vince Weaver, vweaver1@eecs.utk.edu                      */
-/* Compile with gcc -O2 -o rdtsc_null_pe rdtsc_null_pe.c       */
+/* by Vince Weaver, vweaver1@eecs.utk.edu                                  */
+/* Compile with gcc -O2 -o rdtsc_null_pe_rdpmc rdtsc_null_pe_rdpmc.c       */
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -10,7 +10,7 @@
 
 #include <time.h>
 
-#include "include/perf_event_rdpmc.h"
+#include "include/perf_event.h"
 #include <unistd.h>
 #include <asm/unistd.h>
 
@@ -176,7 +176,7 @@ static unsigned long long rdpmc(unsigned int counter) {
 
 #define barrier() __asm__ volatile("" ::: "memory")
 
-
+#if 0
 /* From Peter Zjilstra's demo code */
 static unsigned long long mmap_read_self(void *addr, 
 					 unsigned long long *enabled,
@@ -223,6 +223,34 @@ static unsigned long long mmap_read_self(void *addr,
 
 }
 
+#endif
+
+/* Ingo's code */
+static inline unsigned long long mmap_read_self(void *addr) {
+  
+    struct perf_event_mmap_page *pc = addr;
+    unsigned int seq,idx;
+
+    unsigned long long count;
+
+    do {
+      seq=pc->lock;
+      barrier();
+
+      idx=pc->index;
+      count=pc->offset;
+
+      if (idx) {
+	count+=rdpmc(pc->index-1);
+      }
+      barrier();
+    } while (pc->lock != seq);
+  
+
+  return count;
+}
+
+
 
 int main(int argc, char **argv) {
 
@@ -235,7 +263,7 @@ int main(int argc, char **argv) {
    long long read_before,read_after;
 
    long long init_ns=0,eventset_ns=0;
-   void *addr;
+   void *addr[MAX_EVENTS];
 
    struct perf_event_attr pe;
    int fd[MAX_EVENTS],ret1,ret2,ret3;
@@ -245,6 +273,8 @@ int main(int argc, char **argv) {
    char *machine_name;
    char kernel_name[BUFSIZ];
    struct utsname uname_info;
+   unsigned long long now[MAX_EVENTS],stamp[MAX_EVENTS];
+   unsigned long long now2[MAX_EVENTS],stamp2[MAX_EVENTS];
 
    if (argc>2) {
      count=atoi(argv[2]);
@@ -327,12 +357,13 @@ int main(int argc, char **argv) {
 	 printf("start/stop/read latency: %lld cycles\n",0LL);
 	 exit(1);
       }
-   }
+   
 
-   addr=mmap(NULL,page_size, PROT_READ, MAP_SHARED,fd[0],0);
-   if (addr == (void *)(-1)) {
-     printf("Error mmaping!\n");
-     exit(1);
+      addr[i]=mmap(NULL,page_size, PROT_READ, MAP_SHARED,fd[i],0);
+      if (addr[i] == (void *)(-1)) {
+        printf("Error mmaping!\n");
+        exit(1);
+      }
    }
 
    after=rdtsc();
@@ -352,11 +383,15 @@ int main(int argc, char **argv) {
    /* read */
 
 
+   for(i=0;i<count;i++) {
+     stamp[i] = mmap_read_self(addr[i]);
+   }
 
-   unsigned long long stamp,stamp2,now,now2;
+   /* NULL */
 
-   stamp = mmap_read_self(addr, NULL, &stamp2);
-   now = mmap_read_self(addr,NULL,&now2);
+   for(i=0;i<count;i++) {
+     now[i] = mmap_read_self(addr[i]);
+   }
 
    read_after=rdtsc();
 
@@ -392,10 +427,13 @@ int main(int argc, char **argv) {
    
    
    for(i=0;i<count;i++) {
-     printf("%x count: %lld running: %lld\n",i,now-stamp,now2-stamp2);
+     printf("%x %lld\n",
+	    events[i],now[i]-stamp[i]);
    }
 
-   munmap(addr,page_size);
+   for(i=0;i<count;i++) {
+      munmap(addr[i],page_size);
+   }
 
    for(i=0;i<count;i++) {
       close(fd[i]);

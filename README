@@ -15,7 +15,18 @@ core 0.
 Kernels 2.6.36 and 2.6.37 won't let you turn off nmi_watchdog with
 /proc/sys/kernel/nmi_watchdog?
 
+HOWTO for ASPLOS results
+   make clean/make
+   if on a new machine need to edit the files.
+     rdtsc_null_pe, rdtsc_null_pe_rdpmc
+   edit the make (no longer needed, us uname?)
+   run ./prepare_before.sh to disable NMI watchdog, DVFS
+   run ./make_rdtsc_pe_null_results
+   also ./make_rdtsc_pe_rdpmc_null_results
+   *NOTE* move old results out of the way before running new scripts
+
+
 Vince Weaver
 vweaver1 _at_ cl320.eecs.utk.edu
-28 November 2011
+21 July 2012
 
