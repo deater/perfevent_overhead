@@ -10,9 +10,9 @@ int main(int argc, char **argv) {
 
 #define NUM_EVENTS 8
 
-#define machine "core2"
+//#define machine "core2"
   //#define machine "nehalem"
-  //  #define machine "atom"
+    #define machine "atom"
   //#define machine "cortexA9"
   //#define machine "power6"
 //  #define machine "amd10h"

@@ -21,6 +21,8 @@ HOWTO for ASPLOS results
      rdtsc_null_pe, rdtsc_null_pe_rdpmc
    edit the make (no longer needed, us uname?)
    run ./prepare_before.sh to disable NMI watchdog, DVFS
+   edit ./make_rdtsc_pe_null_results.c ./make_rdtsc_pe_rdpmc_null_results
+   make
    run ./make_rdtsc_pe_null_results
    also ./make_rdtsc_pe_rdpmc_null_results
    *NOTE* move old results out of the way before running new scripts
