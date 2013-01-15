@@ -22,7 +22,10 @@ PAPI_LIB = /home/vince/research/papi/papi.git/src/libpapi.a
 
 all:	hpca_null_papi hpca_multiplex_papi hpca_overflow_papi \
 	make_papi_null_results \
-	make_mpx_results make_oflo_results 
+	make_mpx_results make_oflo_results \
+        make_graphs_papi_null \
+        make_graphs_mpx make_graphs_oflo 
+
 
 
 ###
@@ -84,7 +87,34 @@ make_oflo_results:	make_oflo_results.o
 make_oflo_results.o:	make_oflo_results.c
 	$(CC) $(CFLAGS) -c make_oflo_results.c
 
-#####
+###
+
+make_graphs_papi_null:	make_graphs_papi_null.o
+	$(CC) -g $(LFLAGS) -o make_graphs_papi_null make_graphs_papi_null.o
+
+make_graphs_papi_null.o:	make_graphs_papi_null.c
+	$(CC) $(CFLAGS) -c make_graphs_papi_null.c
+
+###
+
+make_graphs_mpx:	make_graphs_mpx.o
+	$(CC) -g $(LFLAGS) -o make_graphs_mpx make_graphs_mpx.o
+
+make_graphs_mpx.o:	make_graphs_mpx.c
+	$(CC) $(CFLAGS) -c make_graphs_mpx.c
+
+###
+
+make_graphs_oflo:	make_graphs_oflo.o
+	$(CC) -g $(LFLAGS) -o make_graphs_oflo make_graphs_oflo.o -lm
+
+make_graphs_oflo.o:	make_graphs_oflo.c
+	$(CC) $(CFLAGS) -c make_graphs_oflo.c
+
+
+
+######
+
 
 clean:
 	rm -f *.o core *~ \
@@ -93,6 +123,9 @@ clean:
 	hpca_overflow_papi \
 	make_papi_null_results \
 	make_mpx_results \
-	make_oflo_results 
+	make_oflo_results \
+        make_graphs_papi_null \
+        make_graphs_mpx \
+        make_graphs_oflo 
 
-install:	all
+

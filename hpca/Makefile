@@ -15,7 +15,11 @@ all:	hpca_null_pe \
 	make_perfctr_null_results make_perfctr_null_slow_results \
 	make_perfctr_read_results \
 	make_perfmon2_read_results \
-	make_perfmon2_null_results 
+	make_perfmon2_null_results \
+        make_graphs_raw_null \
+        make_graphs_raw_read \
+        make_graphs_kernel_null \
+        make_graphs_kernel_3events \
 
 
 
@@ -169,6 +173,39 @@ hpca_null_perfctr_slow.o:	hpca_null_perfctr.c ../perfctr/perfctr.h ../perfctr/li
 
 #####
 
+make_graphs_kernel_null:	make_graphs_kernel_null.o
+	$(CC) -g $(LFLAGS) -o make_graphs_kernel_null make_graphs_kernel_null.o
+
+make_graphs_kernel_null.o:	make_graphs_kernel_null.c
+	$(CC) $(CFLAGS) -c make_graphs_kernel_null.c
+
+###
+
+make_graphs_kernel_3events:	make_graphs_kernel_3events.o
+	$(CC) -g $(LFLAGS) -o make_graphs_kernel_3events make_graphs_kernel_3events.o
+
+make_graphs_kernel_3events.o:	make_graphs_kernel_3events.c
+	$(CC) $(CFLAGS) -c make_graphs_kernel_3events.c
+
+###
+
+make_graphs_raw_read:	make_graphs_raw_read.o
+	$(CC) -g $(LFLAGS) -o make_graphs_raw_read make_graphs_raw_read.o
+
+make_graphs_raw_read.o:	make_graphs_raw_read.c
+	$(CC) $(CFLAGS) -c make_graphs_raw_read.c
+
+###
+
+make_graphs_raw_null:	make_graphs_raw_null.o
+	$(CC) -g $(LFLAGS) -o make_graphs_raw_null make_graphs_raw_null.o
+
+make_graphs_raw_null.o:	make_graphs_raw_null.c
+	$(CC) $(CFLAGS) -c make_graphs_raw_null.c
+
+
+####
+
 clean:
 	rm -f *.o core *~ \
 	hpca_null_pe \
@@ -185,6 +222,10 @@ clean:
 	make_perfctr_null_results \
 	make_perfctr_null_slow_results \
 	make_perfctr_read_results \
-	make_raw_null_results 
+	make_raw_null_results \
+        make_graphs_raw_null \
+        make_graphs_raw_read \
+        make_graphs_kernel_null \
+        make_graphs_kernel_3events 
 
 install:	all
