@@ -21,8 +21,8 @@
 #include <stddef.h> /* offsetof() */
 
 
-#include "perfmon2/pfmlib.h"
-#include "perfmon2/perfmon.h"
+#include "perfmon/pfmlib.h"
+#include "perfmon/perfmon.h"
 
 #define MAX_EVENTS 16
 

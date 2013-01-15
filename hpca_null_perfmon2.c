@@ -19,8 +19,8 @@
 #include <stddef.h> /* offsetof() */
 
 
-#include "perfmon2/pfmlib.h"
-#include "perfmon2/perfmon.h"
+#include "perfmon/pfmlib.h"
+#include "perfmon/perfmon.h"
 
 long long convert_to_ns(struct timespec *before,
 			struct timespec *after) {
