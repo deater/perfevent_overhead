@@ -1,0 +1,16 @@
+Results from some performance counter overhead calculations.
+
+Currently the graphing programs only plot overhead with time,
+although various other useful data are included in the results
+file (such as cycle and instruction overhead, overhead
+of start/stop times, etc).
+
+The programs used to generate this data can be found in the
+perfevent_results-* tarball.
+
+  http://web.eecs.utk.edu/~vweaver1/projects/perf-events/benchmarks/
+
+Vince Weaver
+vweaver1 _at_ eecs.utk.edu
+21 November 2011
+cat core2.2.6.32-perfctr.1 | sort -n  | head -n 500
