@@ -3,17 +3,25 @@ CC_R	= $(CC) -pthread
 CFLAGS	= -g -O2 -Wall -I..
 LFLAGS  = -lrt -lm
 
-all:	rdtsc_null_pe \
-	rdtsc_null_pe_rdpmc \
-	rdtsc_null_perfctr \
-	rdtsc_null_perfmon2 \
-	make_rdtsc_pe_null_results \
-	make_rdtsc_pe_rdpmc_null_results \
-	make_rdtsc_perfctr_null_results \
-	make_rdtsc_perfmon2_null_results \
-        make_graphs_kernel_rdtsc \
-        make_graphs_kernel_rdtsc_all \
-        make_graphs_kernel_rdtsc_vary_events
+all:	generate_results \
+	rdtsc_null_pe 
+#	rdtsc_null_pe_rdpmc \
+#	rdtsc_null_perfctr \
+#	rdtsc_null_perfmon2 \
+#	make_rdtsc_pe_null_results \
+#	make_rdtsc_pe_rdpmc_null_results \
+#	make_rdtsc_perfctr_null_results \
+#	make_rdtsc_perfmon2_null_results \
+#       make_graphs_kernel_rdtsc \
+#        make_graphs_kernel_rdtsc_all \
+#        make_graphs_kernel_rdtsc_vary_events
+
+
+generate_results:	generate_results.o
+	$(CC) $(LFLAGS) -o generate_results generate_results.o
+
+generate_results.o:	generate_results.c
+	$(CC) $(CFLAGS) -c generate_results.c
 
 
 make_rdtsc_pe_null_results:	make_rdtsc_pe_null_results.o
@@ -108,6 +116,7 @@ make_graphs_kernel_rdtsc_all.o:	make_graphs_kernel_rdtsc_all.c
 
 clean:
 	rm -f *.o core *~ \
+	generate_results \
 	rdtsc_null_pe \
 	rdtsc_null_pe_rdpmc \
 	rdtsc_null_perfctr \
