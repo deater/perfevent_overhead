@@ -3,7 +3,9 @@ CC_R	= $(CC) -pthread
 CFLAGS	= -g -O2 -Wall -I..
 LFLAGS  = -lrt -lm
 
-all:	generate_results \
+all:	\
+	convert_results \
+	generate_results \
 	rdtsc_null_pe 
 #	rdtsc_null_pe_rdpmc \
 #	rdtsc_null_perfctr \
@@ -17,12 +19,23 @@ all:	generate_results \
 #        make_graphs_kernel_rdtsc_vary_events
 
 
+convert_results:	convert_results.o
+	$(CC) $(LFLAGS) -o convert_results convert_results.o
+
+convert_results.o:	convert_results.c
+	$(CC) $(CFLAGS) -c convert_results.c
+
+
+###
+
 generate_results:	generate_results.o
 	$(CC) $(LFLAGS) -o generate_results generate_results.o
 
 generate_results.o:	generate_results.c
 	$(CC) $(CFLAGS) -c generate_results.c
 
+
+###
 
 make_rdtsc_pe_null_results:	make_rdtsc_pe_null_results.o
 	$(CC) $(LFLAGS) -o make_rdtsc_pe_null_results make_rdtsc_pe_null_results.o

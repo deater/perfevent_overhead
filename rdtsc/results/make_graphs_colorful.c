@@ -34,22 +34,22 @@ char kernel_names[NUM_KERNELS][64]={
 };
 
 char colors[NUM_KERNELS][64]={
-  "1.0 0.75   0.75",  /* pink-red */
-  "1.0 0.625 0.0",  /* orange */
-  "1.0 1.0   0.0",  /* yellow */
-  "0.0 0.375 0.0",  /* dark green */
+  "1.0 0.75   0.75", /* pink-red */
+  "1.0 0.625 0.0",   /* orange */
+  "1.0 1.0   0.0",   /* yellow */
+  "0.0 0.375 0.0",   /* dark green */
   "0.63 0.82 0.62",  /* light green */
-  "0.0 1.0   1.0",  /* cyan */
-  "0.375 0.0 1.0",  /* indigo */
-  "1.0 0.0 1.0",    /* magenta */
-  "0.625 0.0 0.5",  /* purple */
-  "0.0 0.0 0.0",    /* black */
-  "0.5 0.5 0.5",    /* grey */
-  "1.0 0.5 0.5",    /* ??? */
-  "0.625 1.0 0.5",  /* ??? */
-  "1.0 0.0   0.0",  /* red */
-  "0.0 0.0   1.0",  /* blue */
-  "0.0 1.0   0.0",  /* green */
+  "0.0 1.0   1.0",   /* cyan */
+  "0.375 0.0 1.0",   /* indigo */
+  "1.0 0.0 1.0",     /* magenta */
+  "0.625 0.0 0.5",   /* purple */
+  "0.0 0.0 0.0",     /* black */
+  "0.5 0.5 0.5",     /* grey */
+  "1.0 0.5 0.5",     /* ??? */
+  "0.625 1.0 0.5",   /* ??? */
+  "0.0 1.0   0.0",   /* green */
+  "0.0 0.0   1.0",   /* blue */
+  "1.0 0.0   0.0",   /* red */
 };
 
 long long times[NUM_KERNELS][NUM_EVENTS][NUM_RUNS];
@@ -67,8 +67,10 @@ struct freq_list {
 #define PLOT_TYPE_TOTAL 3
 
 #define INTERFACE_PERF_EVENT 0
-#define INTERFACE_PERFMON    1
-#define INTERFACE_UNKNOWN    2
+#define INTERFACE_PERFMON2   1
+#define INTERFACE_PERFCTR    2
+#define INTERFACE_PERF_EVENT_RDPMC 3
+#define INTERFACE_UNKNOWN    99
 
 static int debug=0;
 
@@ -197,10 +199,14 @@ int main(int argc, char **argv) {
               sscanf(string,"%*s %*s %s",gathered_version);
            }
            if (!strncmp(string,"Interface:",10)) {
-              if (strstr(string,"perf_event")) {
+              if (strstr(string,"perf_event_rdpmc")) {
+                 interface=INTERFACE_PERF_EVENT_RDPMC;
+              } else if (strstr(string,"perf_event")) {
                  interface=INTERFACE_PERF_EVENT;
               } else if (strstr(string,"perfmon")) {
-                 interface=INTERFACE_PERFMON;
+                 interface=INTERFACE_PERFMON2;
+              } else if (strstr(string,"perfctr")) {
+                 interface=INTERFACE_PERFCTR;
               } else {
                  fprintf(stderr,"Unknown interface!\n");
                  interface=INTERFACE_UNKNOWN;
@@ -220,7 +226,9 @@ int main(int argc, char **argv) {
           printf("\tKernel:    %s\n",kernel_name);
           printf("\tInterface: ");
           if (interface==INTERFACE_PERF_EVENT) printf("perf_event\n");
-          else if (interface==INTERFACE_PERFMON) printf("perfmon2\n");
+          else if (interface==INTERFACE_PERFMON2) printf("perfmon2\n");
+          else if (interface==INTERFACE_PERFCTR) printf("perfctr\n");
+          else if (interface==INTERFACE_PERF_EVENT_RDPMC) printf("perf_event_rdpmc\n");
           else printf("Unknown\n");
           printf("\tCPU:       %d/%d/%d\n",
              cpuinfo.family,cpuinfo.model,cpuinfo.stepping);
