@@ -97,14 +97,18 @@ make_graphs_kernel_rdtsc.o:	make_graphs_kernel_rdtsc.c
 
 ###
 
-make_graphs_colorful:	make_graphs_colorful.o
-	$(CC) -g $(LFLAGS) -o make_graphs_colorful make_graphs_colorful.o
+make_graphs_colorful:	make_graphs_colorful.o read_data.o
+	$(CC) -g $(LFLAGS) -o make_graphs_colorful make_graphs_colorful.o read_data.o
 
-make_graphs_colorful.o:	make_graphs_colorful.c
+make_graphs_colorful.o:	make_graphs_colorful.c read_data.h
 	$(CC) $(CFLAGS) -c make_graphs_colorful.c
 
 #####
 
+read_data.o:	read_data.c read_data.h
+	$(CC) $(CFLAGS) -c read_data.c
+
+#####
 
 clean:
 	rm -f *.o core *~ \
