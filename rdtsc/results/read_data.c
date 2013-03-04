@@ -7,6 +7,8 @@
 #include "read_data.h"
 
 char kernel_names[NUM_KERNELS][64]={
+   "2.6.30-perfmon2",
+   "2.6.32-perfctr",
    "2.6.32",
    "2.6.33",
    "2.6.34",
@@ -21,11 +23,13 @@ char kernel_names[NUM_KERNELS][64]={
    "3.3.0",
    "3.4.0",
    "3.4.0-rdpmc",
-   "2.6.30-perfmon2",
-   "2.6.32-perfctr",
+   "3.5.0",
+   "3.5.0-rdpmc",
 };
 
 char colors[NUM_KERNELS][64]={
+  "0.0 0.0   1.0",   /* blue */
+  "1.0 0.0   0.0",   /* red */
   "1.0 0.75   0.75", /* pink-red */
   "1.0 0.625 0.0",   /* orange */
   "1.0 1.0   0.0",   /* yellow */
@@ -40,8 +44,8 @@ char colors[NUM_KERNELS][64]={
   "1.0 0.5 0.5",     /* ??? */
   "0.625 1.0 0.5",   /* ??? */
   "0.0 1.0   0.0",   /* green */
-  "0.0 0.0   1.0",   /* blue */
-  "1.0 0.0   0.0",   /* red */
+  "0.25 1.0   0.0",   /* ??? */
+  "0.5 1.0   0.0",   /* ??? */
 };
 
 long long times[NUM_KERNELS][NUM_EVENTS][NUM_RUNS];
@@ -251,7 +255,7 @@ loop:
      fprintf(stderr,"\n");
   }
 
-  return 0;
+  return plot_type;
 }
 
 

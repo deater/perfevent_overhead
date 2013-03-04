@@ -217,7 +217,7 @@ int main(int argc, char **argv) {
 		      kernels[k].type,
 		      "amd0fh",
 		      15,4,21,
-		      "AMD Athlon(tm) 64 Processor 2000+",
+		      "AMD Athlon(tm) 64 X2 Processor 2000+",
 		      i);
      }
   }
@@ -250,7 +250,7 @@ int main(int argc, char **argv) {
 		      kernels[k].type,
 		      "nehalem",
 		      6,30,5,
-		      "Intel(R) Core(TM) i? 2GHz",
+		      "Intel(R) Core(TM) i7 X920 2GHz",
 		      i);
      }
   }

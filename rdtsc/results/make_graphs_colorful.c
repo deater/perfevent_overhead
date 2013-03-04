@@ -30,7 +30,7 @@ int main(int argc, char **argv) {
      exit(1);
   }
 
-  read_data(argv[1],0,argv[2]);
+  plot_type=read_data(argv[1],0,argv[2]);
 
   events=EVENT_TO_PLOT;
 
@@ -152,7 +152,7 @@ int main(int argc, char **argv) {
   printf("\n");
 
 
-  for(kernel=0;kernel<NUM_KERNELS;kernel++) {
+  for(kernel=0;kernel<NUM_COLORFUL_KERNELS;kernel++) {
 
      int xsize=maxx-minx;
 

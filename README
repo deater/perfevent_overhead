@@ -37,7 +37,7 @@ How to generate the graphs/data used in the PERF_EVENT paper:
              Generating plots
 	       go into rdtsc/results directory
 	       run "make"
-	       run ./make_graphs_kernel_rdtsc_all.sh
+	       run ./make_graphs_colorful_all.sh
                The graphs will be in "results/graph/colorful"
 	       
    Figure 6: Varying events

@@ -1,6 +1,8 @@
 #define NUM_EVENTS 16
 #define NUM_RUNS 1024
-#define NUM_KERNELS 16
+
+#define NUM_COLORFUL_KERNELS 16
+#define NUM_KERNELS 18
 
 extern char kernel_names[NUM_KERNELS][64];
 extern char colors[NUM_KERNELS][64];
