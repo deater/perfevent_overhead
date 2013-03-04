@@ -1,4 +1,11 @@
-How to generate the graphs/data used in the SIGMETRICS submission:
+Programs for exploring the overhead of various
+Linux performance counter implementations.
+
+
+
+----------------------
+
+How to generate the graphs/data used in the PERF_EVENT paper:
    Figure 1: Context Switch
              core2_context_switch.jgr
 	     
@@ -16,6 +23,23 @@ How to generate the graphs/data used in the SIGMETRICS submission:
    Figure 3: Read            amd0fh core2 atom nehalem
    Figure 4: Start           amd0fh core2 atom nehalem
    Figure 5: Stop            amd0fh core2 atom nehalem
+   
+             Gathering data:
+	       go into rdtsc directory
+	       run "make"
+	       For each kernel run "../prepare_before.sh" to turn off
+	          cpufrequency scaling.  Then run "./generate_results"
+	       If rdpmc results desired, run "./generate_results perf_event_rdpmc"
+               If perfctr results, run "./generate_results perfctr"
+	       If perfmon2 results, run "./generate_results perfmon2"
+	       Once all the data is gathered, consolidate the generated
+	         directories under results/$ARCH to one subdir
+             Generating plots
+	       go into rdtsc/results directory
+	       run "make"
+	       run ./make_graphs_kernel_rdtsc_all.sh
+               The graphs will be in "results/graph/colorful"
+	       
    Figure 6: Varying events
    Figure 7: Taken vs Total amd0fh
    Figure 8: Branch miss percentage amd0fh
@@ -24,37 +48,27 @@ How to generate the graphs/data used in the SIGMETRICS submission:
    
 --------------------
 
-Various programs for exploring the overhead of various
-performance counter libraries under Linux.
+The website for this work is:
+  http://web.eece.maine.edu/~vweaver/projects/perf_events/overhead/
 
-I need to clean up this code and document it better.
-
-A companion tarball is available with results and programs
-for making graphs.
-
-  http://web.eecs.utk.edu/~vweaver1/projects/perf-events/benchmarks/
+Other Comments:
+---------------
 
 The "prepare_before.sh" script will put the cpufreq governor on
-performance, and the various run scripts set the cpu affinity to 
+performance, and the various run commands set the cpu affinity to 
 core 0.
 
 Kernels 2.6.36 and 2.6.37 won't let you turn off nmi_watchdog with
 /proc/sys/kernel/nmi_watchdog?
 
-HOWTO for ASPLOS results
-   make clean/make
-   if on a new machine need to edit the files.
-     rdtsc_null_pe, rdtsc_null_pe_rdpmc
-   edit the make (no longer needed, us uname?)
-   run ./prepare_before.sh to disable NMI watchdog, DVFS
-   edit ./make_rdtsc_pe_null_results.c ./make_rdtsc_pe_rdpmc_null_results
-   make
-   run ./make_rdtsc_pe_null_results
-   also ./make_rdtsc_pe_rdpmc_null_results
-   *NOTE* move old results out of the way before running new scripts
+There are many other factors that can affect performance (including
+number of command line args, which we vary) but hopefully that
+doesn't matter for these simple null cases?
 
+Author:
+-------
 
 Vince Weaver
-vweaver1 _at_ cl320.eecs.utk.edu
-21 July 2012
+vincent.weaver _at_ maine.edu
+4 March 2013
 
