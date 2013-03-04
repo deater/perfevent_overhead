@@ -1,0 +1,108 @@
+(* Begin Graph *)
+newgraph
+
+X 7.25
+Y 0.4
+clip
+
+(* Legend *)
+legend custom
+
+(* Y-Axis *)
+yaxis size 0.25 min 0.5 max 1
+no_draw_axis
+no_draw_hash_marks
+no_draw_hash_labels
+
+(* X-Axis *)
+xaxis size 6 min 0.5 max 7
+no_draw_axis
+no_draw_hash_marks
+no_draw_hash_labels
+
+newcurve marktype box linetype none color 1.0 0.0 0.0
+label font Helvetica fontsize 12 x 0.5 y 0.9 vjc hjl : 2.6.32-perfctr
+pts
+0 0.0
+
+newcurve marktype box linetype none color 0.0 0.0 1.0
+label font Helvetica fontsize 12 x 0.5 y 0.6 vjc hjl : 2.6.30-perfmon2
+pts
+0 0.0
+
+newcurve marktype box linetype none color 1.0 0.75   0.75
+label font Helvetica fontsize 12 x 0.5 y 0.3 vjc hjl : 2.6.32
+pts
+0 0.0
+
+newcurve marktype box linetype none color 1.0 0.625 0.0
+label font Helvetica fontsize 12 x 0.5 y 0.0 vjc hjl : 2.6.33
+pts
+0 0.0
+
+
+
+newcurve marktype box linetype none color 1.0 1.0   0.0
+label font Helvetica fontsize 12 x 3 y 0.9 vjc hjl : 2.6.34
+pts
+0 0.0
+
+newcurve marktype box linetype none color 0.0 0.375 0.0
+label font Helvetica fontsize 12 x 3 y 0.6 vjc hjl : 2.6.35
+pts
+0 0
+
+newcurve marktype box linetype none color 0.63 0.82 0.62
+label font Helvetica fontsize 12 x 3 y 0.3 vjc hjl : 2.6.36
+pts
+0 0
+
+newcurve marktype box linetype none color 0.0 1.0   1.0
+label font Helvetica fontsize 12 x 3 y 0.0 vjc hjl : 2.6.37
+pts
+0 0
+
+
+
+
+newcurve marktype box linetype none color 0.375 0.0 1.0
+label font Helvetica fontsize 12 x 4.5 y 0.9 vjc hjl : 2.6.38
+pts
+0 0.0
+
+newcurve marktype box linetype none color 1.0 0.0 1.0
+label font Helvetica fontsize 12 x 4.5 y 0.6 vjc hjl : 2.6.39
+pts
+0 0.0
+
+newcurve marktype box linetype none color 0.625 0.0 0.5
+label font Helvetica fontsize 12 x 4.5 y 0.3 vjc hjl : 3.0
+pts
+0 0.0
+
+newcurve marktype box linetype none color 0.0 0.0 0.0
+label font Helvetica fontsize 12 x 4.5 y 0.0 vjc hjl : 3.1
+pts
+0 0.0
+
+
+
+newcurve marktype box linetype none color 0.5 0.5 0.5
+label font Helvetica fontsize 12 x 6.0 y 0.9 vjc hjl : 3.2
+pts
+0 0.0
+
+newcurve marktype box linetype none color 1.0 0.5 0.5
+label font Helvetica fontsize 12 x 6.0 y 0.6 vjc hjl : 3.3
+pts
+0 0.0
+
+newcurve marktype box linetype none color 0.625 1.0 0.5
+label font Helvetica fontsize 12 x 6.0 y 0.3 vjc hjl : 3.4
+pts
+0 0.0
+
+newcurve marktype box linetype none color 0.0 1.0 0.0
+label font Helvetica fontsize 12 x 6.0 y 0.0 vjc hjl : 3.4-rdpmc
+pts
+0 0.0
