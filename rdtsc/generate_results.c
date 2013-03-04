@@ -490,28 +490,28 @@ static int generate_results(char *directory, int type, int num) {
    fclose(fff);
 
    if (type==KERNEL_PERF_EVENT) {
-      sprintf(temp_string2,"./rdtsc_null_pe %d ",num);
+      sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe %d ",num);
       for(i=0;i<num;i++) {
          sprintf(temp_string,"0x%x ",event_table->event[i].event);
          strcat(temp_string2,temp_string);
       }
    }
    else if (type==KERNEL_PERF_EVENT_RDPMC) {
-      sprintf(temp_string2,"./rdtsc_null_pe_rdpmc %d ",num);
+      sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe_rdpmc %d ",num);
       for(i=0;i<num;i++) {
          sprintf(temp_string,"0x%x ",event_table->event[i].event);
          strcat(temp_string2,temp_string);
       }
    }
    else if (type==KERNEL_PERFCTR) {
-      sprintf(temp_string2,"./rdtsc_null_perfctr %d ",num);
+      sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_perfctr %d ",num);
       for(i=0;i<num;i++) {
          sprintf(temp_string,"0x%x ",event_table->event[i].event);
          strcat(temp_string2,temp_string);
       }
    }
    else if (type==KERNEL_PERFMON2) {
-      sprintf(temp_string2,"./rdtsc_null_perfmon2 %d ",num);
+      sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_perfmon2 %d ",num);
       for(i=0;i<num;i++) {
          sprintf(temp_string,"%s ",event_table->event[i].event_name);
          strcat(temp_string2,temp_string);

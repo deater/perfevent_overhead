@@ -394,8 +394,8 @@ loop:
   printf("(* Y-Axis *)\n");
   printf("yaxis size 4 min 0 max %lld\n",maxy);
   printf("grid_gray 0.9 grid_lines\n");
-  printf("label font Helvetica fontsize %d  : Times Observed (out of 1000)\n",
-         FONTSIZE);
+  printf("label font Helvetica fontsize %d  : Times Observed (out of %d)\n",
+         FONTSIZE,NUM_RUNS);
   printf("hash_labels font Helvetica fontsize %d\n",FONTSIZE);
   printf("\n");
   printf("(* X-Axis *)\n");
