@@ -189,6 +189,7 @@ int main(int argc, char **argv) {
 
   int i,k;
 
+#if 0
   create_output_dir("core2");
 
   for(k=0;k<NUM_KERNELS;k++) {
@@ -200,6 +201,56 @@ int main(int argc, char **argv) {
 		      "core2",
 		      6,23,10,
 		      "Intel(R) Core(TM)2 Duo CPU     T9900  @ 3.06GHz",
+		      i);
+     }
+  }
+#endif
+
+#if 0
+  create_output_dir("amd0fh");
+
+  for(k=0;k<NUM_KERNELS;k++) {
+     for(i=0;i<NUM_EVENTS;i++) {
+        generate_results(dirname,
+		      "old_amd",
+		      kernels[k].name,
+		      kernels[k].type,
+		      "amd0fh",
+		      15,4,21,
+		      "AMD Athlon(tm) 64 Processor 2000+",
+		      i);
+     }
+  }
+#endif
+
+#if 0
+  create_output_dir("atom");
+
+  for(k=0;k<NUM_KERNELS;k++) {
+     for(i=0;i<NUM_EVENTS;i++) {
+        generate_results(dirname,
+		      "server",
+		      kernels[k].name,
+		      kernels[k].type,
+		      "atom",
+		      6,28,2,
+		      "Intel(R) Atom(TM) CPU  230   @ 1.60GHz",
+		      i);
+     }
+  }
+#endif
+
+  create_output_dir("nehalem");
+
+  for(k=0;k<NUM_KERNELS;k++) {
+     for(i=0;i<NUM_EVENTS;i++) {
+        generate_results(dirname,
+		      "dell_laptop",
+		      kernels[k].name,
+		      kernels[k].type,
+		      "nehalem",
+		      6,30,5,
+		      "Intel(R) Core(TM) i? 2GHz",
 		      i);
      }
   }

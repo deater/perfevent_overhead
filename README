@@ -1,3 +1,29 @@
+How to generate the graphs/data used in the SIGMETRICS submission:
+   Figure 1: Context Switch
+             core2_context_switch.jgr
+	     
+	     Gathering data:
+	       Go into context_switch directory.
+	       Copy lat_ctx from lmbench in
+	       run ./prepare_before.sh
+	       run appropriate .sh file
+	     Generating plot
+	       run "make"
+	       run ./plot_results
+	       remove extraneous lines and put into jgr file by hand
+	     
+   Figure 2: Start/Stop/Read amd0fh core2 atom nehalem
+   Figure 3: Read            amd0fh core2 atom nehalem
+   Figure 4: Start           amd0fh core2 atom nehalem
+   Figure 5: Stop            amd0fh core2 atom nehalem
+   Figure 6: Varying events
+   Figure 7: Taken vs Total amd0fh
+   Figure 8: Branch miss percentage amd0fh
+   Figure 9: Nehalem -- perf-event vs PAPI events
+   
+   
+--------------------
+
 Various programs for exploring the overhead of various
 performance counter libraries under Linux.
 

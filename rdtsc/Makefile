@@ -129,6 +129,7 @@ make_graphs_kernel_rdtsc_all.o:	make_graphs_kernel_rdtsc_all.c
 
 clean:
 	rm -f *.o core *~ \
+	convert_results \
 	generate_results \
 	rdtsc_null_pe \
 	rdtsc_null_pe_rdpmc \
