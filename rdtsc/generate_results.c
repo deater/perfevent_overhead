@@ -13,6 +13,12 @@
 #define VENDOR_AMD     1
 #define VENDOR_INTEL   2
 
+#define KERNEL_PERF_EVENT       0
+#define KERNEL_PERF_EVENT_RDPMC 1
+#define KERNEL_PERFCTR          2
+#define KERNEL_PERFMON2         3
+#define KERNEL_UNKNOWN         99
+
 static char dirname[BUFSIZ];
 
 struct cpuinfo_t {
@@ -432,7 +438,7 @@ static int create_output_dir(void) {
 
 #define NUM_RUNS 1024
 
-static int generate_results(char *directory, int num) {
+static int generate_results(char *directory, int type, int num) {
 
    int i,result;
    char dirname[BUFSIZ],filename[BUFSIZ],temp_string[BUFSIZ],temp_string2[BUFSIZ];
@@ -483,11 +489,35 @@ static int generate_results(char *directory, int num) {
    fprintf(fff,"Runs:      %d\n",NUM_RUNS);
    fclose(fff);
 
-   sprintf(temp_string2,"./rdtsc_null_pe %d ",num);
-   for(i=0;i<num;i++) {
-      sprintf(temp_string,"0x%x ",event_table->event[i].event);
-      strcat(temp_string2,temp_string);
+   if (type==KERNEL_PERF_EVENT) {
+      sprintf(temp_string2,"./rdtsc_null_pe %d ",num);
+      for(i=0;i<num;i++) {
+         sprintf(temp_string,"0x%x ",event_table->event[i].event);
+         strcat(temp_string2,temp_string);
+      }
    }
+   else if (type==KERNEL_PERF_EVENT_RDPMC) {
+      sprintf(temp_string2,"./rdtsc_null_pe_rdpmc %d ",num);
+      for(i=0;i<num;i++) {
+         sprintf(temp_string,"0x%x ",event_table->event[i].event);
+         strcat(temp_string2,temp_string);
+      }
+   }
+   else if (type==KERNEL_PERFCTR) {
+      sprintf(temp_string2,"./rdtsc_null_perfctr %d ",num);
+      for(i=0;i<num;i++) {
+         sprintf(temp_string,"0x%x ",event_table->event[i].event);
+         strcat(temp_string2,temp_string);
+      }
+   }
+   else if (type==KERNEL_PERFMON2) {
+      sprintf(temp_string2,"./rdtsc_null_perfmon2 %d ",num);
+      for(i=0;i<num;i++) {
+         sprintf(temp_string,"%s ",event_table->event[i].event_name);
+         strcat(temp_string2,temp_string);
+      }
+   }
+
    sprintf(temp_string2,"%s >> %s",temp_string2,filename);
 
    for(i=0;i<NUM_RUNS;i++) {
@@ -507,6 +537,7 @@ static int generate_results(char *directory, int num) {
 int main(int argc, char **argv) {
 
   int i;
+  int type=KERNEL_PERF_EVENT;
 
   create_output_dir();
 
@@ -515,8 +546,28 @@ int main(int argc, char **argv) {
      return -1;
   }
 
+  if (argc>1) {
+     if (!strncmp(argv[1],"perf_event_rdpmc",16)) {
+        type=KERNEL_PERF_EVENT_RDPMC;
+     }
+     else if (!strncmp(argv[1],"perf_event",10)) {
+        type=KERNEL_PERF_EVENT;
+     }
+     else if (!strncmp(argv[1],"perfctr",7)) {
+        type=KERNEL_PERFCTR;
+     }
+     else if (!strncmp(argv[1],"perfmon",7)) {
+        type=KERNEL_PERFMON2;
+     }
+     else {
+        type=KERNEL_UNKNOWN;
+	fprintf(stderr,"Error!  Unknown kernel type %s\n",argv[1]);
+	return -1;
+     }
+  }
+
   for(i=0;i<NUM_EVENTS;i++) {
-     generate_results(dirname,i);
+     generate_results(dirname,type,i);
   }
 
   return 0;

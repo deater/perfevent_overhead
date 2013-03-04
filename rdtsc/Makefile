@@ -4,12 +4,11 @@ CFLAGS	= -g -O2 -Wall -I..
 LFLAGS  = -lrt -lm
 
 all:	\
-	convert_results \
 	generate_results \
-	rdtsc_null_pe 
-#	rdtsc_null_pe_rdpmc \
-#	rdtsc_null_perfctr \
-#	rdtsc_null_perfmon2 \
+	rdtsc_null_pe \
+	rdtsc_null_pe_rdpmc \
+	rdtsc_null_perfctr \
+	rdtsc_null_perfmon2 
 #	make_rdtsc_pe_null_results \
 #	make_rdtsc_pe_rdpmc_null_results \
 #	make_rdtsc_perfctr_null_results \
