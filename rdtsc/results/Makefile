@@ -4,7 +4,8 @@ CFLAGS	= -g -O2 -Wall -I..
 LFLAGS  = -lrt -lm
 
 all:	make_graphs_colorful \
-	make_graphs_errorbars
+	make_graphs_errorbars \
+	make_graphs_varying
 #	rdtsc_null_pe \
 #	rdtsc_null_pe_rdpmc \
 #	rdtsc_null_perfctr \
@@ -81,11 +82,11 @@ rdtsc_null_perfmon2.o:	rdtsc_null_perfmon2.c
 
 ####
 
-make_graphs_kernel_rdtsc_vary_events:		make_graphs_kernel_rdtsc_vary_events.o
-	$(CC) $(LFLAGS) -o make_graphs_kernel_rdtsc_vary_events 	make_graphs_kernel_rdtsc_vary_events.o
+make_graphs_varying:		make_graphs_varying.o read_data.o
+	$(CC) $(LFLAGS) -o make_graphs_varying 	make_graphs_varying.o read_data.o
 
-make_graphs_kernel_rdtsc_vary_events.o:		make_graphs_kernel_rdtsc_vary_events.c
-	$(CC) $(CFLAGS) -c make_graphs_kernel_rdtsc_vary_events.c
+make_graphs_varying.o:		make_graphs_varying.c read_data.h
+	$(CC) $(CFLAGS) -c make_graphs_varying.c
 
 
 ###
@@ -133,7 +134,7 @@ clean:
         make_graphs_kernel_rdtsc \
         make_graphs_colorful \
 	make_graphs_errorbars \
-        make_graphs_kernel_rdtsc_vary_events
+        make_graphs_varying
 	cd graphs && make clean
 
 

@@ -41,6 +41,13 @@ How to generate the graphs/data used in the PERF_EVENT paper:
                The graphs will be in "results/graph/colorful"
 	       
    Figure 6: Varying events
+              Generating data:
+                These use the same data as the rdtsc plots
+	      Generating plots:
+	        go into rdtsc/results directory
+		run "make"
+		run ./make_graphs_varying_asll.sh
+		The graphs will be in "results/graph/varying"
    Figure 7: Taken vs Total amd0fh
    Figure 8: Branch miss percentage amd0fh
    Figure 9: Nehalem -- perf-event vs PAPI events
