@@ -163,7 +163,7 @@ int main(int argc, char **argv) {
             ": %s *)\n",
 	    maxx-(xsize/5),
 	    (double)maxy-(((double)maxy/20.0)*(double)kernel),
-	    kernel_names[kernel]);
+	    kernels[kernel].name);
      printf("pts\n");
 
      for(tmp=head[kernel];tmp!=NULL;tmp=tmp->next) {

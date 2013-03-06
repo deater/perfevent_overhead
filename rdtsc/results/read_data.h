@@ -4,7 +4,12 @@
 #define NUM_COLORFUL_KERNELS 16
 #define NUM_KERNELS 18
 
-extern char kernel_names[NUM_KERNELS][64];
+struct kernel_info {
+    char name[64];
+    int type;
+};
+
+extern struct kernel_info kernels[NUM_KERNELS];
 extern char colors[NUM_KERNELS][64];
 extern long long times[NUM_KERNELS][NUM_EVENTS][NUM_RUNS];
 

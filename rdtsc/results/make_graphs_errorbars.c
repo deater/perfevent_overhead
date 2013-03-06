@@ -13,7 +13,7 @@
 
 int main(int argc, char **argv) {
 
-  int events,run,kernel;
+  int events,run,kernel,i;
   int plot_type=PLOT_TYPE_START;
   double maxy;
   double total;
@@ -71,8 +71,8 @@ int main(int argc, char **argv) {
   printf("(* Begin Graph *)\n");
   printf("newgraph\n");
   printf("\n");
-  printf("X 7\n");
-  printf("Y 5\n");
+  printf("X 8.5\n");
+  printf("Y 6\n");
   printf("clip\n");
   printf("\n");
   printf("(* Legend *)\n");
@@ -80,16 +80,27 @@ int main(int argc, char **argv) {
   printf("\n");
   printf("(* Y-Axis *)\n");
   printf("yaxis size 4 min 0 max %.0f\n",maxy);
-  printf("grid_gray 0.9 grid_lines\n");
+  printf("(* grid_gray 0.9 grid_lines *)\n");
   printf("label font Helvetica fontsize %d  : Average Overhead (Cycles)\n", 
           FONTSIZE);
   printf("hash_labels font Helvetica fontsize %d\n",FONTSIZE);
   printf("\n");
   printf("(* X-Axis *)\n");
-  printf("xaxis size 6 min %d max %d\n",-1,NUM_KERNELS+1); //minx,maxx);
-  printf("hash_labels font Helvetica fontsize %d\n",FONTSIZE);
-  printf("label font Helvetica fontsize %d  : Kernels\n",
+  printf("xaxis size 6.5 min %d max %d\n",-1,NUM_KERNELS); //minx,maxx);
+  printf("grid_gray 0.9 grid_lines\n");
+  printf("hash_labels font Helvetica fontsize %d  vjc hjr rotate 45\n",
 	 FONTSIZE);
+  printf("(* label font Helvetica fontsize %d  : Kernels *)\n",
+	 FONTSIZE);
+  printf("no_auto_hash_marks\n");
+  for(i=0;i<NUM_KERNELS;i++) {
+     printf("hash_at %d\n",i);
+  }
+  printf("no_auto_hash_labels\n");
+  for(i=0;i<NUM_KERNELS;i++) {
+     printf("hash_label at %d : %s\n",i,kernels[i].name);
+  }
+
   printf("\n");
   printf("(* Title *)\n");
   printf("title font Helvetica fontsize %d y %lf : "
@@ -110,8 +121,22 @@ int main(int argc, char **argv) {
 //     printf("newcurve marksize 1 marktype xbar linetype none color %s\n",
   //          colors[kernel]);
 
-     printf("newcurve marktype box linetype none color %s\n",
-            colors[kernel]);
+     printf("newcurve ");
+     if (kernels[kernel].type==INTERFACE_PERFCTR) {
+        printf("marktype diamond linetype none color 1.0 0.0 0.0\n");
+     }
+     else if (kernels[kernel].type==INTERFACE_PERFMON2) {
+        printf("marktype circle linetype none color 0.0 0.0 1.0\n");
+     }
+     else if (kernels[kernel].type==INTERFACE_PERF_EVENT) {
+        printf("marktype box linetype none color 0.0 0.0 0.0\n");
+     }
+     else if (kernels[kernel].type==INTERFACE_PERF_EVENT_RDPMC) {
+        printf("marktype x linetype none color 0.3 0.3 0.3\n");
+     }
+     else {
+       printf("marktype box linetype none color 0.3 0.3 0.0\n");
+     }
 
      printf("y_epts\n");
 
@@ -119,7 +144,7 @@ int main(int argc, char **argv) {
             kernel,average[kernel],
 	    average[kernel]-deviation[kernel],
             average[kernel]+deviation[kernel],
-            kernel_names[kernel]);
+            kernels[kernel].name);
 
   }
 

@@ -6,25 +6,25 @@
 
 #include "read_data.h"
 
-char kernel_names[NUM_KERNELS][64]={
-   "2.6.30-perfmon2",
-   "2.6.32-perfctr",
-   "2.6.32",
-   "2.6.33",
-   "2.6.34",
-   "2.6.35",
-   "2.6.36",
-   "2.6.37",
-   "2.6.38",
-   "2.6.39",
-   "3.0.0",
-   "3.1.0",
-   "3.2.0",
-   "3.3.0",
-   "3.4.0",
-   "3.4.0-rdpmc",
-   "3.5.0",
-   "3.5.0-rdpmc",
+struct kernel_info kernels[NUM_KERNELS]={
+   {"2.6.30-perfmon2",	INTERFACE_PERFMON2,},
+   {"2.6.32-perfctr",	INTERFACE_PERFCTR,},
+   {"2.6.32",		INTERFACE_PERF_EVENT,},
+   {"2.6.33",		INTERFACE_PERF_EVENT,},
+   {"2.6.34",		INTERFACE_PERF_EVENT,},
+   {"2.6.35",		INTERFACE_PERF_EVENT,},
+   {"2.6.36",		INTERFACE_PERF_EVENT,},
+   {"2.6.37",		INTERFACE_PERF_EVENT,},
+   {"2.6.38",		INTERFACE_PERF_EVENT,},
+   {"2.6.39",		INTERFACE_PERF_EVENT,},
+   {"3.0.0",		INTERFACE_PERF_EVENT,},
+   {"3.1.0",		INTERFACE_PERF_EVENT,},
+   {"3.2.0",		INTERFACE_PERF_EVENT,},
+   {"3.3.0",		INTERFACE_PERF_EVENT,},
+   {"3.4.0",		INTERFACE_PERF_EVENT,},
+   {"3.4.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.5.0",		INTERFACE_PERF_EVENT,},
+   {"3.5.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
 };
 
 char colors[NUM_KERNELS][64]={
@@ -93,12 +93,12 @@ int read_data(char *machine, int which, char *plot_name) {
   fprintf(stderr,"Reading in data for %s...\n",machine);
 
   for(kernel=0;kernel<NUM_KERNELS;kernel++) {
-     fprintf(stderr,"\tReading data for kernel %s\n",kernel_names[kernel]); 
+     fprintf(stderr,"\tReading data for kernel %s\n",kernels[kernel].name); 
      for(events=0;events<NUM_EVENTS;events++) {
         fprintf(stderr,"%d ",events);
 
         sprintf(filename,"%s/0/%s/%d/results",
-	           machine,kernel_names[kernel],events);
+	           machine,kernels[kernel].name,events);
         fff=fopen(filename,"r");
         if (fff==NULL) {
 	   fprintf(stderr,"Can't open %s\n",filename);
