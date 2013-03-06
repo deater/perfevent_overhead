@@ -76,9 +76,10 @@ int main(int argc, char **argv) {
     maxy*=100.0;
 
   printf("newgraph\n");
-  printf("X 4\n");
+  printf("X 5\n");
   printf("Y 1.25\n");
-  printf("title font Helvetica fontsize %d : %s\n",FONTSIZE+2,argv[1]);
+  printf("title font Helvetica fontsize %d y %lld : %s\n",
+         FONTSIZE+2,(long long)((double)maxy*1.2),argv[1]);
 
   printf("xaxis\n");
   printf("size 3.0 min 0 max %d label font Helvetica fontsize %d : "
@@ -86,7 +87,7 @@ int main(int argc, char **argv) {
   printf("hash_labels fontsize %d\n",FONTSIZE);
 
   printf("yaxis\n");
-  printf("size 0.75 min 0 max %lf label font Helvetica fontsize %d : %s\n",
+  printf("size 0.70 min 0 max %lf label font Helvetica fontsize %d : %s\n",
 	 15.0,FONTSIZE,argv[4]);
   printf("hash_labels fontsize %d\n",FONTSIZE);
   printf("legend on defaults font Helvetica fontsize %d\n",FONTSIZE);
