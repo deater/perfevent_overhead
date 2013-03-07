@@ -103,7 +103,7 @@ int main(int argc, char **argv) {
   printf("(* Begin Graph *)\n");
   printf("newgraph\n");
   printf("\n");
-  printf("X 8.5\n");
+  printf("X 7\n");
   printf("Y 6\n");
   printf("clip\n");
   printf("\n");
@@ -118,7 +118,7 @@ int main(int argc, char **argv) {
   printf("hash_labels font Helvetica fontsize %d\n",FONTSIZE);
   printf("\n");
   printf("(* X-Axis *)\n");
-  printf("xaxis size 6.5 min %d max %d\n",minx-1,maxx+1);
+  printf("xaxis size 5.5 min %f max %f\n",(double)minx-0.5,(double)maxx+0.5);
   printf("grid_gray 0.9 grid_lines\n");
   printf("hash_labels font Helvetica fontsize %d\n",
 	 FONTSIZE);
@@ -126,12 +126,12 @@ int main(int argc, char **argv) {
 	 FONTSIZE);
 
   printf("no_auto_hash_marks\n");
-  for(i=minx-1;i<maxx+1;i++) {
+  for(i=minx;i<maxx+1;i++) {
      printf("hash_at %d\n",i);
   }
 
   printf("no_auto_hash_labels\n");
-  for(i=minx-1;i<maxx+1;i++) {
+  for(i=minx;i<maxx+1;i++) {
      printf("hash_label at %d : %d\n",i,i);
   }
 
@@ -178,7 +178,7 @@ int main(int argc, char **argv) {
        printf("marktype box linetype none color 0.3 0.3 0.0\n");
      }
      printf("label font Helvetica fontsize 14 "
-            "x 0.5 y %lld vjc hjl : %s\n",
+            "x 1.0 y %lld vjc hjl : %s\n",
 	    (long long)maxy-(((long long)maxy)/15*k),
 	    kernels[kernel].name);
 

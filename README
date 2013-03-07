@@ -46,7 +46,7 @@ How to generate the graphs/data used in the PERF_EVENT paper:
 	      Generating plots:
 	        go into rdtsc/results directory
 		run "make"
-		run ./make_graphs_varying_asll.sh
+		run ./make_graphs_varying_all.sh
 		The graphs will be in "results/graph/varying"
    Figure 7: Taken vs Total amd0fh
    Figure 8: Branch miss percentage amd0fh
@@ -77,5 +77,5 @@ Author:
 
 Vince Weaver
 vincent.weaver _at_ maine.edu
-4 March 2013
+7 March 2013
 
