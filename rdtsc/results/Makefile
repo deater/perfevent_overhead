@@ -3,7 +3,9 @@ CC_R	= $(CC) -pthread
 CFLAGS	= -g -O2 -Wall -I..
 LFLAGS  = -lrt -lm
 
-all:	make_graphs_colorful \
+all:	\
+	make_graphs_boxplot \
+	make_graphs_colorful \
 	make_graphs_errorbars \
 	make_graphs_varying
 #	rdtsc_null_pe \
@@ -116,6 +118,15 @@ make_graphs_errorbars.o:	make_graphs_errorbars.c read_data.h
 
 #####
 
+make_graphs_boxplot:	make_graphs_boxplot.o read_data.o
+	$(CC) -g $(LFLAGS) -o make_graphs_boxplot make_graphs_boxplot.o read_data.o
+
+make_graphs_boxplot.o:	make_graphs_boxplot.c read_data.h
+	$(CC) $(CFLAGS) -c make_graphs_boxplot.c
+
+
+#####
+
 read_data.o:	read_data.c read_data.h
 	$(CC) $(CFLAGS) -c read_data.c
 
@@ -132,6 +143,7 @@ clean:
 	make_rdtsc_perfctr_null_results \
 	make_rdtsc_perfmon2_null_results \
         make_graphs_kernel_rdtsc \
+	make_graphs_boxplot \
         make_graphs_colorful \
 	make_graphs_errorbars \
         make_graphs_varying
