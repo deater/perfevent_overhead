@@ -32,17 +32,21 @@ int main(int argc, char **argv) {
 
   int events,run,kernel,i;
   int plot_type=PLOT_TYPE_START;
+  int machine_num=0;
   double maxy;
   double total;
   double average[NUM_KERNELS];
 
-  if (argc<3) {
-     printf("Must specify machine and start/stop/read/total\n");
+  if (argc<4) {
+     printf("Must specify machine type, machine num, "
+            "and start/stop/read/total\n");
      exit(1);
   }
 
+  machine_num=atoi(argv[2]);
+
   /* read in data */
-  plot_type=read_data(argv[1],0,argv[2]);
+  plot_type=read_data(argv[1],machine_num,argv[3]);
   if (plot_type<0) {
      fprintf(stderr,"Some sort of error reading!\n");
      return -1;

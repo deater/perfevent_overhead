@@ -97,8 +97,8 @@ int read_data(char *machine, int which, char *plot_name) {
      for(events=0;events<NUM_EVENTS;events++) {
         fprintf(stderr,"%d ",events);
 
-        sprintf(filename,"%s/0/%s/%d/results",
-	           machine,kernels[kernel].name,events);
+        sprintf(filename,"%s/%d/%s/%d/results",
+		machine,which,kernels[kernel].name,events);
         fff=fopen(filename,"r");
         if (fff==NULL) {
 	   fprintf(stderr,"Can't open %s\n",filename);
