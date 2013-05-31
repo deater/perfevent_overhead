@@ -2,7 +2,7 @@
 #define NUM_RUNS 1024
 
 #define NUM_COLORFUL_KERNELS 16
-#define NUM_KERNELS 18
+#define NUM_KERNELS 24
 
 #define KERNEL_2_6_30_PERFMON2 0
 #define KERNEL_2_6_32_PERFCTR  1

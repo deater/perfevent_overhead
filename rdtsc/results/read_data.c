@@ -25,6 +25,12 @@ struct kernel_info kernels[NUM_KERNELS]={
    {"3.4.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
    {"3.5.0",		INTERFACE_PERF_EVENT,},
    {"3.5.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.5.0",		INTERFACE_PERF_EVENT,},
+   {"3.6.0",		INTERFACE_PERF_EVENT,},
+   {"3.7.0",		INTERFACE_PERF_EVENT,},
+   {"3.8.0",		INTERFACE_PERF_EVENT,},
+   {"3.9.0",		INTERFACE_PERF_EVENT,},
+   {"3.10.0-rc2",		INTERFACE_PERF_EVENT,},
 };
 
 char colors[NUM_KERNELS][64]={
