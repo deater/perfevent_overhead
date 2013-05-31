@@ -449,6 +449,10 @@ static int generate_results(char *directory, int type, int num) {
 
    if (type==KERNEL_PERF_EVENT_RDPMC) {
       sprintf(dirname,"%s/%s-rdpmc",directory,uname_buf.release);
+   } else if (type==KERNEL_PERFCTR) {
+      sprintf(dirname,"%s/%s-perfctr",directory,uname_buf.release);
+   } else if (type==KERNEL_PERFMON2) {
+      sprintf(dirname,"%s/%s-perfmon2",directory,uname_buf.release);
    } else { 
       sprintf(dirname,"%s/%s",directory,uname_buf.release);
    } 
@@ -479,12 +483,21 @@ static int generate_results(char *directory, int type, int num) {
    fprintf(fff,"Kernel:    %s %s\n",uname_buf.sysname,uname_buf.release);
    fprintf(fff,"Interface: ");
    switch(type) {
-      case KERNEL_PERF_EVENT: printf("perf_event");
-                       break;
-      case KERNEL_PERF_EVENT_RDPMC: printf("perf_event_rdpmc");
-                       break;
-      default: printf("unknown");
-             break;
+      case KERNEL_PERF_EVENT: 
+	   printf("perf_event");
+           break;
+      case KERNEL_PERF_EVENT_RDPMC: 
+           printf("perf_event_rdpmc");
+           break;
+      case KERNEL_PERFCTR: 
+	   printf("perfctr");
+           break;
+      case KERNEL_PERFMON2: 
+	   printf("perfmon2");
+           break;
+      default: 
+           printf("unknown");
+           break;
    }
    fprintf(fff,"\n");
    fprintf(fff,"Hostname:  %s\n",uname_buf.nodename);
