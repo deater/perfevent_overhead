@@ -484,19 +484,19 @@ static int generate_results(char *directory, int type, int num) {
    fprintf(fff,"Interface: ");
    switch(type) {
       case KERNEL_PERF_EVENT: 
-	   printf("perf_event");
+	   fprintf(fff,"perf_event");
            break;
       case KERNEL_PERF_EVENT_RDPMC: 
-           printf("perf_event_rdpmc");
+	   fprintf(fff,"perf_event_rdpmc");
            break;
       case KERNEL_PERFCTR: 
-	   printf("perfctr");
+	   fprintf(fff,"perfctr");
            break;
       case KERNEL_PERFMON2: 
-	   printf("perfmon2");
+	   fprintf(fff,"perfmon");
            break;
       default: 
-           printf("unknown");
+	   fprintf(fff,"unknown");
            break;
    }
    fprintf(fff,"\n");
