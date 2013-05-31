@@ -444,10 +444,14 @@ static int generate_results(char *directory, int type, int num) {
    char dirname[BUFSIZ],filename[BUFSIZ],temp_string[BUFSIZ],temp_string2[BUFSIZ];
    FILE *fff;
    struct utsname uname_buf;
-
+ 
    uname(&uname_buf);
 
-   sprintf(dirname,"%s/%s",directory,uname_buf.release);
+   if (type==KERNEL_PERF_EVENT_RDPMC) {
+      sprintf(dirname,"%s/%s-rdpmc",directory,uname_buf.release);
+   } else { 
+      sprintf(dirname,"%s/%s",directory,uname_buf.release);
+   } 
    result=mkdir(dirname,0755);
    if (result<0) {
       if (errno==EEXIST) {
@@ -473,7 +477,16 @@ static int generate_results(char *directory, int type, int num) {
    if (fff==NULL) return -1;
    fprintf(fff,"### System info\n");
    fprintf(fff,"Kernel:    %s %s\n",uname_buf.sysname,uname_buf.release);
-   fprintf(fff,"Interface: perf_event\n");
+   fprintf(fff,"Interface: ");
+   switch(type) {
+      case KERNEL_PERF_EVENT: printf("perf_event");
+                       break;
+      case KERNEL_PERF_EVENT_RDPMC: printf("perf_event_rdpmc");
+                       break;
+      default: printf("unknown");
+             break;
+   }
+   fprintf(fff,"\n");
    fprintf(fff,"Hostname:  %s\n",uname_buf.nodename);
    fprintf(fff,"Family:    %d\n",cpuinfo.family);
    fprintf(fff,"Model:     %d\n",cpuinfo.model);
