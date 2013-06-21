@@ -28,6 +28,8 @@ struct cpuinfo_t {
   int stepping;
   char modelname[BUFSIZ];
   char generic_modelname[BUFSIZ];
+  double frequency;
+  double uptime;
 } cpuinfo;
 
 struct event_type_t {
@@ -349,6 +351,10 @@ static int get_cpuinfo(void) {
       sscanf(temp_string,"%*s%*s%*s%d",&cpuinfo.family);
     }
 
+    if (!strncmp(temp_string,"cpu MHz",7)) {
+	sscanf(temp_string,"%*s%*s%*s%lf",&cpuinfo.frequency);
+    }
+
     if (!strncmp(temp_string,"model",5)) {
       sscanf(temp_string,"%*s%s",temp_string2);
       if (temp_string2[0]==':') {
@@ -376,6 +382,12 @@ static int get_cpuinfo(void) {
   printf("Generic:   %s\n",cpuinfo.generic_modelname);
 
   fclose(fff);
+
+  fff=fopen("/proc/uptime","r");
+  if (fff!=NULL) {
+     fscanf(fff,"%lf",&cpuinfo.uptime);
+     fclose(fff);
+  }
 
   return 0;
 }
@@ -504,6 +516,8 @@ static int generate_results(char *directory, int type, int num) {
    fprintf(fff,"Family:    %d\n",cpuinfo.family);
    fprintf(fff,"Model:     %d\n",cpuinfo.model);
    fprintf(fff,"Stepping:  %d\n",cpuinfo.stepping);
+   fprintf(fff,"Frequency: %lf\n",cpuinfo.frequency);
+   fprintf(fff,"Uptime:    %lf\n",cpuinfo.uptime);
    fprintf(fff,"Modelname: %s\n",cpuinfo.modelname);
    fprintf(fff,"Generic:   %s\n",cpuinfo.generic_modelname);
    for(i=0;i<num;i++) {
