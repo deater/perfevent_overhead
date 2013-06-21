@@ -2,6 +2,7 @@ CC	= gcc
 CC_R	= $(CC) -pthread
 CFLAGS	= -g -O2 -Wall -I..
 LFLAGS  = -lrt -lm
+LFLAGS_BORING =
 
 all:	\
 	generate_results \
@@ -28,7 +29,7 @@ convert_results.o:	convert_results.c
 ###
 
 generate_results:	generate_results.o
-	$(CC) $(LFLAGS) -o generate_results generate_results.o
+	$(CC) $(LFLAGS_BORING) -o generate_results generate_results.o
 
 generate_results.o:	generate_results.c
 	$(CC) $(CFLAGS) -c generate_results.c
@@ -93,7 +94,7 @@ rdtsc_null_perfctr.o:	rdtsc_null_perfctr.c ../perfctr/perfctr.h ../perfctr/libpe
 ####
 
 rdtsc_null_perfmon2:	rdtsc_null_perfmon2.o ../perfmon/libpfm.a
-	$(CC) $(LFLAGS) -o rdtsc_null_perfmon2 rdtsc_null_perfmon2.o ../perfmon/libpfm.a
+	$(CC) $(LFLAGS_BORING) -o rdtsc_null_perfmon2 rdtsc_null_perfmon2.o ../perfmon/libpfm.a
 
 rdtsc_null_perfmon2.o:	rdtsc_null_perfmon2.c
 	$(CC) $(CFLAGS) -I. -I./perfmon2 -c rdtsc_null_perfmon2.c
