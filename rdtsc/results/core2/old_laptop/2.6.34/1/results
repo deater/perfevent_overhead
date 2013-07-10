@@ -1,0 +1,8203 @@
+### System info
+Kernel:    Linux 2.6.34
+Interface: perf_event
+Hostname:  deater.macbook
+Family:    6
+Model:     23
+Stepping:  10
+Modelname: Intel(R) Core(TM)2 Duo CPU     T9900  @ 3.06GHz
+Generic:   core2
+generate_results version: 0.5
+Runs:      1024
+### Perf Results 0
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 172799 cycles
+start latency: 10361 cycles
+stop latency: 3887 cycles
+read latency: 4991 cycles
+53003c 2941
+### Perf Results 1
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 51221 cycles
+start latency: 5589 cycles
+stop latency: 2288 cycles
+read latency: 4347 cycles
+53003c 1768
+### Perf Results 2
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 51014 cycles
+start latency: 5554 cycles
+stop latency: 2323 cycles
+read latency: 4290 cycles
+53003c 1800
+### Perf Results 3
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86239 cycles
+start latency: 5543 cycles
+stop latency: 2151 cycles
+read latency: 4301 cycles
+53003c 1672
+### Perf Results 4
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86630 cycles
+start latency: 5566 cycles
+stop latency: 2288 cycles
+read latency: 4359 cycles
+53003c 1775
+### Perf Results 5
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50911 cycles
+start latency: 5497 cycles
+stop latency: 2185 cycles
+read latency: 4336 cycles
+53003c 1692
+### Perf Results 6
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86308 cycles
+start latency: 5577 cycles
+stop latency: 2243 cycles
+read latency: 4370 cycles
+53003c 1740
+### Perf Results 7
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86549 cycles
+start latency: 5577 cycles
+stop latency: 2197 cycles
+read latency: 4312 cycles
+53003c 1692
+### Perf Results 8
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 51440 cycles
+start latency: 5566 cycles
+stop latency: 2323 cycles
+read latency: 4324 cycles
+53003c 1683
+### Perf Results 9
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86158 cycles
+start latency: 5646 cycles
+stop latency: 2220 cycles
+read latency: 4324 cycles
+53003c 1730
+### Perf Results 10
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86089 cycles
+start latency: 5428 cycles
+stop latency: 2288 cycles
+read latency: 4474 cycles
+53003c 1674
+### Perf Results 11
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 51140 cycles
+start latency: 5577 cycles
+stop latency: 2197 cycles
+read latency: 4427 cycles
+53003c 1711
+### Perf Results 12
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50474 cycles
+start latency: 5405 cycles
+stop latency: 2277 cycles
+read latency: 4243 cycles
+53003c 1633
+### Perf Results 13
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5543 cycles
+stop latency: 2219 cycles
+read latency: 4313 cycles
+53003c 1736
+### Perf Results 14
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5463 cycles
+stop latency: 2357 cycles
+read latency: 4439 cycles
+53003c 1700
+### Perf Results 15
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50922 cycles
+start latency: 5382 cycles
+stop latency: 2185 cycles
+read latency: 4358 cycles
+53003c 1554
+### Perf Results 16
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5485 cycles
+stop latency: 2289 cycles
+read latency: 4312 cycles
+53003c 1668
+### Perf Results 17
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50335 cycles
+start latency: 5578 cycles
+stop latency: 2196 cycles
+read latency: 4336 cycles
+53003c 1711
+### Perf Results 18
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 159850 cycles
+start latency: 5819 cycles
+stop latency: 2289 cycles
+read latency: 4347 cycles
+53003c 1634
+### Perf Results 19
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85618 cycles
+start latency: 5463 cycles
+stop latency: 2231 cycles
+read latency: 4358 cycles
+53003c 1573
+### Perf Results 20
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85640 cycles
+start latency: 5463 cycles
+stop latency: 2323 cycles
+read latency: 4232 cycles
+53003c 1676
+### Perf Results 21
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50669 cycles
+start latency: 5589 cycles
+stop latency: 2231 cycles
+read latency: 4301 cycles
+53003c 1574
+### Perf Results 22
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85790 cycles
+start latency: 5428 cycles
+stop latency: 2323 cycles
+read latency: 4301 cycles
+53003c 1654
+### Perf Results 23
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50531 cycles
+start latency: 5589 cycles
+stop latency: 2265 cycles
+read latency: 4451 cycles
+53003c 1765
+### Perf Results 24
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 51186 cycles
+start latency: 5566 cycles
+stop latency: 2346 cycles
+read latency: 4358 cycles
+53003c 1684
+### Perf Results 25
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86894 cycles
+start latency: 5405 cycles
+stop latency: 2231 cycles
+read latency: 4382 cycles
+53003c 1586
+### Perf Results 26
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85951 cycles
+start latency: 5393 cycles
+stop latency: 2300 cycles
+read latency: 4313 cycles
+53003c 1661
+### Perf Results 27
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50600 cycles
+start latency: 5417 cycles
+stop latency: 2507 cycles
+read latency: 4370 cycles
+53003c 1853
+### Perf Results 28
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5509 cycles
+stop latency: 2288 cycles
+read latency: 4382 cycles
+53003c 1631
+### Perf Results 29
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50312 cycles
+start latency: 5463 cycles
+stop latency: 2254 cycles
+read latency: 4416 cycles
+53003c 1606
+### Perf Results 30
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50830 cycles
+start latency: 5474 cycles
+stop latency: 2300 cycles
+read latency: 4336 cycles
+53003c 1655
+### Perf Results 31
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5531 cycles
+stop latency: 2220 cycles
+read latency: 4393 cycles
+53003c 1722
+### Perf Results 32
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85997 cycles
+start latency: 5623 cycles
+stop latency: 2335 cycles
+read latency: 4301 cycles
+53003c 1834
+### Perf Results 33
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50796 cycles
+start latency: 5485 cycles
+stop latency: 2220 cycles
+read latency: 4312 cycles
+53003c 1735
+### Perf Results 34
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50427 cycles
+start latency: 5577 cycles
+stop latency: 2312 cycles
+read latency: 4289 cycles
+53003c 1807
+### Perf Results 35
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85870 cycles
+start latency: 5543 cycles
+stop latency: 2185 cycles
+read latency: 4335 cycles
+53003c 1700
+### Perf Results 36
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86227 cycles
+start latency: 5589 cycles
+stop latency: 2334 cycles
+read latency: 4301 cycles
+53003c 1693
+### Perf Results 37
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50819 cycles
+start latency: 5681 cycles
+stop latency: 2265 cycles
+read latency: 4359 cycles
+53003c 1768
+### Perf Results 38
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85871 cycles
+start latency: 5416 cycles
+stop latency: 2323 cycles
+read latency: 4589 cycles
+53003c 1658
+### Perf Results 39
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50358 cycles
+start latency: 5382 cycles
+stop latency: 2208 cycles
+read latency: 4393 cycles
+53003c 1557
+### Perf Results 40
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50313 cycles
+start latency: 5382 cycles
+stop latency: 2300 cycles
+read latency: 4290 cycles
+53003c 1657
+### Perf Results 41
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 86193 cycles
+start latency: 5336 cycles
+stop latency: 2162 cycles
+read latency: 4381 cycles
+53003c 1518
+### Perf Results 42
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50497 cycles
+start latency: 5348 cycles
+stop latency: 2277 cycles
+read latency: 4692 cycles
+53003c 1650
+### Perf Results 43
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50128 cycles
+start latency: 5577 cycles
+stop latency: 2162 cycles
+read latency: 4290 cycles
+53003c 1678
+### Perf Results 44
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5405 cycles
+stop latency: 2334 cycles
+read latency: 4474 cycles
+53003c 1698
+### Perf Results 45
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5555 cycles
+stop latency: 2231 cycles
+read latency: 4381 cycles
+53003c 1719
+### Perf Results 46
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5371 cycles
+stop latency: 2311 cycles
+read latency: 4382 cycles
+53003c 1656
+### Perf Results 47
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50244 cycles
+start latency: 5555 cycles
+stop latency: 2219 cycles
+read latency: 4290 cycles
+53003c 1724
+### Perf Results 48
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85871 cycles
+start latency: 5359 cycles
+stop latency: 2312 cycles
+read latency: 4347 cycles
+53003c 1679
+### Perf Results 49
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5359 cycles
+stop latency: 2380 cycles
+read latency: 4324 cycles
+53003c 1721
+### Perf Results 50
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 145555 cycles
+start latency: 5612 cycles
+stop latency: 2277 cycles
+read latency: 4324 cycles
+53003c 1615
+### Perf Results 51
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85847 cycles
+start latency: 5658 cycles
+stop latency: 2185 cycles
+read latency: 4485 cycles
+53003c 1710
+### Perf Results 52
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85917 cycles
+start latency: 5428 cycles
+stop latency: 2323 cycles
+read latency: 4289 cycles
+53003c 1667
+### Perf Results 53
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5554 cycles
+stop latency: 2266 cycles
+read latency: 4266 cycles
+53003c 1755
+### Perf Results 54
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85836 cycles
+start latency: 5543 cycles
+stop latency: 2300 cycles
+read latency: 4393 cycles
+53003c 1806
+### Perf Results 55
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5704 cycles
+stop latency: 2208 cycles
+read latency: 4381 cycles
+53003c 1725
+### Perf Results 56
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50612 cycles
+start latency: 5394 cycles
+stop latency: 2334 cycles
+read latency: 4255 cycles
+53003c 1670
+### Perf Results 57
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85951 cycles
+start latency: 5577 cycles
+stop latency: 2197 cycles
+read latency: 4416 cycles
+53003c 1703
+### Perf Results 58
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5382 cycles
+stop latency: 2369 cycles
+read latency: 4347 cycles
+53003c 1713
+### Perf Results 59
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5600 cycles
+stop latency: 2220 cycles
+read latency: 4324 cycles
+53003c 1728
+### Perf Results 60
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50451 cycles
+start latency: 5601 cycles
+stop latency: 2323 cycles
+read latency: 4324 cycles
+53003c 1814
+### Perf Results 61
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5509 cycles
+stop latency: 2231 cycles
+read latency: 4381 cycles
+53003c 1744
+### Perf Results 62
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50278 cycles
+start latency: 5336 cycles
+stop latency: 2335 cycles
+read latency: 4381 cycles
+53003c 1679
+### Perf Results 63
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5405 cycles
+stop latency: 2219 cycles
+read latency: 4336 cycles
+53003c 1578
+### Perf Results 64
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85893 cycles
+start latency: 5348 cycles
+stop latency: 2288 cycles
+read latency: 4290 cycles
+53003c 1643
+### Perf Results 65
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5566 cycles
+stop latency: 2242 cycles
+read latency: 4359 cycles
+53003c 1764
+### Perf Results 66
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5359 cycles
+stop latency: 2300 cycles
+read latency: 4359 cycles
+53003c 1662
+### Perf Results 67
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86066 cycles
+start latency: 5600 cycles
+stop latency: 2197 cycles
+read latency: 4335 cycles
+53003c 1706
+### Perf Results 68
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 86112 cycles
+start latency: 5417 cycles
+stop latency: 2277 cycles
+read latency: 4381 cycles
+53003c 1625
+### Perf Results 69
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50773 cycles
+start latency: 5394 cycles
+stop latency: 2185 cycles
+read latency: 4301 cycles
+53003c 1539
+### Perf Results 70
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85560 cycles
+start latency: 5313 cycles
+stop latency: 2300 cycles
+read latency: 4301 cycles
+53003c 1647
+### Perf Results 71
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5486 cycles
+stop latency: 2219 cycles
+read latency: 4290 cycles
+53003c 1730
+### Perf Results 72
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5382 cycles
+stop latency: 2311 cycles
+read latency: 4382 cycles
+53003c 1673
+### Perf Results 73
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86135 cycles
+start latency: 5693 cycles
+stop latency: 2265 cycles
+read latency: 4485 cycles
+53003c 1794
+### Perf Results 74
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85709 cycles
+start latency: 5486 cycles
+stop latency: 2323 cycles
+read latency: 4324 cycles
+53003c 1814
+### Perf Results 75
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50451 cycles
+start latency: 5601 cycles
+stop latency: 2219 cycles
+read latency: 4359 cycles
+53003c 1724
+### Perf Results 76
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5416 cycles
+stop latency: 2335 cycles
+read latency: 4312 cycles
+53003c 1705
+### Perf Results 77
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5543 cycles
+stop latency: 2219 cycles
+read latency: 4336 cycles
+53003c 1722
+### Perf Results 78
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50428 cycles
+start latency: 5428 cycles
+stop latency: 2323 cycles
+read latency: 4278 cycles
+53003c 1676
+### Perf Results 79
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50749 cycles
+start latency: 5566 cycles
+stop latency: 2220 cycles
+read latency: 4416 cycles
+53003c 1711
+### Perf Results 80
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85951 cycles
+start latency: 5474 cycles
+stop latency: 2266 cycles
+read latency: 4577 cycles
+53003c 1612
+### Perf Results 81
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5532 cycles
+stop latency: 2242 cycles
+read latency: 4370 cycles
+53003c 1750
+### Perf Results 82
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50588 cycles
+start latency: 5371 cycles
+stop latency: 2553 cycles
+read latency: 4312 cycles
+53003c 1902
+### Perf Results 83
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85802 cycles
+start latency: 5382 cycles
+stop latency: 2219 cycles
+read latency: 4359 cycles
+53003c 1556
+### Perf Results 84
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5359 cycles
+stop latency: 2277 cycles
+read latency: 4347 cycles
+53003c 1648
+### Perf Results 85
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50336 cycles
+start latency: 5623 cycles
+stop latency: 2231 cycles
+read latency: 4347 cycles
+53003c 1726
+### Perf Results 86
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85710 cycles
+start latency: 5739 cycles
+stop latency: 2334 cycles
+read latency: 4347 cycles
+53003c 1661
+### Perf Results 87
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50450 cycles
+start latency: 5647 cycles
+stop latency: 2242 cycles
+read latency: 4347 cycles
+53003c 1749
+### Perf Results 88
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5566 cycles
+stop latency: 2288 cycles
+read latency: 4313 cycles
+53003c 1788
+### Perf Results 89
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85974 cycles
+start latency: 5531 cycles
+stop latency: 2220 cycles
+read latency: 4393 cycles
+53003c 1724
+### Perf Results 90
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85997 cycles
+start latency: 5348 cycles
+stop latency: 2323 cycles
+read latency: 4404 cycles
+53003c 1667
+### Perf Results 91
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50059 cycles
+start latency: 5543 cycles
+stop latency: 2173 cycles
+read latency: 4485 cycles
+53003c 1678
+### Perf Results 92
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86043 cycles
+start latency: 5531 cycles
+stop latency: 2323 cycles
+read latency: 4301 cycles
+53003c 1640
+### Perf Results 93
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85986 cycles
+start latency: 5555 cycles
+stop latency: 2208 cycles
+read latency: 4255 cycles
+53003c 1707
+### Perf Results 94
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86480 cycles
+start latency: 5497 cycles
+stop latency: 2289 cycles
+read latency: 4623 cycles
+53003c 1615
+### Perf Results 95
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85836 cycles
+start latency: 5600 cycles
+stop latency: 2231 cycles
+read latency: 4244 cycles
+53003c 1739
+### Perf Results 96
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85779 cycles
+start latency: 5658 cycles
+stop latency: 2266 cycles
+read latency: 4358 cycles
+53003c 1773
+### Perf Results 97
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5463 cycles
+stop latency: 2288 cycles
+read latency: 4336 cycles
+53003c 1638
+### Perf Results 98
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85617 cycles
+start latency: 5578 cycles
+stop latency: 2277 cycles
+read latency: 4335 cycles
+53003c 1796
+### Perf Results 99
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50255 cycles
+start latency: 5612 cycles
+stop latency: 2219 cycles
+read latency: 4462 cycles
+53003c 1740
+### Perf Results 100
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50922 cycles
+start latency: 5359 cycles
+stop latency: 2300 cycles
+read latency: 4370 cycles
+53003c 1675
+### Perf Results 101
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86135 cycles
+start latency: 5819 cycles
+stop latency: 2242 cycles
+read latency: 4347 cycles
+53003c 1739
+### Perf Results 102
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5440 cycles
+stop latency: 2311 cycles
+read latency: 4278 cycles
+53003c 1683
+### Perf Results 103
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50738 cycles
+start latency: 5704 cycles
+stop latency: 2277 cycles
+read latency: 4508 cycles
+53003c 1801
+### Perf Results 104
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5347 cycles
+stop latency: 2289 cycles
+read latency: 4358 cycles
+53003c 1639
+### Perf Results 105
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5566 cycles
+stop latency: 2208 cycles
+read latency: 4462 cycles
+53003c 1701
+### Perf Results 106
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50313 cycles
+start latency: 5508 cycles
+stop latency: 2335 cycles
+read latency: 4301 cycles
+53003c 1691
+### Perf Results 107
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50266 cycles
+start latency: 5382 cycles
+stop latency: 2173 cycles
+read latency: 4347 cycles
+53003c 1536
+### Perf Results 108
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85940 cycles
+start latency: 5405 cycles
+stop latency: 2312 cycles
+read latency: 4289 cycles
+53003c 1667
+### Perf Results 109
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50358 cycles
+start latency: 5601 cycles
+stop latency: 2208 cycles
+read latency: 4347 cycles
+53003c 1710
+### Perf Results 110
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5359 cycles
+stop latency: 2346 cycles
+read latency: 4370 cycles
+53003c 1668
+### Perf Results 111
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85548 cycles
+start latency: 5520 cycles
+stop latency: 2254 cycles
+read latency: 4324 cycles
+53003c 1758
+### Perf Results 112
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85824 cycles
+start latency: 5417 cycles
+stop latency: 2334 cycles
+read latency: 4313 cycles
+53003c 1666
+### Perf Results 113
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5405 cycles
+stop latency: 2219 cycles
+read latency: 4393 cycles
+53003c 1566
+### Perf Results 114
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85675 cycles
+start latency: 5393 cycles
+stop latency: 2323 cycles
+read latency: 4301 cycles
+53003c 1674
+### Perf Results 115
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50669 cycles
+start latency: 5577 cycles
+stop latency: 2231 cycles
+read latency: 4336 cycles
+53003c 1735
+### Perf Results 116
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5439 cycles
+stop latency: 2335 cycles
+read latency: 4312 cycles
+53003c 1664
+### Perf Results 117
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86043 cycles
+start latency: 5554 cycles
+stop latency: 2162 cycles
+read latency: 4278 cycles
+53003c 1673
+### Perf Results 118
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50715 cycles
+start latency: 5439 cycles
+stop latency: 2346 cycles
+read latency: 4416 cycles
+53003c 1689
+### Perf Results 119
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50543 cycles
+start latency: 5497 cycles
+stop latency: 2231 cycles
+read latency: 4347 cycles
+53003c 1578
+### Perf Results 120
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50681 cycles
+start latency: 5474 cycles
+stop latency: 2289 cycles
+read latency: 4358 cycles
+53003c 1654
+### Perf Results 121
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5600 cycles
+stop latency: 2185 cycles
+read latency: 4520 cycles
+53003c 1705
+### Perf Results 122
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50267 cycles
+start latency: 5428 cycles
+stop latency: 2311 cycles
+read latency: 4336 cycles
+53003c 1687
+### Perf Results 123
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50267 cycles
+start latency: 5566 cycles
+stop latency: 2266 cycles
+read latency: 4393 cycles
+53003c 1767
+### Perf Results 124
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85813 cycles
+start latency: 5439 cycles
+stop latency: 2300 cycles
+read latency: 4290 cycles
+53003c 1661
+### Perf Results 125
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50634 cycles
+start latency: 5566 cycles
+stop latency: 2208 cycles
+read latency: 4267 cycles
+53003c 1718
+### Perf Results 126
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50600 cycles
+start latency: 5440 cycles
+stop latency: 2311 cycles
+read latency: 4255 cycles
+53003c 1671
+### Perf Results 127
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85687 cycles
+start latency: 5532 cycles
+stop latency: 2231 cycles
+read latency: 4335 cycles
+53003c 1717
+### Perf Results 128
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86124 cycles
+start latency: 5417 cycles
+stop latency: 2277 cycles
+read latency: 4358 cycles
+53003c 1631
+### Perf Results 129
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50382 cycles
+start latency: 5543 cycles
+stop latency: 2242 cycles
+read latency: 4370 cycles
+53003c 1745
+### Perf Results 130
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 46219 cycles
+start latency: 5486 cycles
+stop latency: 2300 cycles
+read latency: 4289 cycles
+53003c 1655
+### Perf Results 131
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5532 cycles
+stop latency: 2208 cycles
+read latency: 4266 cycles
+53003c 1725
+### Perf Results 132
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5554 cycles
+stop latency: 2312 cycles
+read latency: 4324 cycles
+53003c 1809
+### Perf Results 133
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86078 cycles
+start latency: 5600 cycles
+stop latency: 2208 cycles
+read latency: 4313 cycles
+53003c 1732
+### Perf Results 134
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86250 cycles
+start latency: 5416 cycles
+stop latency: 2277 cycles
+read latency: 4221 cycles
+53003c 1626
+### Perf Results 135
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5554 cycles
+stop latency: 2243 cycles
+read latency: 4600 cycles
+53003c 1748
+### Perf Results 136
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5382 cycles
+stop latency: 2346 cycles
+read latency: 4427 cycles
+53003c 1687
+### Perf Results 137
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50715 cycles
+start latency: 5555 cycles
+stop latency: 2219 cycles
+read latency: 4393 cycles
+53003c 1723
+### Perf Results 138
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50543 cycles
+start latency: 5589 cycles
+stop latency: 2323 cycles
+read latency: 4393 cycles
+53003c 1817
+### Perf Results 139
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5554 cycles
+stop latency: 2243 cycles
+read latency: 4232 cycles
+53003c 1733
+### Perf Results 140
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 105041 cycles
+start latency: 5773 cycles
+stop latency: 2335 cycles
+read latency: 4439 cycles
+53003c 1697
+### Perf Results 141
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5486 cycles
+stop latency: 2208 cycles
+read latency: 4347 cycles
+53003c 1701
+### Perf Results 142
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5612 cycles
+stop latency: 2380 cycles
+read latency: 4301 cycles
+53003c 1876
+### Perf Results 143
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85824 cycles
+start latency: 5393 cycles
+stop latency: 2243 cycles
+read latency: 4370 cycles
+53003c 1585
+### Perf Results 144
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86100 cycles
+start latency: 5393 cycles
+stop latency: 2289 cycles
+read latency: 4370 cycles
+53003c 1636
+### Perf Results 145
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50140 cycles
+start latency: 5555 cycles
+stop latency: 2173 cycles
+read latency: 4428 cycles
+53003c 1687
+### Perf Results 146
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85870 cycles
+start latency: 5543 cycles
+stop latency: 2346 cycles
+read latency: 4312 cycles
+53003c 1834
+### Perf Results 147
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 111366 cycles
+start latency: 5727 cycles
+stop latency: 2208 cycles
+read latency: 4451 cycles
+53003c 1557
+### Perf Results 148
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50566 cycles
+start latency: 5405 cycles
+stop latency: 2334 cycles
+read latency: 4221 cycles
+53003c 1680
+### Perf Results 149
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85790 cycles
+start latency: 5635 cycles
+stop latency: 2231 cycles
+read latency: 4301 cycles
+53003c 1755
+### Perf Results 150
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85779 cycles
+start latency: 5543 cycles
+stop latency: 2277 cycles
+read latency: 4324 cycles
+53003c 1772
+### Perf Results 151
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5382 cycles
+stop latency: 2231 cycles
+read latency: 4359 cycles
+53003c 1577
+### Perf Results 152
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50496 cycles
+start latency: 5428 cycles
+stop latency: 2312 cycles
+read latency: 4278 cycles
+53003c 1663
+### Perf Results 153
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5543 cycles
+stop latency: 2208 cycles
+read latency: 4427 cycles
+53003c 1695
+### Perf Results 154
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50451 cycles
+start latency: 5451 cycles
+stop latency: 2346 cycles
+read latency: 4393 cycles
+53003c 1686
+### Perf Results 155
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50922 cycles
+start latency: 5474 cycles
+stop latency: 2208 cycles
+read latency: 4347 cycles
+53003c 1564
+### Perf Results 156
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85997 cycles
+start latency: 5439 cycles
+stop latency: 2300 cycles
+read latency: 4324 cycles
+53003c 1672
+### Perf Results 157
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 75808 cycles
+start latency: 5911 cycles
+stop latency: 2231 cycles
+read latency: 4336 cycles
+53003c 1747
+### Perf Results 158
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50635 cycles
+start latency: 5589 cycles
+stop latency: 2300 cycles
+read latency: 4290 cycles
+53003c 1805
+### Perf Results 159
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85825 cycles
+start latency: 5509 cycles
+stop latency: 2196 cycles
+read latency: 4405 cycles
+53003c 1706
+### Perf Results 160
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 86307 cycles
+start latency: 5486 cycles
+stop latency: 2357 cycles
+read latency: 4359 cycles
+53003c 1705
+### Perf Results 161
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5359 cycles
+stop latency: 2208 cycles
+read latency: 4266 cycles
+53003c 1570
+### Perf Results 162
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85894 cycles
+start latency: 5382 cycles
+stop latency: 2300 cycles
+read latency: 4347 cycles
+53003c 1656
+### Perf Results 163
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85894 cycles
+start latency: 5508 cycles
+stop latency: 2254 cycles
+read latency: 4301 cycles
+53003c 1732
+### Perf Results 164
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5394 cycles
+stop latency: 2300 cycles
+read latency: 4289 cycles
+53003c 1654
+### Perf Results 165
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85802 cycles
+start latency: 5612 cycles
+stop latency: 2185 cycles
+read latency: 4427 cycles
+53003c 1699
+### Perf Results 166
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5543 cycles
+stop latency: 2323 cycles
+read latency: 4381 cycles
+53003c 1817
+### Perf Results 167
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50692 cycles
+start latency: 5555 cycles
+stop latency: 2185 cycles
+read latency: 4416 cycles
+53003c 1694
+### Perf Results 168
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50336 cycles
+start latency: 5394 cycles
+stop latency: 2277 cycles
+read latency: 4289 cycles
+53003c 1651
+### Perf Results 169
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50267 cycles
+start latency: 5555 cycles
+stop latency: 2242 cycles
+read latency: 4232 cycles
+53003c 1744
+### Perf Results 170
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5382 cycles
+stop latency: 2265 cycles
+read latency: 4428 cycles
+53003c 1626
+### Perf Results 171
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5658 cycles
+stop latency: 2208 cycles
+read latency: 4324 cycles
+53003c 1695
+### Perf Results 172
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85801 cycles
+start latency: 5554 cycles
+stop latency: 2277 cycles
+read latency: 4370 cycles
+53003c 1789
+### Perf Results 173
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50290 cycles
+start latency: 5624 cycles
+stop latency: 2173 cycles
+read latency: 4451 cycles
+53003c 1685
+### Perf Results 174
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50497 cycles
+start latency: 5439 cycles
+stop latency: 2335 cycles
+read latency: 4209 cycles
+53003c 1692
+### Perf Results 175
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86008 cycles
+start latency: 5485 cycles
+stop latency: 2208 cycles
+read latency: 4359 cycles
+53003c 1713
+### Perf Results 176
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85790 cycles
+start latency: 5554 cycles
+stop latency: 2335 cycles
+read latency: 4324 cycles
+53003c 1838
+### Perf Results 177
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50312 cycles
+start latency: 5566 cycles
+stop latency: 2197 cycles
+read latency: 4301 cycles
+53003c 1696
+### Perf Results 178
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86296 cycles
+start latency: 5647 cycles
+stop latency: 2311 cycles
+read latency: 4405 cycles
+53003c 1805
+### Perf Results 179
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5555 cycles
+stop latency: 2208 cycles
+read latency: 4255 cycles
+53003c 1706
+### Perf Results 180
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5612 cycles
+stop latency: 2265 cycles
+read latency: 4347 cycles
+53003c 1763
+### Perf Results 181
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86123 cycles
+start latency: 5589 cycles
+stop latency: 2208 cycles
+read latency: 4243 cycles
+53003c 1721
+### Perf Results 182
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 102224 cycles
+start latency: 5693 cycles
+stop latency: 2277 cycles
+read latency: 4416 cycles
+53003c 1628
+### Perf Results 183
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5589 cycles
+stop latency: 2208 cycles
+read latency: 4289 cycles
+53003c 1719
+### Perf Results 184
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5589 cycles
+stop latency: 2277 cycles
+read latency: 4370 cycles
+53003c 1775
+### Perf Results 185
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5520 cycles
+stop latency: 2242 cycles
+read latency: 4278 cycles
+53003c 1721
+### Perf Results 186
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85825 cycles
+start latency: 5474 cycles
+stop latency: 2311 cycles
+read latency: 4221 cycles
+53003c 1671
+### Perf Results 187
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50680 cycles
+start latency: 5566 cycles
+stop latency: 2197 cycles
+read latency: 4370 cycles
+53003c 1697
+### Perf Results 188
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 98233 cycles
+start latency: 5727 cycles
+stop latency: 2335 cycles
+read latency: 4358 cycles
+53003c 1691
+### Perf Results 189
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50519 cycles
+start latency: 5543 cycles
+stop latency: 2254 cycles
+read latency: 4301 cycles
+53003c 1748
+### Perf Results 190
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50197 cycles
+start latency: 5612 cycles
+stop latency: 2277 cycles
+read latency: 4289 cycles
+53003c 1761
+### Perf Results 191
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85974 cycles
+start latency: 5623 cycles
+stop latency: 2174 cycles
+read latency: 4370 cycles
+53003c 1689
+### Perf Results 192
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85813 cycles
+start latency: 5325 cycles
+stop latency: 2288 cycles
+read latency: 4313 cycles
+53003c 1659
+### Perf Results 193
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50117 cycles
+start latency: 5577 cycles
+stop latency: 2220 cycles
+read latency: 4358 cycles
+53003c 1717
+### Perf Results 194
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 86216 cycles
+start latency: 5428 cycles
+stop latency: 2300 cycles
+read latency: 4301 cycles
+53003c 1650
+### Perf Results 195
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86354 cycles
+start latency: 5520 cycles
+stop latency: 2208 cycles
+read latency: 4324 cycles
+53003c 1550
+### Perf Results 196
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50635 cycles
+start latency: 5509 cycles
+stop latency: 2288 cycles
+read latency: 4359 cycles
+53003c 1796
+### Perf Results 197
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86216 cycles
+start latency: 5646 cycles
+stop latency: 2254 cycles
+read latency: 4324 cycles
+53003c 1766
+### Perf Results 198
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85974 cycles
+start latency: 5520 cycles
+stop latency: 2289 cycles
+read latency: 4312 cycles
+53003c 1774
+### Perf Results 199
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50151 cycles
+start latency: 5612 cycles
+stop latency: 2197 cycles
+read latency: 4232 cycles
+53003c 1712
+### Perf Results 200
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50692 cycles
+start latency: 5348 cycles
+stop latency: 2277 cycles
+read latency: 4289 cycles
+53003c 1646
+### Perf Results 201
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85870 cycles
+start latency: 5577 cycles
+stop latency: 2151 cycles
+read latency: 4370 cycles
+53003c 1673
+### Perf Results 202
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86147 cycles
+start latency: 5382 cycles
+stop latency: 2289 cycles
+read latency: 4266 cycles
+53003c 1648
+### Perf Results 203
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 49852 cycles
+start latency: 5370 cycles
+stop latency: 2220 cycles
+read latency: 4278 cycles
+53003c 1563
+### Perf Results 204
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85997 cycles
+start latency: 5463 cycles
+stop latency: 2334 cycles
+read latency: 4313 cycles
+53003c 1686
+### Perf Results 205
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50255 cycles
+start latency: 5601 cycles
+stop latency: 2208 cycles
+read latency: 4301 cycles
+53003c 1724
+### Perf Results 206
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 51049 cycles
+start latency: 5635 cycles
+stop latency: 2254 cycles
+read latency: 4347 cycles
+53003c 1750
+### Perf Results 207
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85675 cycles
+start latency: 5543 cycles
+stop latency: 2196 cycles
+read latency: 4117 cycles
+53003c 1710
+### Perf Results 208
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85836 cycles
+start latency: 5428 cycles
+stop latency: 2300 cycles
+read latency: 4301 cycles
+53003c 1642
+### Perf Results 209
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50336 cycles
+start latency: 5635 cycles
+stop latency: 2231 cycles
+read latency: 24299 cycles
+53003c 1747
+### Perf Results 210
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 46989 cycles
+start latency: 5509 cycles
+stop latency: 2311 cycles
+read latency: 4439 cycles
+53003c 1665
+### Perf Results 211
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85974 cycles
+start latency: 5612 cycles
+stop latency: 2266 cycles
+read latency: 4232 cycles
+53003c 1762
+### Perf Results 212
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50278 cycles
+start latency: 5578 cycles
+stop latency: 2300 cycles
+read latency: 4312 cycles
+53003c 1800
+### Perf Results 213
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85997 cycles
+start latency: 5532 cycles
+stop latency: 2231 cycles
+read latency: 4404 cycles
+53003c 1739
+### Perf Results 214
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 86009 cycles
+start latency: 5417 cycles
+stop latency: 2300 cycles
+read latency: 4577 cycles
+53003c 1650
+### Perf Results 215
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50473 cycles
+start latency: 5382 cycles
+stop latency: 2266 cycles
+read latency: 4255 cycles
+53003c 1605
+### Perf Results 216
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50657 cycles
+start latency: 5439 cycles
+stop latency: 2335 cycles
+read latency: 4335 cycles
+53003c 1682
+### Perf Results 217
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5520 cycles
+stop latency: 2266 cycles
+read latency: 4393 cycles
+53003c 1756
+### Perf Results 218
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5440 cycles
+stop latency: 2265 cycles
+read latency: 4324 cycles
+53003c 1639
+### Perf Results 219
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50497 cycles
+start latency: 5520 cycles
+stop latency: 2197 cycles
+read latency: 4370 cycles
+53003c 1710
+### Perf Results 220
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85974 cycles
+start latency: 5531 cycles
+stop latency: 2323 cycles
+read latency: 4336 cycles
+53003c 1785
+### Perf Results 221
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50681 cycles
+start latency: 5692 cycles
+stop latency: 2220 cycles
+read latency: 4335 cycles
+53003c 1738
+### Perf Results 222
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5520 cycles
+stop latency: 2335 cycles
+read latency: 4404 cycles
+53003c 1692
+### Perf Results 223
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85813 cycles
+start latency: 5336 cycles
+stop latency: 2219 cycles
+read latency: 4267 cycles
+53003c 1561
+### Perf Results 224
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85652 cycles
+start latency: 5463 cycles
+stop latency: 2311 cycles
+read latency: 4347 cycles
+53003c 1818
+### Perf Results 225
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50761 cycles
+start latency: 5577 cycles
+stop latency: 2185 cycles
+read latency: 4313 cycles
+53003c 1685
+### Perf Results 226
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 82467 cycles
+start latency: 5531 cycles
+stop latency: 2289 cycles
+read latency: 4335 cycles
+53003c 1634
+### Perf Results 227
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50474 cycles
+start latency: 5554 cycles
+stop latency: 2220 cycles
+read latency: 4347 cycles
+53003c 1727
+### Perf Results 228
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5382 cycles
+stop latency: 2323 cycles
+read latency: 4174 cycles
+53003c 1685
+### Perf Results 229
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86123 cycles
+start latency: 5485 cycles
+stop latency: 2185 cycles
+read latency: 4485 cycles
+53003c 1696
+### Perf Results 230
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 95657 cycles
+start latency: 5819 cycles
+stop latency: 2334 cycles
+read latency: 4462 cycles
+53003c 1703
+### Perf Results 231
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5670 cycles
+stop latency: 2196 cycles
+read latency: 4313 cycles
+53003c 1707
+### Perf Results 232
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5624 cycles
+stop latency: 2288 cycles
+read latency: 4278 cycles
+53003c 1781
+### Perf Results 233
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5394 cycles
+stop latency: 2231 cycles
+read latency: 4335 cycles
+53003c 1583
+### Perf Results 234
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50474 cycles
+start latency: 5474 cycles
+stop latency: 2346 cycles
+read latency: 4381 cycles
+53003c 1682
+### Perf Results 235
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5359 cycles
+stop latency: 2208 cycles
+read latency: 4405 cycles
+53003c 1560
+### Perf Results 236
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85893 cycles
+start latency: 5336 cycles
+stop latency: 2289 cycles
+read latency: 4278 cycles
+53003c 1652
+### Perf Results 237
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50554 cycles
+start latency: 5554 cycles
+stop latency: 2220 cycles
+read latency: 4278 cycles
+53003c 1725
+### Perf Results 238
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50853 cycles
+start latency: 5417 cycles
+stop latency: 2311 cycles
+read latency: 4623 cycles
+53003c 1654
+### Perf Results 239
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85594 cycles
+start latency: 5589 cycles
+stop latency: 2220 cycles
+read latency: 4324 cycles
+53003c 1723
+### Perf Results 240
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5566 cycles
+stop latency: 2323 cycles
+read latency: 4266 cycles
+53003c 1801
+### Perf Results 241
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50382 cycles
+start latency: 5647 cycles
+stop latency: 2231 cycles
+read latency: 4427 cycles
+53003c 1714
+### Perf Results 242
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85698 cycles
+start latency: 5405 cycles
+stop latency: 2300 cycles
+read latency: 4289 cycles
+53003c 1653
+### Perf Results 243
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50267 cycles
+start latency: 5658 cycles
+stop latency: 2219 cycles
+read latency: 4359 cycles
+53003c 1736
+### Perf Results 244
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50094 cycles
+start latency: 5371 cycles
+stop latency: 2288 cycles
+read latency: 4370 cycles
+53003c 1636
+### Perf Results 245
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 86031 cycles
+start latency: 5509 cycles
+stop latency: 2219 cycles
+read latency: 4370 cycles
+53003c 1723
+### Perf Results 246
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50336 cycles
+start latency: 5669 cycles
+stop latency: 2300 cycles
+read latency: 4324 cycles
+53003c 1791
+### Perf Results 247
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5554 cycles
+stop latency: 2174 cycles
+read latency: 4393 cycles
+53003c 1681
+### Perf Results 248
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 87159 cycles
+start latency: 5761 cycles
+stop latency: 2668 cycles
+read latency: 4485 cycles
+53003c 2104
+### Perf Results 249
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86238 cycles
+start latency: 5555 cycles
+stop latency: 2196 cycles
+read latency: 4393 cycles
+53003c 1691
+### Perf Results 250
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5589 cycles
+stop latency: 2346 cycles
+read latency: 4381 cycles
+53003c 1807
+### Perf Results 251
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5624 cycles
+stop latency: 2242 cycles
+read latency: 4359 cycles
+53003c 1746
+### Perf Results 252
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 92207 cycles
+start latency: 5922 cycles
+stop latency: 2323 cycles
+read latency: 4359 cycles
+53003c 1837
+### Perf Results 253
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50358 cycles
+start latency: 5624 cycles
+stop latency: 2219 cycles
+read latency: 4255 cycles
+53003c 1734
+### Perf Results 254
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50474 cycles
+start latency: 5405 cycles
+stop latency: 2311 cycles
+read latency: 4209 cycles
+53003c 1635
+### Perf Results 255
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50140 cycles
+start latency: 5646 cycles
+stop latency: 2496 cycles
+read latency: 4496 cycles
+53003c 2014
+### Perf Results 256
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5601 cycles
+stop latency: 2300 cycles
+read latency: 4370 cycles
+53003c 1777
+### Perf Results 257
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50611 cycles
+start latency: 5589 cycles
+stop latency: 2231 cycles
+read latency: 4439 cycles
+53003c 1728
+### Perf Results 258
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85641 cycles
+start latency: 5439 cycles
+stop latency: 2289 cycles
+read latency: 4278 cycles
+53003c 1662
+### Perf Results 259
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50405 cycles
+start latency: 5405 cycles
+stop latency: 2231 cycles
+read latency: 4301 cycles
+53003c 1582
+### Perf Results 260
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50382 cycles
+start latency: 5578 cycles
+stop latency: 2288 cycles
+read latency: 4313 cycles
+53003c 1777
+### Perf Results 261
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86158 cycles
+start latency: 5382 cycles
+stop latency: 2185 cycles
+read latency: 4359 cycles
+53003c 1525
+### Perf Results 262
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50336 cycles
+start latency: 5474 cycles
+stop latency: 2346 cycles
+read latency: 4405 cycles
+53003c 1692
+### Perf Results 263
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5623 cycles
+stop latency: 2220 cycles
+read latency: 4324 cycles
+53003c 1715
+### Perf Results 264
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50358 cycles
+start latency: 5520 cycles
+stop latency: 2335 cycles
+read latency: 4370 cycles
+53003c 1821
+### Perf Results 265
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50106 cycles
+start latency: 5566 cycles
+stop latency: 2254 cycles
+read latency: 4312 cycles
+53003c 1749
+### Perf Results 266
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50554 cycles
+start latency: 5451 cycles
+stop latency: 2323 cycles
+read latency: 4232 cycles
+53003c 1676
+### Perf Results 267
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5635 cycles
+stop latency: 2254 cycles
+read latency: 4313 cycles
+53003c 1754
+### Perf Results 268
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85824 cycles
+start latency: 5647 cycles
+stop latency: 2323 cycles
+read latency: 4347 cycles
+53003c 1814
+### Perf Results 269
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50589 cycles
+start latency: 5370 cycles
+stop latency: 2185 cycles
+read latency: 4405 cycles
+53003c 1523
+### Perf Results 270
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5508 cycles
+stop latency: 2289 cycles
+read latency: 4209 cycles
+53003c 1791
+### Perf Results 271
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85755 cycles
+start latency: 5439 cycles
+stop latency: 2208 cycles
+read latency: 4267 cycles
+53003c 1717
+### Perf Results 272
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85755 cycles
+start latency: 5382 cycles
+stop latency: 2254 cycles
+read latency: 4335 cycles
+53003c 1611
+### Perf Results 273
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50267 cycles
+start latency: 5646 cycles
+stop latency: 2220 cycles
+read latency: 4439 cycles
+53003c 1704
+### Perf Results 274
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5635 cycles
+stop latency: 2289 cycles
+read latency: 4358 cycles
+53003c 1654
+### Perf Results 275
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86020 cycles
+start latency: 5405 cycles
+stop latency: 2242 cycles
+read latency: 4313 cycles
+53003c 1579
+### Perf Results 276
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50542 cycles
+start latency: 5382 cycles
+stop latency: 2346 cycles
+read latency: 4312 cycles
+53003c 1715
+### Perf Results 277
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5566 cycles
+stop latency: 2231 cycles
+read latency: 4255 cycles
+53003c 1745
+### Perf Results 278
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85974 cycles
+start latency: 5612 cycles
+stop latency: 2335 cycles
+read latency: 4358 cycles
+53003c 1835
+### Perf Results 279
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5623 cycles
+stop latency: 2231 cycles
+read latency: 4416 cycles
+53003c 1739
+### Perf Results 280
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50658 cycles
+start latency: 5428 cycles
+stop latency: 2346 cycles
+read latency: 4244 cycles
+53003c 1698
+### Perf Results 281
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50474 cycles
+start latency: 5555 cycles
+stop latency: 2219 cycles
+read latency: 4393 cycles
+53003c 1724
+### Perf Results 282
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5497 cycles
+stop latency: 2335 cycles
+read latency: 4266 cycles
+53003c 1690
+### Perf Results 283
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5578 cycles
+stop latency: 2277 cycles
+read latency: 4439 cycles
+53003c 1784
+### Perf Results 284
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85962 cycles
+start latency: 5394 cycles
+stop latency: 2334 cycles
+read latency: 4267 cycles
+53003c 1696
+### Perf Results 285
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50611 cycles
+start latency: 5405 cycles
+stop latency: 2242 cycles
+read latency: 4278 cycles
+53003c 1579
+### Perf Results 286
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50542 cycles
+start latency: 5416 cycles
+stop latency: 2254 cycles
+read latency: 4267 cycles
+53003c 1619
+### Perf Results 287
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85548 cycles
+start latency: 5520 cycles
+stop latency: 2197 cycles
+read latency: 4381 cycles
+53003c 1700
+### Perf Results 288
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85824 cycles
+start latency: 5566 cycles
+stop latency: 2323 cycles
+read latency: 4267 cycles
+53003c 1808
+### Perf Results 289
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50405 cycles
+start latency: 5635 cycles
+stop latency: 2242 cycles
+read latency: 4370 cycles
+53003c 1740
+### Perf Results 290
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 81052 cycles
+start latency: 5589 cycles
+stop latency: 2311 cycles
+read latency: 4393 cycles
+53003c 1669
+### Perf Results 291
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 86147 cycles
+start latency: 5393 cycles
+stop latency: 2197 cycles
+read latency: 4312 cycles
+53003c 1551
+### Perf Results 292
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50876 cycles
+start latency: 5370 cycles
+stop latency: 2289 cycles
+read latency: 4289 cycles
+53003c 1636
+### Perf Results 293
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85963 cycles
+start latency: 5532 cycles
+stop latency: 2242 cycles
+read latency: 4439 cycles
+53003c 1724
+### Perf Results 294
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85560 cycles
+start latency: 5532 cycles
+stop latency: 2288 cycles
+read latency: 4221 cycles
+53003c 1788
+### Perf Results 295
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50266 cycles
+start latency: 5428 cycles
+stop latency: 2196 cycles
+read latency: 4359 cycles
+53003c 1543
+### Perf Results 296
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50497 cycles
+start latency: 5462 cycles
+stop latency: 2312 cycles
+read latency: 4312 cycles
+53003c 1656
+### Perf Results 297
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5578 cycles
+stop latency: 2219 cycles
+read latency: 4370 cycles
+53003c 1733
+### Perf Results 298
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50255 cycles
+start latency: 5670 cycles
+stop latency: 2346 cycles
+read latency: 4427 cycles
+53003c 1829
+### Perf Results 299
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5578 cycles
+stop latency: 2185 cycles
+read latency: 4358 cycles
+53003c 1692
+### Perf Results 300
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85882 cycles
+start latency: 5336 cycles
+stop latency: 2300 cycles
+read latency: 4244 cycles
+53003c 1668
+### Perf Results 301
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50945 cycles
+start latency: 5601 cycles
+stop latency: 2231 cycles
+read latency: 4347 cycles
+53003c 1745
+### Perf Results 302
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50382 cycles
+start latency: 5382 cycles
+stop latency: 2300 cycles
+read latency: 4358 cycles
+53003c 1651
+### Perf Results 303
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85710 cycles
+start latency: 5554 cycles
+stop latency: 2231 cycles
+read latency: 4324 cycles
+53003c 1741
+### Perf Results 304
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86020 cycles
+start latency: 5417 cycles
+stop latency: 2242 cycles
+read latency: 4313 cycles
+53003c 1607
+### Perf Results 305
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50450 cycles
+start latency: 5589 cycles
+stop latency: 2185 cycles
+read latency: 4381 cycles
+53003c 1696
+### Perf Results 306
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86066 cycles
+start latency: 5451 cycles
+stop latency: 2300 cycles
+read latency: 4278 cycles
+53003c 1655
+### Perf Results 307
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85940 cycles
+start latency: 5566 cycles
+stop latency: 2196 cycles
+read latency: 4336 cycles
+53003c 1719
+### Perf Results 308
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50197 cycles
+start latency: 5899 cycles
+stop latency: 2323 cycles
+read latency: 4485 cycles
+53003c 1824
+### Perf Results 309
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 110664 cycles
+start latency: 5842 cycles
+stop latency: 2254 cycles
+read latency: 4404 cycles
+53003c 1614
+### Perf Results 310
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86146 cycles
+start latency: 5393 cycles
+stop latency: 2323 cycles
+read latency: 4278 cycles
+53003c 1690
+### Perf Results 311
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5635 cycles
+stop latency: 2231 cycles
+read latency: 4382 cycles
+53003c 1741
+### Perf Results 312
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50531 cycles
+start latency: 5428 cycles
+stop latency: 2334 cycles
+read latency: 4347 cycles
+53003c 1685
+### Perf Results 313
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50289 cycles
+start latency: 5601 cycles
+stop latency: 2277 cycles
+read latency: 4381 cycles
+53003c 1779
+### Perf Results 314
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5439 cycles
+stop latency: 2289 cycles
+read latency: 4450 cycles
+53003c 1643
+### Perf Results 315
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5601 cycles
+stop latency: 2219 cycles
+read latency: 4278 cycles
+53003c 1711
+### Perf Results 316
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85951 cycles
+start latency: 5416 cycles
+stop latency: 2323 cycles
+read latency: 4301 cycles
+53003c 1674
+### Perf Results 317
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5601 cycles
+stop latency: 2185 cycles
+read latency: 4404 cycles
+53003c 1695
+### Perf Results 318
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50266 cycles
+start latency: 5600 cycles
+stop latency: 2346 cycles
+read latency: 4347 cycles
+53003c 1832
+### Perf Results 319
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85571 cycles
+start latency: 5520 cycles
+stop latency: 2220 cycles
+read latency: 4312 cycles
+53003c 1722
+### Perf Results 320
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85779 cycles
+start latency: 5359 cycles
+stop latency: 2277 cycles
+read latency: 4267 cycles
+53003c 1633
+### Perf Results 321
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5543 cycles
+stop latency: 2196 cycles
+read latency: 4393 cycles
+53003c 1697
+### Perf Results 322
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85951 cycles
+start latency: 5578 cycles
+stop latency: 2288 cycles
+read latency: 4336 cycles
+53003c 1785
+### Perf Results 323
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85813 cycles
+start latency: 5462 cycles
+stop latency: 2197 cycles
+read latency: 4289 cycles
+53003c 1712
+### Perf Results 324
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50312 cycles
+start latency: 5485 cycles
+stop latency: 2289 cycles
+read latency: 4220 cycles
+53003c 1773
+### Perf Results 325
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85664 cycles
+start latency: 5612 cycles
+stop latency: 2208 cycles
+read latency: 4324 cycles
+53003c 1704
+### Perf Results 326
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86227 cycles
+start latency: 5417 cycles
+stop latency: 2311 cycles
+read latency: 4301 cycles
+53003c 1664
+### Perf Results 327
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5612 cycles
+stop latency: 2185 cycles
+read latency: 4393 cycles
+53003c 1678
+### Perf Results 328
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50922 cycles
+start latency: 5555 cycles
+stop latency: 2277 cycles
+read latency: 4278 cycles
+53003c 1638
+### Perf Results 329
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5554 cycles
+stop latency: 2243 cycles
+read latency: 4278 cycles
+53003c 1743
+### Perf Results 330
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5647 cycles
+stop latency: 2265 cycles
+read latency: 4313 cycles
+53003c 1768
+### Perf Results 331
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50336 cycles
+start latency: 5543 cycles
+stop latency: 2185 cycles
+read latency: 4370 cycles
+53003c 1700
+### Perf Results 332
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85664 cycles
+start latency: 5348 cycles
+stop latency: 2323 cycles
+read latency: 4324 cycles
+53003c 1679
+### Perf Results 333
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5578 cycles
+stop latency: 2231 cycles
+read latency: 4335 cycles
+53003c 1752
+### Perf Results 334
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5394 cycles
+stop latency: 2300 cycles
+read latency: 4347 cycles
+53003c 1650
+### Perf Results 335
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86261 cycles
+start latency: 5405 cycles
+stop latency: 2208 cycles
+read latency: 4313 cycles
+53003c 1550
+### Perf Results 336
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5474 cycles
+stop latency: 2300 cycles
+read latency: 4462 cycles
+53003c 1655
+### Perf Results 337
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50565 cycles
+start latency: 5417 cycles
+stop latency: 2254 cycles
+read latency: 4312 cycles
+53003c 1590
+### Perf Results 338
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 56902 cycles
+start latency: 5486 cycles
+stop latency: 2300 cycles
+read latency: 4232 cycles
+53003c 1651
+### Perf Results 339
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86043 cycles
+start latency: 5578 cycles
+stop latency: 2219 cycles
+read latency: 4393 cycles
+53003c 1731
+### Perf Results 340
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5382 cycles
+stop latency: 2311 cycles
+read latency: 4393 cycles
+53003c 1653
+### Perf Results 341
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86365 cycles
+start latency: 5451 cycles
+stop latency: 2242 cycles
+read latency: 4313 cycles
+53003c 1597
+### Perf Results 342
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85790 cycles
+start latency: 5428 cycles
+stop latency: 2300 cycles
+read latency: 4405 cycles
+53003c 1642
+### Perf Results 343
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 69552 cycles
+start latency: 5716 cycles
+stop latency: 2242 cycles
+read latency: 4405 cycles
+53003c 1594
+### Perf Results 344
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5324 cycles
+stop latency: 2312 cycles
+read latency: 4232 cycles
+53003c 1650
+### Perf Results 345
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50278 cycles
+start latency: 5647 cycles
+stop latency: 2277 cycles
+read latency: 4473 cycles
+53003c 1784
+### Perf Results 346
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5531 cycles
+stop latency: 2323 cycles
+read latency: 4439 cycles
+53003c 1680
+### Perf Results 347
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50474 cycles
+start latency: 5336 cycles
+stop latency: 2254 cycles
+read latency: 4382 cycles
+53003c 1603
+### Perf Results 348
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85778 cycles
+start latency: 5359 cycles
+stop latency: 2300 cycles
+read latency: 4186 cycles
+53003c 1654
+### Perf Results 349
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 79269 cycles
+start latency: 5900 cycles
+stop latency: 2231 cycles
+read latency: 4358 cycles
+53003c 1718
+### Perf Results 350
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50726 cycles
+start latency: 5439 cycles
+stop latency: 2289 cycles
+read latency: 4278 cycles
+53003c 1625
+### Perf Results 351
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85698 cycles
+start latency: 5462 cycles
+stop latency: 2174 cycles
+read latency: 4519 cycles
+53003c 1687
+### Perf Results 352
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85744 cycles
+start latency: 5566 cycles
+stop latency: 2323 cycles
+read latency: 4301 cycles
+53003c 1802
+### Perf Results 353
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5658 cycles
+stop latency: 2242 cycles
+read latency: 4370 cycles
+53003c 1741
+### Perf Results 354
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85778 cycles
+start latency: 5336 cycles
+stop latency: 2300 cycles
+read latency: 4301 cycles
+53003c 1626
+### Perf Results 355
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5555 cycles
+stop latency: 2254 cycles
+read latency: 4347 cycles
+53003c 1748
+### Perf Results 356
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5439 cycles
+stop latency: 2312 cycles
+read latency: 4393 cycles
+53003c 1673
+### Perf Results 357
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85974 cycles
+start latency: 5578 cycles
+stop latency: 2242 cycles
+read latency: 4336 cycles
+53003c 1740
+### Perf Results 358
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50497 cycles
+start latency: 5635 cycles
+stop latency: 2334 cycles
+read latency: 4370 cycles
+53003c 1831
+### Perf Results 359
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5577 cycles
+stop latency: 2231 cycles
+read latency: 4267 cycles
+53003c 1725
+### Perf Results 360
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50784 cycles
+start latency: 5370 cycles
+stop latency: 2312 cycles
+read latency: 4393 cycles
+53003c 1676
+### Perf Results 361
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50600 cycles
+start latency: 5624 cycles
+stop latency: 2231 cycles
+read latency: 4370 cycles
+53003c 1736
+### Perf Results 362
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50750 cycles
+start latency: 5359 cycles
+stop latency: 2300 cycles
+read latency: 4474 cycles
+53003c 1669
+### Perf Results 363
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50451 cycles
+start latency: 5600 cycles
+stop latency: 2254 cycles
+read latency: 4428 cycles
+53003c 1766
+### Perf Results 364
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86020 cycles
+start latency: 5359 cycles
+stop latency: 2323 cycles
+read latency: 4232 cycles
+53003c 1674
+### Perf Results 365
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5555 cycles
+stop latency: 2208 cycles
+read latency: 4324 cycles
+53003c 1709
+### Perf Results 366
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5417 cycles
+stop latency: 2300 cycles
+read latency: 4404 cycles
+53003c 1660
+### Perf Results 367
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5313 cycles
+stop latency: 2185 cycles
+read latency: 4278 cycles
+53003c 1534
+### Perf Results 368
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85836 cycles
+start latency: 5382 cycles
+stop latency: 2335 cycles
+read latency: 4278 cycles
+53003c 1697
+### Perf Results 369
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50289 cycles
+start latency: 5658 cycles
+stop latency: 2243 cycles
+read latency: 4266 cycles
+53003c 1734
+### Perf Results 370
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 65228 cycles
+start latency: 5577 cycles
+stop latency: 2289 cycles
+read latency: 4416 cycles
+53003c 1632
+### Perf Results 371
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86020 cycles
+start latency: 5532 cycles
+stop latency: 2231 cycles
+read latency: 4232 cycles
+53003c 1745
+### Perf Results 372
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5474 cycles
+stop latency: 2300 cycles
+read latency: 4335 cycles
+53003c 1785
+### Perf Results 373
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85894 cycles
+start latency: 5554 cycles
+stop latency: 2220 cycles
+read latency: 4381 cycles
+53003c 1733
+### Perf Results 374
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5428 cycles
+stop latency: 2323 cycles
+read latency: 4335 cycles
+53003c 1676
+### Perf Results 375
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50405 cycles
+start latency: 5693 cycles
+stop latency: 2196 cycles
+read latency: 4382 cycles
+53003c 1706
+### Perf Results 376
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50658 cycles
+start latency: 5370 cycles
+stop latency: 2312 cycles
+read latency: 4588 cycles
+53003c 1684
+### Perf Results 377
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50266 cycles
+start latency: 5578 cycles
+stop latency: 2185 cycles
+read latency: 4324 cycles
+53003c 1690
+### Perf Results 378
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5532 cycles
+stop latency: 2334 cycles
+read latency: 4554 cycles
+53003c 1706
+### Perf Results 379
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50600 cycles
+start latency: 5577 cycles
+stop latency: 2220 cycles
+read latency: 4312 cycles
+53003c 1733
+### Perf Results 380
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85893 cycles
+start latency: 5336 cycles
+stop latency: 2380 cycles
+read latency: 4290 cycles
+53003c 1694
+### Perf Results 381
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5348 cycles
+stop latency: 2254 cycles
+read latency: 4209 cycles
+53003c 1590
+### Perf Results 382
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5393 cycles
+stop latency: 2323 cycles
+read latency: 4290 cycles
+53003c 1681
+### Perf Results 383
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85802 cycles
+start latency: 5554 cycles
+stop latency: 2220 cycles
+read latency: 4255 cycles
+53003c 1731
+### Perf Results 384
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86054 cycles
+start latency: 5347 cycles
+stop latency: 2335 cycles
+read latency: 4542 cycles
+53003c 1685
+### Perf Results 385
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5566 cycles
+stop latency: 2208 cycles
+read latency: 4347 cycles
+53003c 1723
+### Perf Results 386
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 91885 cycles
+start latency: 5750 cycles
+stop latency: 2254 cycles
+read latency: 4405 cycles
+53003c 1774
+### Perf Results 387
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85813 cycles
+start latency: 5543 cycles
+stop latency: 2219 cycles
+read latency: 4313 cycles
+53003c 1727
+### Perf Results 388
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5439 cycles
+stop latency: 2231 cycles
+read latency: 4347 cycles
+53003c 1600
+### Perf Results 389
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85917 cycles
+start latency: 5543 cycles
+stop latency: 2173 cycles
+read latency: 4359 cycles
+53003c 1698
+### Perf Results 390
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85963 cycles
+start latency: 5359 cycles
+stop latency: 2335 cycles
+read latency: 4255 cycles
+53003c 1694
+### Perf Results 391
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50083 cycles
+start latency: 5566 cycles
+stop latency: 2208 cycles
+read latency: 4347 cycles
+53003c 1725
+### Perf Results 392
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5566 cycles
+stop latency: 2311 cycles
+read latency: 4324 cycles
+53003c 1793
+### Perf Results 393
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50335 cycles
+start latency: 5704 cycles
+stop latency: 2196 cycles
+read latency: 4382 cycles
+53003c 1709
+### Perf Results 394
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5474 cycles
+stop latency: 2265 cycles
+read latency: 4416 cycles
+53003c 1634
+### Perf Results 395
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50313 cycles
+start latency: 5727 cycles
+stop latency: 2243 cycles
+read latency: 4393 cycles
+53003c 1741
+### Perf Results 396
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85813 cycles
+start latency: 5589 cycles
+stop latency: 2311 cycles
+read latency: 4347 cycles
+53003c 1821
+### Perf Results 397
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50335 cycles
+start latency: 5555 cycles
+stop latency: 2208 cycles
+read latency: 4278 cycles
+53003c 1725
+### Perf Results 398
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5405 cycles
+stop latency: 2265 cycles
+read latency: 4278 cycles
+53003c 1620
+### Perf Results 399
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85652 cycles
+start latency: 5509 cycles
+stop latency: 2196 cycles
+read latency: 4382 cycles
+53003c 1708
+### Perf Results 400
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85893 cycles
+start latency: 5612 cycles
+stop latency: 2231 cycles
+read latency: 4335 cycles
+53003c 1746
+### Perf Results 401
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50186 cycles
+start latency: 5646 cycles
+stop latency: 2185 cycles
+read latency: 4474 cycles
+53003c 1696
+### Perf Results 402
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 65251 cycles
+start latency: 5566 cycles
+stop latency: 2289 cycles
+read latency: 4427 cycles
+53003c 1625
+### Perf Results 403
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85756 cycles
+start latency: 5646 cycles
+stop latency: 2220 cycles
+read latency: 4312 cycles
+53003c 1726
+### Perf Results 404
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50255 cycles
+start latency: 5589 cycles
+stop latency: 2266 cycles
+read latency: 4301 cycles
+53003c 1766
+### Perf Results 405
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 86583 cycles
+start latency: 5474 cycles
+stop latency: 2243 cycles
+read latency: 4266 cycles
+53003c 1561
+### Perf Results 406
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5589 cycles
+stop latency: 2311 cycles
+read latency: 4451 cycles
+53003c 1631
+### Perf Results 407
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5486 cycles
+stop latency: 2208 cycles
+read latency: 4255 cycles
+53003c 1698
+### Perf Results 408
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5348 cycles
+stop latency: 2334 cycles
+read latency: 4313 cycles
+53003c 1679
+### Perf Results 409
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86204 cycles
+start latency: 5555 cycles
+stop latency: 2254 cycles
+read latency: 4232 cycles
+53003c 1765
+### Perf Results 410
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86020 cycles
+start latency: 5405 cycles
+stop latency: 2311 cycles
+read latency: 4290 cycles
+53003c 1674
+### Perf Results 411
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5601 cycles
+stop latency: 2219 cycles
+read latency: 4405 cycles
+53003c 1726
+### Perf Results 412
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5416 cycles
+stop latency: 2358 cycles
+read latency: 4220 cycles
+53003c 1707
+### Perf Results 413
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50566 cycles
+start latency: 5428 cycles
+stop latency: 2220 cycles
+read latency: 4462 cycles
+53003c 1563
+### Perf Results 414
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50290 cycles
+start latency: 5543 cycles
+stop latency: 2323 cycles
+read latency: 4301 cycles
+53003c 1810
+### Perf Results 415
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50198 cycles
+start latency: 5589 cycles
+stop latency: 2231 cycles
+read latency: 4381 cycles
+53003c 1745
+### Perf Results 416
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86055 cycles
+start latency: 5555 cycles
+stop latency: 2323 cycles
+read latency: 4312 cycles
+53003c 1797
+### Perf Results 417
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50451 cycles
+start latency: 5589 cycles
+stop latency: 2162 cycles
+read latency: 4289 cycles
+53003c 1674
+### Perf Results 418
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50876 cycles
+start latency: 5555 cycles
+stop latency: 2300 cycles
+read latency: 4335 cycles
+53003c 1820
+### Perf Results 419
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86319 cycles
+start latency: 5923 cycles
+stop latency: 2196 cycles
+read latency: 4393 cycles
+53003c 1713
+### Perf Results 420
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85916 cycles
+start latency: 5359 cycles
+stop latency: 2277 cycles
+read latency: 4715 cycles
+53003c 1640
+### Perf Results 421
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50497 cycles
+start latency: 5577 cycles
+stop latency: 2197 cycles
+read latency: 4370 cycles
+53003c 1711
+### Perf Results 422
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86043 cycles
+start latency: 5370 cycles
+stop latency: 2323 cycles
+read latency: 4290 cycles
+53003c 1674
+### Perf Results 423
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5532 cycles
+stop latency: 2265 cycles
+read latency: 4336 cycles
+53003c 1593
+### Perf Results 424
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50428 cycles
+start latency: 5370 cycles
+stop latency: 2289 cycles
+read latency: 4232 cycles
+53003c 1634
+### Perf Results 425
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5601 cycles
+stop latency: 2254 cycles
+read latency: 4404 cycles
+53003c 1755
+### Perf Results 426
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86146 cycles
+start latency: 5428 cycles
+stop latency: 2369 cycles
+read latency: 4186 cycles
+53003c 1708
+### Perf Results 427
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50243 cycles
+start latency: 5405 cycles
+stop latency: 2265 cycles
+read latency: 4313 cycles
+53003c 1617
+### Perf Results 428
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50566 cycles
+start latency: 5405 cycles
+stop latency: 2289 cycles
+read latency: 4358 cycles
+53003c 1639
+### Perf Results 429
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5635 cycles
+stop latency: 2243 cycles
+read latency: 4439 cycles
+53003c 1744
+### Perf Results 430
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5382 cycles
+stop latency: 2323 cycles
+read latency: 4359 cycles
+53003c 1691
+### Perf Results 431
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50266 cycles
+start latency: 5589 cycles
+stop latency: 2231 cycles
+read latency: 4381 cycles
+53003c 1728
+### Perf Results 432
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85870 cycles
+start latency: 5382 cycles
+stop latency: 2265 cycles
+read latency: 4186 cycles
+53003c 1626
+### Perf Results 433
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50658 cycles
+start latency: 5520 cycles
+stop latency: 2484 cycles
+read latency: 4347 cycles
+53003c 1991
+### Perf Results 434
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50186 cycles
+start latency: 5485 cycles
+stop latency: 2381 cycles
+read latency: 4335 cycles
+53003c 1699
+### Perf Results 435
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85733 cycles
+start latency: 5347 cycles
+stop latency: 2220 cycles
+read latency: 4301 cycles
+53003c 1548
+### Perf Results 436
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85802 cycles
+start latency: 5405 cycles
+stop latency: 2323 cycles
+read latency: 4312 cycles
+53003c 1821
+### Perf Results 437
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5520 cycles
+stop latency: 2196 cycles
+read latency: 4370 cycles
+53003c 1707
+### Perf Results 438
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85940 cycles
+start latency: 5577 cycles
+stop latency: 2335 cycles
+read latency: 4312 cycles
+53003c 1826
+### Perf Results 439
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86146 cycles
+start latency: 5554 cycles
+stop latency: 2185 cycles
+read latency: 4405 cycles
+53003c 1687
+### Perf Results 440
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50773 cycles
+start latency: 5612 cycles
+stop latency: 2323 cycles
+read latency: 4289 cycles
+53003c 1804
+### Perf Results 441
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85686 cycles
+start latency: 5543 cycles
+stop latency: 2208 cycles
+read latency: 4244 cycles
+53003c 1703
+### Perf Results 442
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86089 cycles
+start latency: 5371 cycles
+stop latency: 2277 cycles
+read latency: 4312 cycles
+53003c 1640
+### Perf Results 443
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50554 cycles
+start latency: 5589 cycles
+stop latency: 2208 cycles
+read latency: 4266 cycles
+53003c 1710
+### Perf Results 444
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50646 cycles
+start latency: 5324 cycles
+stop latency: 2312 cycles
+read latency: 4324 cycles
+53003c 1648
+### Perf Results 445
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50163 cycles
+start latency: 5577 cycles
+stop latency: 2220 cycles
+read latency: 4370 cycles
+53003c 1724
+### Perf Results 446
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50451 cycles
+start latency: 5347 cycles
+stop latency: 2335 cycles
+read latency: 4232 cycles
+53003c 1690
+### Perf Results 447
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50427 cycles
+start latency: 5417 cycles
+stop latency: 2254 cycles
+read latency: 4381 cycles
+53003c 1588
+### Perf Results 448
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85641 cycles
+start latency: 5497 cycles
+stop latency: 2357 cycles
+read latency: 4336 cycles
+53003c 1708
+### Perf Results 449
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5394 cycles
+stop latency: 2196 cycles
+read latency: 4543 cycles
+53003c 1555
+### Perf Results 450
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50784 cycles
+start latency: 5416 cycles
+stop latency: 2358 cycles
+read latency: 4289 cycles
+53003c 1689
+### Perf Results 451
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85664 cycles
+start latency: 5589 cycles
+stop latency: 2242 cycles
+read latency: 4267 cycles
+53003c 1744
+### Perf Results 452
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86365 cycles
+start latency: 5405 cycles
+stop latency: 2335 cycles
+read latency: 4358 cycles
+53003c 1698
+### Perf Results 453
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5589 cycles
+stop latency: 2231 cycles
+read latency: 4405 cycles
+53003c 1725
+### Perf Results 454
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85847 cycles
+start latency: 5451 cycles
+stop latency: 2312 cycles
+read latency: 4324 cycles
+53003c 1662
+### Perf Results 455
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85962 cycles
+start latency: 5382 cycles
+stop latency: 2219 cycles
+read latency: 4278 cycles
+53003c 1550
+### Perf Results 456
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50358 cycles
+start latency: 5531 cycles
+stop latency: 2277 cycles
+read latency: 4232 cycles
+53003c 1641
+### Perf Results 457
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85940 cycles
+start latency: 5509 cycles
+stop latency: 2265 cycles
+read latency: 4313 cycles
+53003c 1789
+### Perf Results 458
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5416 cycles
+stop latency: 2323 cycles
+read latency: 4313 cycles
+53003c 1685
+### Perf Results 459
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50186 cycles
+start latency: 5600 cycles
+stop latency: 2185 cycles
+read latency: 4393 cycles
+53003c 1698
+### Perf Results 460
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50715 cycles
+start latency: 5359 cycles
+stop latency: 2289 cycles
+read latency: 4232 cycles
+53003c 1651
+### Perf Results 461
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5566 cycles
+stop latency: 2219 cycles
+read latency: 4347 cycles
+53003c 1709
+### Perf Results 462
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50255 cycles
+start latency: 5554 cycles
+stop latency: 2289 cycles
+read latency: 4462 cycles
+53003c 1788
+### Perf Results 463
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5623 cycles
+stop latency: 2231 cycles
+read latency: 4290 cycles
+53003c 1710
+### Perf Results 464
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85917 cycles
+start latency: 5520 cycles
+stop latency: 2311 cycles
+read latency: 4370 cycles
+53003c 1793
+### Perf Results 465
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5509 cycles
+stop latency: 2173 cycles
+read latency: 4301 cycles
+53003c 1674
+### Perf Results 466
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50358 cycles
+start latency: 5554 cycles
+stop latency: 2323 cycles
+read latency: 4255 cycles
+53003c 1822
+### Perf Results 467
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85801 cycles
+start latency: 5647 cycles
+stop latency: 2196 cycles
+read latency: 4290 cycles
+53003c 1715
+### Perf Results 468
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86238 cycles
+start latency: 5439 cycles
+stop latency: 2323 cycles
+read latency: 4382 cycles
+53003c 1697
+### Perf Results 469
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50313 cycles
+start latency: 5658 cycles
+stop latency: 2242 cycles
+read latency: 4405 cycles
+53003c 1748
+### Perf Results 470
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 86123 cycles
+start latency: 5393 cycles
+stop latency: 2277 cycles
+read latency: 4428 cycles
+53003c 1617
+### Perf Results 471
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85479 cycles
+start latency: 5497 cycles
+stop latency: 2174 cycles
+read latency: 4255 cycles
+53003c 1684
+### Perf Results 472
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5382 cycles
+stop latency: 2254 cycles
+read latency: 4312 cycles
+53003c 1623
+### Perf Results 473
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86043 cycles
+start latency: 5532 cycles
+stop latency: 2173 cycles
+read latency: 4497 cycles
+53003c 1681
+### Perf Results 474
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85986 cycles
+start latency: 5371 cycles
+stop latency: 2346 cycles
+read latency: 4370 cycles
+53003c 1710
+### Perf Results 475
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50335 cycles
+start latency: 5601 cycles
+stop latency: 2219 cycles
+read latency: 4416 cycles
+53003c 1726
+### Perf Results 476
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50669 cycles
+start latency: 5359 cycles
+stop latency: 2277 cycles
+read latency: 4336 cycles
+53003c 1631
+### Perf Results 477
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50796 cycles
+start latency: 5520 cycles
+stop latency: 2220 cycles
+read latency: 4370 cycles
+53003c 1571
+### Perf Results 478
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50243 cycles
+start latency: 5612 cycles
+stop latency: 2300 cycles
+read latency: 4404 cycles
+53003c 1794
+### Perf Results 479
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50623 cycles
+start latency: 5693 cycles
+stop latency: 2196 cycles
+read latency: 4370 cycles
+53003c 1695
+### Perf Results 480
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5370 cycles
+stop latency: 2323 cycles
+read latency: 4324 cycles
+53003c 1688
+### Perf Results 481
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5532 cycles
+stop latency: 2196 cycles
+read latency: 4301 cycles
+53003c 1703
+### Perf Results 482
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5623 cycles
+stop latency: 2300 cycles
+read latency: 4405 cycles
+53003c 1766
+### Perf Results 483
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85721 cycles
+start latency: 5508 cycles
+stop latency: 2197 cycles
+read latency: 4278 cycles
+53003c 1710
+### Perf Results 484
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85974 cycles
+start latency: 5600 cycles
+stop latency: 2312 cycles
+read latency: 4381 cycles
+53003c 1803
+### Perf Results 485
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50738 cycles
+start latency: 5578 cycles
+stop latency: 2231 cycles
+read latency: 4485 cycles
+53003c 1737
+### Perf Results 486
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86112 cycles
+start latency: 5405 cycles
+stop latency: 2277 cycles
+read latency: 4427 cycles
+53003c 1623
+### Perf Results 487
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85629 cycles
+start latency: 5313 cycles
+stop latency: 2185 cycles
+read latency: 4335 cycles
+53003c 1531
+### Perf Results 488
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50450 cycles
+start latency: 5359 cycles
+stop latency: 2289 cycles
+read latency: 4381 cycles
+53003c 1661
+### Perf Results 489
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86124 cycles
+start latency: 5554 cycles
+stop latency: 2208 cycles
+read latency: 4520 cycles
+53003c 1724
+### Perf Results 490
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85847 cycles
+start latency: 5313 cycles
+stop latency: 2265 cycles
+read latency: 4244 cycles
+53003c 1628
+### Perf Results 491
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5520 cycles
+stop latency: 2208 cycles
+read latency: 4381 cycles
+53003c 1698
+### Perf Results 492
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50623 cycles
+start latency: 5589 cycles
+stop latency: 2334 cycles
+read latency: 4382 cycles
+53003c 1827
+### Perf Results 493
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50784 cycles
+start latency: 5612 cycles
+stop latency: 2242 cycles
+read latency: 4347 cycles
+53003c 1727
+### Perf Results 494
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50680 cycles
+start latency: 5520 cycles
+stop latency: 2323 cycles
+read latency: 4335 cycles
+53003c 1680
+### Perf Results 495
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5623 cycles
+stop latency: 2220 cycles
+read latency: 4255 cycles
+53003c 1730
+### Perf Results 496
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85744 cycles
+start latency: 5623 cycles
+stop latency: 2277 cycles
+read latency: 4324 cycles
+53003c 1779
+### Perf Results 497
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50382 cycles
+start latency: 5658 cycles
+stop latency: 2197 cycles
+read latency: 4404 cycles
+53003c 1693
+### Perf Results 498
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5635 cycles
+stop latency: 2265 cycles
+read latency: 4370 cycles
+53003c 1769
+### Perf Results 499
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85813 cycles
+start latency: 5382 cycles
+stop latency: 2185 cycles
+read latency: 4347 cycles
+53003c 1535
+### Perf Results 500
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86204 cycles
+start latency: 5325 cycles
+stop latency: 2277 cycles
+read latency: 4393 cycles
+53003c 1644
+### Perf Results 501
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5555 cycles
+stop latency: 2277 cycles
+read latency: 4312 cycles
+53003c 1777
+### Perf Results 502
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 88435 cycles
+start latency: 5716 cycles
+stop latency: 2300 cycles
+read latency: 4393 cycles
+53003c 1811
+### Perf Results 503
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85951 cycles
+start latency: 5554 cycles
+stop latency: 2300 cycles
+read latency: 4336 cycles
+53003c 1790
+### Perf Results 504
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5635 cycles
+stop latency: 2311 cycles
+read latency: 4324 cycles
+53003c 1808
+### Perf Results 505
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86342 cycles
+start latency: 5543 cycles
+stop latency: 2197 cycles
+read latency: 4439 cycles
+53003c 1713
+### Perf Results 506
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85870 cycles
+start latency: 5348 cycles
+stop latency: 2300 cycles
+read latency: 4347 cycles
+53003c 1644
+### Perf Results 507
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50427 cycles
+start latency: 5704 cycles
+stop latency: 2254 cycles
+read latency: 4393 cycles
+53003c 1587
+### Perf Results 508
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5555 cycles
+stop latency: 2277 cycles
+read latency: 4278 cycles
+53003c 1771
+### Perf Results 509
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5600 cycles
+stop latency: 2220 cycles
+read latency: 4381 cycles
+53003c 1726
+### Perf Results 510
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5451 cycles
+stop latency: 2346 cycles
+read latency: 4393 cycles
+53003c 1671
+### Perf Results 511
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50600 cycles
+start latency: 5324 cycles
+stop latency: 2231 cycles
+read latency: 4474 cycles
+53003c 1578
+### Perf Results 512
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85767 cycles
+start latency: 5555 cycles
+stop latency: 2323 cycles
+read latency: 4220 cycles
+53003c 1823
+### Perf Results 513
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50405 cycles
+start latency: 5566 cycles
+stop latency: 2231 cycles
+read latency: 4450 cycles
+53003c 1732
+### Perf Results 514
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 82835 cycles
+start latency: 5957 cycles
+stop latency: 2357 cycles
+read latency: 4393 cycles
+53003c 1843
+### Perf Results 515
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85560 cycles
+start latency: 5543 cycles
+stop latency: 2196 cycles
+read latency: 4324 cycles
+53003c 1698
+### Perf Results 516
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86147 cycles
+start latency: 5439 cycles
+stop latency: 2254 cycles
+read latency: 4347 cycles
+53003c 1618
+### Perf Results 517
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5589 cycles
+stop latency: 2231 cycles
+read latency: 4324 cycles
+53003c 1737
+### Perf Results 518
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85330 cycles
+start latency: 5727 cycles
+stop latency: 2277 cycles
+read latency: 4519 cycles
+53003c 1793
+### Perf Results 519
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86170 cycles
+start latency: 5520 cycles
+stop latency: 2185 cycles
+read latency: 4382 cycles
+53003c 1698
+### Perf Results 520
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5428 cycles
+stop latency: 2300 cycles
+read latency: 4393 cycles
+53003c 1671
+### Perf Results 521
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85802 cycles
+start latency: 5566 cycles
+stop latency: 2242 cycles
+read latency: 4324 cycles
+53003c 1749
+### Perf Results 522
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85664 cycles
+start latency: 5520 cycles
+stop latency: 2289 cycles
+read latency: 4289 cycles
+53003c 1787
+### Perf Results 523
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5382 cycles
+stop latency: 2197 cycles
+read latency: 4289 cycles
+53003c 1552
+### Perf Results 524
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50646 cycles
+start latency: 5440 cycles
+stop latency: 2323 cycles
+read latency: 4278 cycles
+53003c 1655
+### Perf Results 525
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50278 cycles
+start latency: 5658 cycles
+stop latency: 2185 cycles
+read latency: 4508 cycles
+53003c 1694
+### Perf Results 526
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50715 cycles
+start latency: 5601 cycles
+stop latency: 2311 cycles
+read latency: 4336 cycles
+53003c 1803
+### Perf Results 527
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50359 cycles
+start latency: 5577 cycles
+stop latency: 2243 cycles
+read latency: 4347 cycles
+53003c 1749
+### Perf Results 528
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85882 cycles
+start latency: 5382 cycles
+stop latency: 2277 cycles
+read latency: 4266 cycles
+53003c 1643
+### Perf Results 529
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5451 cycles
+stop latency: 2219 cycles
+read latency: 4347 cycles
+53003c 1733
+### Perf Results 530
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50255 cycles
+start latency: 5543 cycles
+stop latency: 2335 cycles
+read latency: 4324 cycles
+53003c 1844
+### Perf Results 531
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85790 cycles
+start latency: 5566 cycles
+stop latency: 2277 cycles
+read latency: 4313 cycles
+53003c 1796
+### Perf Results 532
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85836 cycles
+start latency: 5462 cycles
+stop latency: 2312 cycles
+read latency: 4243 cycles
+53003c 1663
+### Perf Results 533
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50473 cycles
+start latency: 5681 cycles
+stop latency: 2254 cycles
+read latency: 4289 cycles
+53003c 1765
+### Perf Results 534
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 57880 cycles
+start latency: 5543 cycles
+stop latency: 2300 cycles
+read latency: 4416 cycles
+53003c 1650
+### Perf Results 535
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85997 cycles
+start latency: 5520 cycles
+stop latency: 2219 cycles
+read latency: 4290 cycles
+53003c 1720
+### Perf Results 536
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50175 cycles
+start latency: 5578 cycles
+stop latency: 2334 cycles
+read latency: 4278 cycles
+53003c 1814
+### Perf Results 537
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85963 cycles
+start latency: 5589 cycles
+stop latency: 2162 cycles
+read latency: 4428 cycles
+53003c 1671
+### Perf Results 538
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5439 cycles
+stop latency: 2300 cycles
+read latency: 4301 cycles
+53003c 1628
+### Perf Results 539
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50531 cycles
+start latency: 5416 cycles
+stop latency: 2243 cycles
+read latency: 4301 cycles
+53003c 1593
+### Perf Results 540
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 51037 cycles
+start latency: 5486 cycles
+stop latency: 2288 cycles
+read latency: 4347 cycles
+53003c 1647
+### Perf Results 541
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50888 cycles
+start latency: 5532 cycles
+stop latency: 2242 cycles
+read latency: 4370 cycles
+53003c 1744
+### Perf Results 542
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50358 cycles
+start latency: 5601 cycles
+stop latency: 2300 cycles
+read latency: 4335 cycles
+53003c 1785
+### Perf Results 543
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50531 cycles
+start latency: 5577 cycles
+stop latency: 2231 cycles
+read latency: 4313 cycles
+53003c 1711
+### Perf Results 544
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5520 cycles
+stop latency: 2312 cycles
+read latency: 4404 cycles
+53003c 1806
+### Perf Results 545
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5543 cycles
+stop latency: 2185 cycles
+read latency: 4255 cycles
+53003c 1693
+### Perf Results 546
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50519 cycles
+start latency: 5532 cycles
+stop latency: 2288 cycles
+read latency: 4359 cycles
+53003c 1791
+### Perf Results 547
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85825 cycles
+start latency: 5520 cycles
+stop latency: 2185 cycles
+read latency: 4266 cycles
+53003c 1717
+### Perf Results 548
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85675 cycles
+start latency: 5359 cycles
+stop latency: 2277 cycles
+read latency: 4313 cycles
+53003c 1642
+### Perf Results 549
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50220 cycles
+start latency: 5600 cycles
+stop latency: 2243 cycles
+read latency: 4301 cycles
+53003c 1717
+### Perf Results 550
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 88562 cycles
+start latency: 5600 cycles
+stop latency: 2358 cycles
+read latency: 4462 cycles
+53003c 1714
+### Perf Results 551
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5624 cycles
+stop latency: 2231 cycles
+read latency: 4278 cycles
+53003c 1729
+### Perf Results 552
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5566 cycles
+stop latency: 2323 cycles
+read latency: 4220 cycles
+53003c 1822
+### Perf Results 553
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86147 cycles
+start latency: 5612 cycles
+stop latency: 2196 cycles
+read latency: 4439 cycles
+53003c 1693
+### Perf Results 554
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86009 cycles
+start latency: 5393 cycles
+stop latency: 2369 cycles
+read latency: 4313 cycles
+53003c 1714
+### Perf Results 555
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5428 cycles
+stop latency: 2242 cycles
+read latency: 4405 cycles
+53003c 1588
+### Perf Results 556
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50657 cycles
+start latency: 5336 cycles
+stop latency: 2335 cycles
+read latency: 4243 cycles
+53003c 1685
+### Perf Results 557
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50520 cycles
+start latency: 5463 cycles
+stop latency: 2219 cycles
+read latency: 4382 cycles
+53003c 1561
+### Perf Results 558
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5520 cycles
+stop latency: 2300 cycles
+read latency: 4335 cycles
+53003c 1653
+### Perf Results 559
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50646 cycles
+start latency: 5566 cycles
+stop latency: 2254 cycles
+read latency: 4404 cycles
+53003c 1756
+### Perf Results 560
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85813 cycles
+start latency: 5371 cycles
+stop latency: 2265 cycles
+read latency: 4313 cycles
+53003c 1639
+### Perf Results 561
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50474 cycles
+start latency: 5497 cycles
+stop latency: 2196 cycles
+read latency: 4347 cycles
+53003c 1701
+### Perf Results 562
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86331 cycles
+start latency: 5555 cycles
+stop latency: 2369 cycles
+read latency: 4220 cycles
+53003c 1667
+### Perf Results 563
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86158 cycles
+start latency: 5623 cycles
+stop latency: 2231 cycles
+read latency: 4278 cycles
+53003c 1715
+### Perf Results 564
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50359 cycles
+start latency: 5462 cycles
+stop latency: 2358 cycles
+read latency: 4289 cycles
+53003c 1685
+### Perf Results 565
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50692 cycles
+start latency: 5635 cycles
+stop latency: 2243 cycles
+read latency: 4450 cycles
+53003c 1752
+### Perf Results 566
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50807 cycles
+start latency: 5417 cycles
+stop latency: 2334 cycles
+read latency: 4313 cycles
+53003c 1667
+### Perf Results 567
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50428 cycles
+start latency: 5624 cycles
+stop latency: 2208 cycles
+read latency: 4312 cycles
+53003c 1714
+### Perf Results 568
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5393 cycles
+stop latency: 2300 cycles
+read latency: 4359 cycles
+53003c 1647
+### Perf Results 569
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5566 cycles
+stop latency: 2196 cycles
+read latency: 4347 cycles
+53003c 1692
+### Perf Results 570
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85801 cycles
+start latency: 5416 cycles
+stop latency: 2335 cycles
+read latency: 4324 cycles
+53003c 1692
+### Perf Results 571
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5566 cycles
+stop latency: 2208 cycles
+read latency: 4312 cycles
+53003c 1701
+### Perf Results 572
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 51014 cycles
+start latency: 5416 cycles
+stop latency: 2323 cycles
+read latency: 4301 cycles
+53003c 1660
+### Perf Results 573
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86135 cycles
+start latency: 5382 cycles
+stop latency: 2208 cycles
+read latency: 4393 cycles
+53003c 1565
+### Perf Results 574
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50382 cycles
+start latency: 5416 cycles
+stop latency: 2335 cycles
+read latency: 4347 cycles
+53003c 1692
+### Perf Results 575
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5693 cycles
+stop latency: 2208 cycles
+read latency: 4370 cycles
+53003c 1699
+### Perf Results 576
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5589 cycles
+stop latency: 2358 cycles
+read latency: 4278 cycles
+53003c 1844
+### Perf Results 577
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50427 cycles
+start latency: 5589 cycles
+stop latency: 2220 cycles
+read latency: 4358 cycles
+53003c 1718
+### Perf Results 578
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50082 cycles
+start latency: 5531 cycles
+stop latency: 2358 cycles
+read latency: 4381 cycles
+53003c 1700
+### Perf Results 579
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5543 cycles
+stop latency: 2219 cycles
+read latency: 4416 cycles
+53003c 1712
+### Perf Results 580
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5555 cycles
+stop latency: 2334 cycles
+read latency: 4347 cycles
+53003c 1817
+### Perf Results 581
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50554 cycles
+start latency: 5359 cycles
+stop latency: 2231 cycles
+read latency: 4336 cycles
+53003c 1576
+### Perf Results 582
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 129927 cycles
+start latency: 5773 cycles
+stop latency: 2288 cycles
+read latency: 4623 cycles
+53003c 1638
+### Perf Results 583
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85802 cycles
+start latency: 5520 cycles
+stop latency: 2265 cycles
+read latency: 4301 cycles
+53003c 1766
+### Perf Results 584
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85802 cycles
+start latency: 5497 cycles
+stop latency: 2346 cycles
+read latency: 4324 cycles
+53003c 1828
+### Perf Results 585
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50278 cycles
+start latency: 5462 cycles
+stop latency: 2208 cycles
+read latency: 4301 cycles
+53003c 1552
+### Perf Results 586
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85756 cycles
+start latency: 5405 cycles
+stop latency: 2277 cycles
+read latency: 4267 cycles
+53003c 1647
+### Perf Results 587
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50427 cycles
+start latency: 5543 cycles
+stop latency: 2254 cycles
+read latency: 4404 cycles
+53003c 1760
+### Perf Results 588
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50531 cycles
+start latency: 5578 cycles
+stop latency: 2311 cycles
+read latency: 4324 cycles
+53003c 1808
+### Perf Results 589
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 86216 cycles
+start latency: 5508 cycles
+stop latency: 2231 cycles
+read latency: 4370 cycles
+53003c 1599
+### Perf Results 590
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5623 cycles
+stop latency: 2277 cycles
+read latency: 4347 cycles
+53003c 1778
+### Perf Results 591
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5612 cycles
+stop latency: 2231 cycles
+read latency: 4439 cycles
+53003c 1733
+### Perf Results 592
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50796 cycles
+start latency: 5428 cycles
+stop latency: 2323 cycles
+read latency: 4393 cycles
+53003c 1658
+### Perf Results 593
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50163 cycles
+start latency: 5670 cycles
+stop latency: 2231 cycles
+read latency: 4324 cycles
+53003c 1739
+### Perf Results 594
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 77176 cycles
+start latency: 5819 cycles
+stop latency: 2311 cycles
+read latency: 4485 cycles
+53003c 1676
+### Perf Results 595
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50359 cycles
+start latency: 5612 cycles
+stop latency: 2174 cycles
+read latency: 4416 cycles
+53003c 1687
+### Perf Results 596
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5370 cycles
+stop latency: 2277 cycles
+read latency: 4336 cycles
+53003c 1625
+### Perf Results 597
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50554 cycles
+start latency: 5531 cycles
+stop latency: 2220 cycles
+read latency: 4370 cycles
+53003c 1727
+### Perf Results 598
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50565 cycles
+start latency: 5761 cycles
+stop latency: 2323 cycles
+read latency: 4370 cycles
+53003c 1825
+### Perf Results 599
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86078 cycles
+start latency: 5417 cycles
+stop latency: 2254 cycles
+read latency: 4186 cycles
+53003c 1584
+### Perf Results 600
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86020 cycles
+start latency: 5370 cycles
+stop latency: 2277 cycles
+read latency: 4209 cycles
+53003c 1636
+### Perf Results 601
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50290 cycles
+start latency: 5555 cycles
+stop latency: 2185 cycles
+read latency: 4358 cycles
+53003c 1700
+### Perf Results 602
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 79097 cycles
+start latency: 5681 cycles
+stop latency: 2312 cycles
+read latency: 4439 cycles
+53003c 1838
+### Perf Results 603
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86043 cycles
+start latency: 5566 cycles
+stop latency: 2208 cycles
+read latency: 4324 cycles
+53003c 1706
+### Perf Results 604
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5497 cycles
+stop latency: 2311 cycles
+read latency: 4393 cycles
+53003c 1675
+### Perf Results 605
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 108238 cycles
+start latency: 5865 cycles
+stop latency: 2277 cycles
+read latency: 4462 cycles
+53003c 1627
+### Perf Results 606
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85779 cycles
+start latency: 5290 cycles
+stop latency: 2277 cycles
+read latency: 4313 cycles
+53003c 1643
+### Perf Results 607
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50313 cycles
+start latency: 5624 cycles
+stop latency: 2185 cycles
+read latency: 4427 cycles
+53003c 1697
+### Perf Results 608
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50542 cycles
+start latency: 5485 cycles
+stop latency: 2277 cycles
+read latency: 4324 cycles
+53003c 1638
+### Perf Results 609
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5589 cycles
+stop latency: 2208 cycles
+read latency: 4336 cycles
+53003c 1720
+### Perf Results 610
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50473 cycles
+start latency: 5382 cycles
+stop latency: 2300 cycles
+read latency: 4382 cycles
+53003c 1650
+### Perf Results 611
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5647 cycles
+stop latency: 2242 cycles
+read latency: 4290 cycles
+53003c 1729
+### Perf Results 612
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85709 cycles
+start latency: 5440 cycles
+stop latency: 2311 cycles
+read latency: 4301 cycles
+53003c 1654
+### Perf Results 613
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50830 cycles
+start latency: 5416 cycles
+stop latency: 2197 cycles
+read latency: 4301 cycles
+53003c 1546
+### Perf Results 614
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50588 cycles
+start latency: 5394 cycles
+stop latency: 2265 cycles
+read latency: 4359 cycles
+53003c 1636
+### Perf Results 615
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85802 cycles
+start latency: 5612 cycles
+stop latency: 2208 cycles
+read latency: 4278 cycles
+53003c 1713
+### Perf Results 616
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85824 cycles
+start latency: 5382 cycles
+stop latency: 2277 cycles
+read latency: 4336 cycles
+53003c 1637
+### Perf Results 617
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50428 cycles
+start latency: 5578 cycles
+stop latency: 2208 cycles
+read latency: 4335 cycles
+53003c 1702
+### Perf Results 618
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85480 cycles
+start latency: 5405 cycles
+stop latency: 2277 cycles
+read latency: 4312 cycles
+53003c 1642
+### Perf Results 619
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50657 cycles
+start latency: 5371 cycles
+stop latency: 2219 cycles
+read latency: 4267 cycles
+53003c 1567
+### Perf Results 620
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50267 cycles
+start latency: 5543 cycles
+stop latency: 2312 cycles
+read latency: 4381 cycles
+53003c 1809
+### Perf Results 621
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85779 cycles
+start latency: 5624 cycles
+stop latency: 2219 cycles
+read latency: 4359 cycles
+53003c 1715
+### Perf Results 622
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5623 cycles
+stop latency: 2266 cycles
+read latency: 4255 cycles
+53003c 1764
+### Perf Results 623
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5669 cycles
+stop latency: 2197 cycles
+read latency: 4439 cycles
+53003c 1703
+### Perf Results 624
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50531 cycles
+start latency: 5371 cycles
+stop latency: 2311 cycles
+read latency: 4232 cycles
+53003c 1673
+### Perf Results 625
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50727 cycles
+start latency: 5451 cycles
+stop latency: 2231 cycles
+read latency: 4439 cycles
+53003c 1580
+### Perf Results 626
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50554 cycles
+start latency: 5462 cycles
+stop latency: 2358 cycles
+read latency: 4427 cycles
+53003c 1697
+### Perf Results 627
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50473 cycles
+start latency: 5555 cycles
+stop latency: 2231 cycles
+read latency: 4312 cycles
+53003c 1738
+### Perf Results 628
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85675 cycles
+start latency: 5359 cycles
+stop latency: 2323 cycles
+read latency: 4278 cycles
+53003c 1672
+### Perf Results 629
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50140 cycles
+start latency: 5578 cycles
+stop latency: 2219 cycles
+read latency: 4290 cycles
+53003c 1712
+### Perf Results 630
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 136815 cycles
+start latency: 5796 cycles
+stop latency: 2312 cycles
+read latency: 4692 cycles
+53003c 1660
+### Perf Results 631
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85802 cycles
+start latency: 5646 cycles
+stop latency: 2185 cycles
+read latency: 4313 cycles
+53003c 1700
+### Perf Results 632
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86112 cycles
+start latency: 5463 cycles
+stop latency: 2300 cycles
+read latency: 4278 cycles
+53003c 1668
+### Perf Results 633
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50290 cycles
+start latency: 5405 cycles
+stop latency: 2242 cycles
+read latency: 4359 cycles
+53003c 1591
+### Perf Results 634
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85744 cycles
+start latency: 5405 cycles
+stop latency: 2265 cycles
+read latency: 4416 cycles
+53003c 1599
+### Perf Results 635
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5531 cycles
+stop latency: 2231 cycles
+read latency: 4336 cycles
+53003c 1727
+### Perf Results 636
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5854 cycles
+stop latency: 2300 cycles
+read latency: 4289 cycles
+53003c 1782
+### Perf Results 637
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85778 cycles
+start latency: 5612 cycles
+stop latency: 2208 cycles
+read latency: 4382 cycles
+53003c 1716
+### Perf Results 638
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85940 cycles
+start latency: 5417 cycles
+stop latency: 2334 cycles
+read latency: 4290 cycles
+53003c 1670
+### Perf Results 639
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50473 cycles
+start latency: 5463 cycles
+stop latency: 2231 cycles
+read latency: 4289 cycles
+53003c 1565
+### Perf Results 640
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5440 cycles
+stop latency: 2265 cycles
+read latency: 4313 cycles
+53003c 1618
+### Perf Results 641
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5612 cycles
+stop latency: 2231 cycles
+read latency: 4474 cycles
+53003c 1736
+### Perf Results 642
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50623 cycles
+start latency: 5301 cycles
+stop latency: 2289 cycles
+read latency: 4358 cycles
+53003c 1644
+### Perf Results 643
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5646 cycles
+stop latency: 2254 cycles
+read latency: 4416 cycles
+53003c 1747
+### Perf Results 644
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86089 cycles
+start latency: 5451 cycles
+stop latency: 2369 cycles
+read latency: 4220 cycles
+53003c 1712
+### Perf Results 645
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5589 cycles
+stop latency: 2231 cycles
+read latency: 4359 cycles
+53003c 1748
+### Perf Results 646
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50888 cycles
+start latency: 5532 cycles
+stop latency: 2323 cycles
+read latency: 4473 cycles
+53003c 1661
+### Perf Results 647
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85675 cycles
+start latency: 5370 cycles
+stop latency: 2254 cycles
+read latency: 4313 cycles
+53003c 1579
+### Perf Results 648
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85802 cycles
+start latency: 5842 cycles
+stop latency: 2335 cycles
+read latency: 4289 cycles
+53003c 2099
+### Perf Results 649
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50244 cycles
+start latency: 5520 cycles
+stop latency: 2173 cycles
+read latency: 4566 cycles
+53003c 1691
+### Perf Results 650
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85986 cycles
+start latency: 5485 cycles
+stop latency: 2243 cycles
+read latency: 4508 cycles
+53003c 1764
+### Perf Results 651
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50427 cycles
+start latency: 5566 cycles
+stop latency: 2220 cycles
+read latency: 4347 cycles
+53003c 1727
+### Perf Results 652
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5554 cycles
+stop latency: 2312 cycles
+read latency: 4255 cycles
+53003c 1806
+### Perf Results 653
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85916 cycles
+start latency: 5612 cycles
+stop latency: 2254 cycles
+read latency: 4381 cycles
+53003c 1761
+### Perf Results 654
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85687 cycles
+start latency: 5428 cycles
+stop latency: 2323 cycles
+read latency: 4289 cycles
+53003c 1683
+### Perf Results 655
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5612 cycles
+stop latency: 2162 cycles
+read latency: 4577 cycles
+53003c 1669
+### Perf Results 656
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5336 cycles
+stop latency: 2289 cycles
+read latency: 4347 cycles
+53003c 1655
+### Perf Results 657
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50600 cycles
+start latency: 5623 cycles
+stop latency: 2197 cycles
+read latency: 4531 cycles
+53003c 1712
+### Perf Results 658
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50221 cycles
+start latency: 5578 cycles
+stop latency: 2265 cycles
+read latency: 4359 cycles
+53003c 1759
+### Perf Results 659
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50657 cycles
+start latency: 5658 cycles
+stop latency: 2208 cycles
+read latency: 4278 cycles
+53003c 1713
+### Perf Results 660
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86066 cycles
+start latency: 5428 cycles
+stop latency: 2289 cycles
+read latency: 4232 cycles
+53003c 1630
+### Perf Results 661
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50554 cycles
+start latency: 5566 cycles
+stop latency: 2197 cycles
+read latency: 4324 cycles
+53003c 1586
+### Perf Results 662
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50519 cycles
+start latency: 5440 cycles
+stop latency: 2323 cycles
+read latency: 4393 cycles
+53003c 1672
+### Perf Results 663
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85744 cycles
+start latency: 5555 cycles
+stop latency: 2254 cycles
+read latency: 4335 cycles
+53003c 1740
+### Perf Results 664
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85951 cycles
+start latency: 5394 cycles
+stop latency: 2323 cycles
+read latency: 4278 cycles
+53003c 1670
+### Perf Results 665
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50519 cycles
+start latency: 5623 cycles
+stop latency: 2208 cycles
+read latency: 4393 cycles
+53003c 1714
+### Perf Results 666
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85813 cycles
+start latency: 5554 cycles
+stop latency: 2323 cycles
+read latency: 4393 cycles
+53003c 1668
+### Perf Results 667
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85882 cycles
+start latency: 5612 cycles
+stop latency: 2220 cycles
+read latency: 4312 cycles
+53003c 1735
+### Perf Results 668
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50554 cycles
+start latency: 5440 cycles
+stop latency: 2300 cycles
+read latency: 4335 cycles
+53003c 1656
+### Perf Results 669
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85721 cycles
+start latency: 5463 cycles
+stop latency: 2196 cycles
+read latency: 4278 cycles
+53003c 1569
+### Perf Results 670
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85894 cycles
+start latency: 5439 cycles
+stop latency: 2335 cycles
+read latency: 4232 cycles
+53003c 1685
+### Perf Results 671
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50497 cycles
+start latency: 5566 cycles
+stop latency: 2220 cycles
+read latency: 4335 cycles
+53003c 1729
+### Perf Results 672
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5393 cycles
+stop latency: 2323 cycles
+read latency: 4232 cycles
+53003c 1680
+### Perf Results 673
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5623 cycles
+stop latency: 2231 cycles
+read latency: 4382 cycles
+53003c 1729
+### Perf Results 674
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50105 cycles
+start latency: 5497 cycles
+stop latency: 2346 cycles
+read latency: 4324 cycles
+53003c 1681
+### Perf Results 675
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5405 cycles
+stop latency: 2254 cycles
+read latency: 4359 cycles
+53003c 1604
+### Perf Results 676
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85917 cycles
+start latency: 5416 cycles
+stop latency: 2277 cycles
+read latency: 4336 cycles
+53003c 1628
+### Perf Results 677
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50899 cycles
+start latency: 5359 cycles
+stop latency: 2174 cycles
+read latency: 4266 cycles
+53003c 1528
+### Perf Results 678
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50427 cycles
+start latency: 5693 cycles
+stop latency: 2277 cycles
+read latency: 4255 cycles
+53003c 1784
+### Perf Results 679
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85560 cycles
+start latency: 5566 cycles
+stop latency: 2219 cycles
+read latency: 4359 cycles
+53003c 1725
+### Perf Results 680
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86020 cycles
+start latency: 5531 cycles
+stop latency: 2358 cycles
+read latency: 4450 cycles
+53003c 1698
+### Perf Results 681
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50542 cycles
+start latency: 5405 cycles
+stop latency: 2220 cycles
+read latency: 4347 cycles
+53003c 1580
+### Perf Results 682
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 73612 cycles
+start latency: 5451 cycles
+stop latency: 2289 cycles
+read latency: 4393 cycles
+53003c 1651
+### Perf Results 683
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85836 cycles
+start latency: 5336 cycles
+stop latency: 2254 cycles
+read latency: 4335 cycles
+53003c 1602
+### Perf Results 684
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5405 cycles
+stop latency: 2289 cycles
+read latency: 4278 cycles
+53003c 1634
+### Perf Results 685
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85939 cycles
+start latency: 5601 cycles
+stop latency: 2242 cycles
+read latency: 4336 cycles
+53003c 1741
+### Perf Results 686
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86100 cycles
+start latency: 5394 cycles
+stop latency: 2334 cycles
+read latency: 4347 cycles
+53003c 1696
+### Perf Results 687
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50278 cycles
+start latency: 5658 cycles
+stop latency: 2197 cycles
+read latency: 4450 cycles
+53003c 1701
+### Perf Results 688
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50922 cycles
+start latency: 5658 cycles
+stop latency: 2312 cycles
+read latency: 4462 cycles
+53003c 1674
+### Perf Results 689
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5520 cycles
+stop latency: 2220 cycles
+read latency: 4266 cycles
+53003c 1726
+### Perf Results 690
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5463 cycles
+stop latency: 2334 cycles
+read latency: 4439 cycles
+53003c 1680
+### Perf Results 691
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5578 cycles
+stop latency: 2254 cycles
+read latency: 4335 cycles
+53003c 1745
+### Perf Results 692
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85997 cycles
+start latency: 5417 cycles
+stop latency: 2346 cycles
+read latency: 4289 cycles
+53003c 1693
+### Perf Results 693
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5601 cycles
+stop latency: 2242 cycles
+read latency: 4336 cycles
+53003c 1747
+### Perf Results 694
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50830 cycles
+start latency: 5577 cycles
+stop latency: 2346 cycles
+read latency: 4336 cycles
+53003c 1676
+### Perf Results 695
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85790 cycles
+start latency: 5658 cycles
+stop latency: 2197 cycles
+read latency: 4324 cycles
+53003c 1703
+### Perf Results 696
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 91977 cycles
+start latency: 5739 cycles
+stop latency: 2323 cycles
+read latency: 4312 cycles
+53003c 1681
+### Perf Results 697
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5589 cycles
+stop latency: 2220 cycles
+read latency: 4289 cycles
+53003c 1728
+### Perf Results 698
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85502 cycles
+start latency: 5359 cycles
+stop latency: 2266 cycles
+read latency: 4278 cycles
+53003c 1609
+### Perf Results 699
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5543 cycles
+stop latency: 2266 cycles
+read latency: 4312 cycles
+53003c 1776
+### Perf Results 700
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5405 cycles
+stop latency: 2300 cycles
+read latency: 4255 cycles
+53003c 1647
+### Perf Results 701
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86043 cycles
+start latency: 5417 cycles
+stop latency: 2208 cycles
+read latency: 4301 cycles
+53003c 1569
+### Perf Results 702
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5440 cycles
+stop latency: 2288 cycles
+read latency: 4508 cycles
+53003c 1659
+### Perf Results 703
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50128 cycles
+start latency: 5543 cycles
+stop latency: 2219 cycles
+read latency: 4324 cycles
+53003c 1725
+### Perf Results 704
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5462 cycles
+stop latency: 2346 cycles
+read latency: 4324 cycles
+53003c 1675
+### Perf Results 705
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50359 cycles
+start latency: 5670 cycles
+stop latency: 2208 cycles
+read latency: 4393 cycles
+53003c 1713
+### Perf Results 706
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50474 cycles
+start latency: 5439 cycles
+stop latency: 2312 cycles
+read latency: 4335 cycles
+53003c 1661
+### Perf Results 707
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 75497 cycles
+start latency: 5876 cycles
+stop latency: 2208 cycles
+read latency: 4439 cycles
+53003c 1556
+### Perf Results 708
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85709 cycles
+start latency: 5359 cycles
+stop latency: 2312 cycles
+read latency: 4381 cycles
+53003c 1673
+### Perf Results 709
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50197 cycles
+start latency: 5589 cycles
+stop latency: 2208 cycles
+read latency: 4267 cycles
+53003c 1715
+### Perf Results 710
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50450 cycles
+start latency: 6049 cycles
+stop latency: 2346 cycles
+read latency: 4796 cycles
+53003c 1848
+### Perf Results 711
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85468 cycles
+start latency: 5612 cycles
+stop latency: 2219 cycles
+read latency: 4382 cycles
+53003c 1719
+### Perf Results 712
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85951 cycles
+start latency: 5543 cycles
+stop latency: 2334 cycles
+read latency: 4244 cycles
+53003c 1829
+### Perf Results 713
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50312 cycles
+start latency: 5589 cycles
+stop latency: 2208 cycles
+read latency: 4232 cycles
+53003c 1693
+### Perf Results 714
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 47001 cycles
+start latency: 5497 cycles
+stop latency: 2289 cycles
+read latency: 4358 cycles
+53003c 1611
+### Perf Results 715
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86204 cycles
+start latency: 5508 cycles
+stop latency: 2243 cycles
+read latency: 4324 cycles
+53003c 1757
+### Perf Results 716
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50163 cycles
+start latency: 5543 cycles
+stop latency: 2277 cycles
+read latency: 4289 cycles
+53003c 1784
+### Perf Results 717
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5623 cycles
+stop latency: 2300 cycles
+read latency: 4301 cycles
+53003c 1772
+### Perf Results 718
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85916 cycles
+start latency: 5393 cycles
+stop latency: 2312 cycles
+read latency: 4232 cycles
+53003c 1663
+### Perf Results 719
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50220 cycles
+start latency: 5669 cycles
+stop latency: 2208 cycles
+read latency: 4359 cycles
+53003c 1710
+### Perf Results 720
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86388 cycles
+start latency: 5462 cycles
+stop latency: 2346 cycles
+read latency: 4485 cycles
+53003c 1652
+### Perf Results 721
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5543 cycles
+stop latency: 2254 cycles
+read latency: 4255 cycles
+53003c 1745
+### Perf Results 722
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85894 cycles
+start latency: 5474 cycles
+stop latency: 2335 cycles
+read latency: 4347 cycles
+53003c 1816
+### Perf Results 723
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85468 cycles
+start latency: 5623 cycles
+stop latency: 2197 cycles
+read latency: 4370 cycles
+53003c 1712
+### Perf Results 724
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5359 cycles
+stop latency: 2323 cycles
+read latency: 4577 cycles
+53003c 1686
+### Perf Results 725
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50140 cycles
+start latency: 5601 cycles
+stop latency: 2242 cycles
+read latency: 4382 cycles
+53003c 1745
+### Perf Results 726
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 84950 cycles
+start latency: 5612 cycles
+stop latency: 2312 cycles
+read latency: 4393 cycles
+53003c 1647
+### Perf Results 727
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85963 cycles
+start latency: 5623 cycles
+stop latency: 2254 cycles
+read latency: 4290 cycles
+53003c 1768
+### Perf Results 728
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50623 cycles
+start latency: 5451 cycles
+stop latency: 2335 cycles
+read latency: 4404 cycles
+53003c 1680
+### Perf Results 729
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86204 cycles
+start latency: 5566 cycles
+stop latency: 2288 cycles
+read latency: 4370 cycles
+53003c 1801
+### Perf Results 730
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5324 cycles
+stop latency: 2266 cycles
+read latency: 4301 cycles
+53003c 1630
+### Perf Results 731
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50220 cycles
+start latency: 5635 cycles
+stop latency: 2242 cycles
+read latency: 4267 cycles
+53003c 1733
+### Perf Results 732
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50543 cycles
+start latency: 5417 cycles
+stop latency: 2323 cycles
+read latency: 4220 cycles
+53003c 1678
+### Perf Results 733
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5658 cycles
+stop latency: 2220 cycles
+read latency: 4335 cycles
+53003c 1725
+### Perf Results 734
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5405 cycles
+stop latency: 2289 cycles
+read latency: 4370 cycles
+53003c 1654
+### Perf Results 735
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50037 cycles
+start latency: 5577 cycles
+stop latency: 2220 cycles
+read latency: 4381 cycles
+53003c 1724
+### Perf Results 736
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85882 cycles
+start latency: 5371 cycles
+stop latency: 2369 cycles
+read latency: 4186 cycles
+53003c 1729
+### Perf Results 737
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50186 cycles
+start latency: 5532 cycles
+stop latency: 2242 cycles
+read latency: 4359 cycles
+53003c 1734
+### Perf Results 738
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50957 cycles
+start latency: 5371 cycles
+stop latency: 2346 cycles
+read latency: 4301 cycles
+53003c 1701
+### Perf Results 739
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85825 cycles
+start latency: 5589 cycles
+stop latency: 2242 cycles
+read latency: 4301 cycles
+53003c 1728
+### Perf Results 740
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85986 cycles
+start latency: 5497 cycles
+stop latency: 2312 cycles
+read latency: 4243 cycles
+53003c 1664
+### Perf Results 741
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5554 cycles
+stop latency: 2231 cycles
+read latency: 4324 cycles
+53003c 1737
+### Perf Results 742
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 73405 cycles
+start latency: 5532 cycles
+stop latency: 2323 cycles
+read latency: 4450 cycles
+53003c 1689
+### Perf Results 743
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86020 cycles
+start latency: 5555 cycles
+stop latency: 2185 cycles
+read latency: 4370 cycles
+53003c 1698
+### Perf Results 744
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5451 cycles
+stop latency: 2311 cycles
+read latency: 4416 cycles
+53003c 1657
+### Perf Results 745
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86330 cycles
+start latency: 5359 cycles
+stop latency: 2312 cycles
+read latency: 4278 cycles
+53003c 1672
+### Perf Results 746
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86135 cycles
+start latency: 5451 cycles
+stop latency: 2265 cycles
+read latency: 4301 cycles
+53003c 1626
+### Perf Results 747
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50313 cycles
+start latency: 5566 cycles
+stop latency: 2220 cycles
+read latency: 4347 cycles
+53003c 1728
+### Perf Results 748
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50680 cycles
+start latency: 5324 cycles
+stop latency: 2243 cycles
+read latency: 4255 cycles
+53003c 1607
+### Perf Results 749
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5578 cycles
+stop latency: 2219 cycles
+read latency: 4370 cycles
+53003c 1713
+### Perf Results 750
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5532 cycles
+stop latency: 2300 cycles
+read latency: 4255 cycles
+53003c 1798
+### Perf Results 751
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5532 cycles
+stop latency: 2231 cycles
+read latency: 4324 cycles
+53003c 1729
+### Perf Results 752
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85698 cycles
+start latency: 5554 cycles
+stop latency: 2289 cycles
+read latency: 4220 cycles
+53003c 1772
+### Perf Results 753
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5693 cycles
+stop latency: 2208 cycles
+read latency: 4324 cycles
+53003c 1712
+### Perf Results 754
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50198 cycles
+start latency: 5600 cycles
+stop latency: 2254 cycles
+read latency: 4359 cycles
+53003c 1752
+### Perf Results 755
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85629 cycles
+start latency: 5531 cycles
+stop latency: 2197 cycles
+read latency: 4324 cycles
+53003c 1701
+### Perf Results 756
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85940 cycles
+start latency: 5439 cycles
+stop latency: 2346 cycles
+read latency: 4267 cycles
+53003c 1701
+### Perf Results 757
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5370 cycles
+stop latency: 2289 cycles
+read latency: 4312 cycles
+53003c 1617
+### Perf Results 758
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 86043 cycles
+start latency: 5474 cycles
+stop latency: 2242 cycles
+read latency: 4520 cycles
+53003c 1590
+### Perf Results 759
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85824 cycles
+start latency: 5578 cycles
+stop latency: 2288 cycles
+read latency: 4232 cycles
+53003c 1763
+### Perf Results 760
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5428 cycles
+stop latency: 2311 cycles
+read latency: 4324 cycles
+53003c 1657
+### Perf Results 761
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86055 cycles
+start latency: 5440 cycles
+stop latency: 2185 cycles
+read latency: 4416 cycles
+53003c 1550
+### Perf Results 762
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86009 cycles
+start latency: 5302 cycles
+stop latency: 21033 cycles
+read latency: 5302 cycles
+53003c 1637
+### Perf Results 763
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5646 cycles
+stop latency: 2231 cycles
+read latency: 4497 cycles
+53003c 1732
+### Perf Results 764
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50612 cycles
+start latency: 5405 cycles
+stop latency: 2300 cycles
+read latency: 4370 cycles
+53003c 1674
+### Perf Results 765
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50129 cycles
+start latency: 5508 cycles
+stop latency: 2231 cycles
+read latency: 4301 cycles
+53003c 1741
+### Perf Results 766
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50428 cycles
+start latency: 5451 cycles
+stop latency: 2277 cycles
+read latency: 4313 cycles
+53003c 1642
+### Perf Results 767
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50174 cycles
+start latency: 5543 cycles
+stop latency: 2242 cycles
+read latency: 4370 cycles
+53003c 1727
+### Perf Results 768
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86319 cycles
+start latency: 5624 cycles
+stop latency: 2334 cycles
+read latency: 4278 cycles
+53003c 1842
+### Perf Results 769
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50405 cycles
+start latency: 5439 cycles
+stop latency: 2220 cycles
+read latency: 4335 cycles
+53003c 1729
+### Perf Results 770
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5566 cycles
+stop latency: 2323 cycles
+read latency: 4336 cycles
+53003c 1824
+### Perf Results 771
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85675 cycles
+start latency: 5578 cycles
+stop latency: 2185 cycles
+read latency: 4347 cycles
+53003c 1696
+### Perf Results 772
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86043 cycles
+start latency: 5290 cycles
+stop latency: 2288 cycles
+read latency: 4290 cycles
+53003c 1635
+### Perf Results 773
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50473 cycles
+start latency: 5497 cycles
+stop latency: 2208 cycles
+read latency: 4313 cycles
+53003c 1713
+### Perf Results 774
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85790 cycles
+start latency: 5865 cycles
+stop latency: 2288 cycles
+read latency: 4347 cycles
+53003c 1788
+### Perf Results 775
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85779 cycles
+start latency: 5670 cycles
+stop latency: 2196 cycles
+read latency: 4324 cycles
+53003c 1704
+### Perf Results 776
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50497 cycles
+start latency: 5578 cycles
+stop latency: 2300 cycles
+read latency: 4301 cycles
+53003c 1794
+### Perf Results 777
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86031 cycles
+start latency: 5520 cycles
+stop latency: 2174 cycles
+read latency: 4508 cycles
+53003c 1685
+### Perf Results 778
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86078 cycles
+start latency: 5463 cycles
+stop latency: 2369 cycles
+read latency: 4312 cycles
+53003c 1704
+### Perf Results 779
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50174 cycles
+start latency: 5520 cycles
+stop latency: 2231 cycles
+read latency: 4393 cycles
+53003c 1579
+### Perf Results 780
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50405 cycles
+start latency: 5531 cycles
+stop latency: 2335 cycles
+read latency: 4335 cycles
+53003c 1838
+### Perf Results 781
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5566 cycles
+stop latency: 2208 cycles
+read latency: 4370 cycles
+53003c 1720
+### Perf Results 782
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5428 cycles
+stop latency: 2288 cycles
+read latency: 4267 cycles
+53003c 1640
+### Perf Results 783
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5543 cycles
+stop latency: 2208 cycles
+read latency: 4289 cycles
+53003c 1711
+### Perf Results 784
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85916 cycles
+start latency: 5509 cycles
+stop latency: 2311 cycles
+read latency: 4278 cycles
+53003c 1810
+### Perf Results 785
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5405 cycles
+stop latency: 2243 cycles
+read latency: 4370 cycles
+53003c 1586
+### Perf Results 786
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5405 cycles
+stop latency: 2323 cycles
+read latency: 4244 cycles
+53003c 1652
+### Perf Results 787
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85560 cycles
+start latency: 5382 cycles
+stop latency: 2197 cycles
+read latency: 4301 cycles
+53003c 1559
+### Perf Results 788
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86031 cycles
+start latency: 5405 cycles
+stop latency: 2254 cycles
+read latency: 4266 cycles
+53003c 1619
+### Perf Results 789
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50543 cycles
+start latency: 5658 cycles
+stop latency: 2254 cycles
+read latency: 4451 cycles
+53003c 1761
+### Perf Results 790
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85940 cycles
+start latency: 5497 cycles
+stop latency: 2334 cycles
+read latency: 4370 cycles
+53003c 1675
+### Perf Results 791
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86193 cycles
+start latency: 5485 cycles
+stop latency: 2220 cycles
+read latency: 4381 cycles
+53003c 1568
+### Perf Results 792
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50451 cycles
+start latency: 5290 cycles
+stop latency: 2277 cycles
+read latency: 4508 cycles
+53003c 1634
+### Perf Results 793
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86262 cycles
+start latency: 5612 cycles
+stop latency: 2231 cycles
+read latency: 4358 cycles
+53003c 1741
+### Perf Results 794
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86296 cycles
+start latency: 5428 cycles
+stop latency: 2300 cycles
+read latency: 4359 cycles
+53003c 1662
+### Perf Results 795
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50382 cycles
+start latency: 5601 cycles
+stop latency: 2231 cycles
+read latency: 4324 cycles
+53003c 1736
+### Perf Results 796
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5658 cycles
+stop latency: 2323 cycles
+read latency: 4382 cycles
+53003c 1809
+### Perf Results 797
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50255 cycles
+start latency: 5520 cycles
+stop latency: 2208 cycles
+read latency: 4324 cycles
+53003c 1713
+### Perf Results 798
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5416 cycles
+stop latency: 2335 cycles
+read latency: 4347 cycles
+53003c 1699
+### Perf Results 799
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5566 cycles
+stop latency: 2219 cycles
+read latency: 4324 cycles
+53003c 1726
+### Perf Results 800
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85422 cycles
+start latency: 5554 cycles
+stop latency: 2300 cycles
+read latency: 4393 cycles
+53003c 1800
+### Perf Results 801
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50358 cycles
+start latency: 5428 cycles
+stop latency: 2265 cycles
+read latency: 4301 cycles
+53003c 1601
+### Perf Results 802
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5474 cycles
+stop latency: 2300 cycles
+read latency: 4324 cycles
+53003c 1639
+### Perf Results 803
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85721 cycles
+start latency: 5486 cycles
+stop latency: 2208 cycles
+read latency: 4255 cycles
+53003c 1716
+### Perf Results 804
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85939 cycles
+start latency: 5371 cycles
+stop latency: 2311 cycles
+read latency: 4290 cycles
+53003c 1675
+### Perf Results 805
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5669 cycles
+stop latency: 2243 cycles
+read latency: 4335 cycles
+53003c 1750
+### Perf Results 806
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 72933 cycles
+start latency: 5463 cycles
+stop latency: 2311 cycles
+read latency: 4370 cycles
+53003c 1664
+### Perf Results 807
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5566 cycles
+stop latency: 2208 cycles
+read latency: 4382 cycles
+53003c 1734
+### Perf Results 808
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50543 cycles
+start latency: 5336 cycles
+stop latency: 2265 cycles
+read latency: 4244 cycles
+53003c 1625
+### Perf Results 809
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86031 cycles
+start latency: 5485 cycles
+stop latency: 2231 cycles
+read latency: 4370 cycles
+53003c 1727
+### Perf Results 810
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85859 cycles
+start latency: 5313 cycles
+stop latency: 2357 cycles
+read latency: 4244 cycles
+53003c 1713
+### Perf Results 811
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50301 cycles
+start latency: 5612 cycles
+stop latency: 2242 cycles
+read latency: 4336 cycles
+53003c 1751
+### Perf Results 812
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50634 cycles
+start latency: 5474 cycles
+stop latency: 2289 cycles
+read latency: 4370 cycles
+53003c 1636
+### Perf Results 813
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50773 cycles
+start latency: 5555 cycles
+stop latency: 2231 cycles
+read latency: 4335 cycles
+53003c 1738
+### Perf Results 814
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50520 cycles
+start latency: 5509 cycles
+stop latency: 2334 cycles
+read latency: 4347 cycles
+53003c 1684
+### Perf Results 815
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50450 cycles
+start latency: 5578 cycles
+stop latency: 2219 cycles
+read latency: 4313 cycles
+53003c 1724
+### Perf Results 816
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86031 cycles
+start latency: 5348 cycles
+stop latency: 2265 cycles
+read latency: 4290 cycles
+53003c 1619
+### Perf Results 817
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50405 cycles
+start latency: 5497 cycles
+stop latency: 2277 cycles
+read latency: 4278 cycles
+53003c 1788
+### Perf Results 818
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50542 cycles
+start latency: 5451 cycles
+stop latency: 2369 cycles
+read latency: 4278 cycles
+53003c 1697
+### Perf Results 819
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85641 cycles
+start latency: 5485 cycles
+stop latency: 2197 cycles
+read latency: 4335 cycles
+53003c 1532
+### Perf Results 820
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85986 cycles
+start latency: 5348 cycles
+stop latency: 2323 cycles
+read latency: 4266 cycles
+53003c 1690
+### Perf Results 821
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5566 cycles
+stop latency: 2196 cycles
+read latency: 4370 cycles
+53003c 1712
+### Perf Results 822
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85572 cycles
+start latency: 5393 cycles
+stop latency: 2289 cycles
+read latency: 4370 cycles
+53003c 1626
+### Perf Results 823
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50358 cycles
+start latency: 5543 cycles
+stop latency: 2242 cycles
+read latency: 4278 cycles
+53003c 1740
+### Perf Results 824
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50692 cycles
+start latency: 5428 cycles
+stop latency: 2311 cycles
+read latency: 4462 cycles
+53003c 1651
+### Perf Results 825
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85997 cycles
+start latency: 5405 cycles
+stop latency: 2254 cycles
+read latency: 4324 cycles
+53003c 1608
+### Perf Results 826
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86066 cycles
+start latency: 5451 cycles
+stop latency: 2277 cycles
+read latency: 4508 cycles
+53003c 1647
+### Perf Results 827
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50358 cycles
+start latency: 5578 cycles
+stop latency: 2231 cycles
+read latency: 4404 cycles
+53003c 1730
+### Perf Results 828
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5474 cycles
+stop latency: 2300 cycles
+read latency: 4358 cycles
+53003c 1637
+### Perf Results 829
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50358 cycles
+start latency: 5578 cycles
+stop latency: 2219 cycles
+read latency: 4301 cycles
+53003c 1730
+### Perf Results 830
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50865 cycles
+start latency: 5405 cycles
+stop latency: 2289 cycles
+read latency: 4381 cycles
+53003c 1657
+### Perf Results 831
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50474 cycles
+start latency: 5531 cycles
+stop latency: 2231 cycles
+read latency: 4359 cycles
+53003c 1737
+### Perf Results 832
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85767 cycles
+start latency: 5417 cycles
+stop latency: 2311 cycles
+read latency: 4347 cycles
+53003c 1647
+### Perf Results 833
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50428 cycles
+start latency: 5336 cycles
+stop latency: 2185 cycles
+read latency: 4358 cycles
+53003c 1541
+### Perf Results 834
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50830 cycles
+start latency: 5532 cycles
+stop latency: 2311 cycles
+read latency: 4290 cycles
+53003c 1648
+### Perf Results 835
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5555 cycles
+stop latency: 2208 cycles
+read latency: 4358 cycles
+53003c 1713
+### Perf Results 836
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85825 cycles
+start latency: 5554 cycles
+stop latency: 2312 cycles
+read latency: 4301 cycles
+53003c 1823
+### Perf Results 837
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50658 cycles
+start latency: 5647 cycles
+stop latency: 2196 cycles
+read latency: 4382 cycles
+53003c 1703
+### Perf Results 838
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 107410 cycles
+start latency: 5842 cycles
+stop latency: 2277 cycles
+read latency: 4382 cycles
+53003c 1635
+### Perf Results 839
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50451 cycles
+start latency: 5566 cycles
+stop latency: 2265 cycles
+read latency: 4313 cycles
+53003c 1767
+### Perf Results 840
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5405 cycles
+stop latency: 2288 cycles
+read latency: 4221 cycles
+53003c 1645
+### Perf Results 841
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85894 cycles
+start latency: 5589 cycles
+stop latency: 2185 cycles
+read latency: 4313 cycles
+53003c 1685
+### Perf Results 842
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85882 cycles
+start latency: 5359 cycles
+stop latency: 2288 cycles
+read latency: 4336 cycles
+53003c 1637
+### Perf Results 843
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50335 cycles
+start latency: 5647 cycles
+stop latency: 2219 cycles
+read latency: 4393 cycles
+53003c 1724
+### Perf Results 844
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5681 cycles
+stop latency: 2300 cycles
+read latency: 4393 cycles
+53003c 1783
+### Perf Results 845
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5578 cycles
+stop latency: 2219 cycles
+read latency: 4313 cycles
+53003c 1736
+### Perf Results 846
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50554 cycles
+start latency: 5428 cycles
+stop latency: 2277 cycles
+read latency: 4335 cycles
+53003c 1646
+### Perf Results 847
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50474 cycles
+start latency: 5612 cycles
+stop latency: 2243 cycles
+read latency: 4278 cycles
+53003c 1748
+### Perf Results 848
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85997 cycles
+start latency: 5347 cycles
+stop latency: 2277 cycles
+read latency: 4175 cycles
+53003c 1637
+### Perf Results 849
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5623 cycles
+stop latency: 2197 cycles
+read latency: 4427 cycles
+53003c 1705
+### Perf Results 850
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 51060 cycles
+start latency: 5440 cycles
+stop latency: 2323 cycles
+read latency: 4151 cycles
+53003c 1635
+### Perf Results 851
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85618 cycles
+start latency: 5589 cycles
+stop latency: 2242 cycles
+read latency: 4382 cycles
+53003c 1745
+### Perf Results 852
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85974 cycles
+start latency: 5417 cycles
+stop latency: 2323 cycles
+read latency: 4370 cycles
+53003c 1677
+### Perf Results 853
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5440 cycles
+stop latency: 2196 cycles
+read latency: 4347 cycles
+53003c 1551
+### Perf Results 854
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85502 cycles
+start latency: 5336 cycles
+stop latency: 2288 cycles
+read latency: 4278 cycles
+53003c 1631
+### Perf Results 855
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5681 cycles
+stop latency: 2185 cycles
+read latency: 4450 cycles
+53003c 1684
+### Perf Results 856
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50266 cycles
+start latency: 5440 cycles
+stop latency: 2311 cycles
+read latency: 4405 cycles
+53003c 1661
+### Perf Results 857
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86331 cycles
+start latency: 5681 cycles
+stop latency: 2219 cycles
+read latency: 4520 cycles
+53003c 1722
+### Perf Results 858
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5497 cycles
+stop latency: 2334 cycles
+read latency: 4290 cycles
+53003c 1681
+### Perf Results 859
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5497 cycles
+stop latency: 2265 cycles
+read latency: 4336 cycles
+53003c 1629
+### Perf Results 860
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5371 cycles
+stop latency: 2277 cycles
+read latency: 4324 cycles
+53003c 1619
+### Perf Results 861
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50278 cycles
+start latency: 5543 cycles
+stop latency: 2197 cycles
+read latency: 4335 cycles
+53003c 1693
+### Perf Results 862
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50508 cycles
+start latency: 5462 cycles
+stop latency: 2312 cycles
+read latency: 4427 cycles
+53003c 1655
+### Perf Results 863
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50692 cycles
+start latency: 5635 cycles
+stop latency: 2231 cycles
+read latency: 4336 cycles
+53003c 1730
+### Perf Results 864
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85767 cycles
+start latency: 5635 cycles
+stop latency: 2300 cycles
+read latency: 4232 cycles
+53003c 1794
+### Perf Results 865
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50450 cycles
+start latency: 5589 cycles
+stop latency: 2196 cycles
+read latency: 4313 cycles
+53003c 1705
+### Perf Results 866
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50404 cycles
+start latency: 5370 cycles
+stop latency: 2369 cycles
+read latency: 4209 cycles
+53003c 1686
+### Perf Results 867
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85813 cycles
+start latency: 5370 cycles
+stop latency: 2266 cycles
+read latency: 4404 cycles
+53003c 1610
+### Perf Results 868
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85916 cycles
+start latency: 5451 cycles
+stop latency: 2334 cycles
+read latency: 4221 cycles
+53003c 1680
+### Perf Results 869
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5554 cycles
+stop latency: 2231 cycles
+read latency: 4313 cycles
+53003c 1726
+### Perf Results 870
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 47012 cycles
+start latency: 5761 cycles
+stop latency: 2300 cycles
+read latency: 4336 cycles
+53003c 1808
+### Perf Results 871
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86250 cycles
+start latency: 5520 cycles
+stop latency: 2197 cycles
+read latency: 4243 cycles
+53003c 1704
+### Perf Results 872
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50565 cycles
+start latency: 5462 cycles
+stop latency: 2289 cycles
+read latency: 4301 cycles
+53003c 1668
+### Perf Results 873
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86112 cycles
+start latency: 5440 cycles
+stop latency: 2242 cycles
+read latency: 4370 cycles
+53003c 1733
+### Perf Results 874
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5359 cycles
+stop latency: 2289 cycles
+read latency: 4174 cycles
+53003c 1636
+### Perf Results 875
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50335 cycles
+start latency: 5669 cycles
+stop latency: 2208 cycles
+read latency: 4347 cycles
+53003c 1710
+### Perf Results 876
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85882 cycles
+start latency: 5417 cycles
+stop latency: 2334 cycles
+read latency: 4336 cycles
+53003c 1646
+### Perf Results 877
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86032 cycles
+start latency: 5600 cycles
+stop latency: 2300 cycles
+read latency: 4244 cycles
+53003c 1757
+### Perf Results 878
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86112 cycles
+start latency: 5359 cycles
+stop latency: 2334 cycles
+read latency: 4301 cycles
+53003c 1663
+### Perf Results 879
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85192 cycles
+start latency: 5600 cycles
+stop latency: 2254 cycles
+read latency: 4209 cycles
+53003c 1768
+### Perf Results 880
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86077 cycles
+start latency: 5520 cycles
+stop latency: 2323 cycles
+read latency: 4336 cycles
+53003c 1819
+### Perf Results 881
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5624 cycles
+stop latency: 2231 cycles
+read latency: 4312 cycles
+53003c 1737
+### Perf Results 882
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85986 cycles
+start latency: 5347 cycles
+stop latency: 2277 cycles
+read latency: 4301 cycles
+53003c 1646
+### Perf Results 883
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5681 cycles
+stop latency: 2288 cycles
+read latency: 4359 cycles
+53003c 1781
+### Perf Results 884
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50704 cycles
+start latency: 5727 cycles
+stop latency: 2334 cycles
+read latency: 4359 cycles
+53003c 1810
+### Perf Results 885
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50152 cycles
+start latency: 5508 cycles
+stop latency: 2231 cycles
+read latency: 4474 cycles
+53003c 1565
+### Perf Results 886
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5439 cycles
+stop latency: 2358 cycles
+read latency: 4347 cycles
+53003c 1708
+### Perf Results 887
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50497 cycles
+start latency: 5658 cycles
+stop latency: 2196 cycles
+read latency: 4278 cycles
+53003c 1698
+### Perf Results 888
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5612 cycles
+stop latency: 2335 cycles
+read latency: 4266 cycles
+53003c 1822
+### Perf Results 889
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50071 cycles
+start latency: 5554 cycles
+stop latency: 2266 cycles
+read latency: 4301 cycles
+53003c 1767
+### Perf Results 890
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5382 cycles
+stop latency: 2335 cycles
+read latency: 4278 cycles
+53003c 1687
+### Perf Results 891
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 51129 cycles
+start latency: 5566 cycles
+stop latency: 2231 cycles
+read latency: 4324 cycles
+53003c 1734
+### Perf Results 892
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85790 cycles
+start latency: 5370 cycles
+stop latency: 2277 cycles
+read latency: 4370 cycles
+53003c 1622
+### Perf Results 893
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5623 cycles
+stop latency: 2243 cycles
+read latency: 4358 cycles
+53003c 1737
+### Perf Results 894
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50232 cycles
+start latency: 5601 cycles
+stop latency: 2311 cycles
+read latency: 4324 cycles
+53003c 1811
+### Perf Results 895
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85848 cycles
+start latency: 5382 cycles
+stop latency: 2162 cycles
+read latency: 4335 cycles
+53003c 1521
+### Perf Results 896
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 86216 cycles
+start latency: 5589 cycles
+stop latency: 2277 cycles
+read latency: 4335 cycles
+53003c 1626
+### Perf Results 897
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5578 cycles
+stop latency: 2254 cycles
+read latency: 4427 cycles
+53003c 1767
+### Perf Results 898
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50577 cycles
+start latency: 5405 cycles
+stop latency: 2346 cycles
+read latency: 4427 cycles
+53003c 1703
+### Perf Results 899
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50899 cycles
+start latency: 5543 cycles
+stop latency: 2208 cycles
+read latency: 4313 cycles
+53003c 1720
+### Perf Results 900
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50773 cycles
+start latency: 5394 cycles
+stop latency: 2311 cycles
+read latency: 4347 cycles
+53003c 1679
+### Perf Results 901
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50784 cycles
+start latency: 5623 cycles
+stop latency: 2231 cycles
+read latency: 4324 cycles
+53003c 1749
+### Perf Results 902
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85985 cycles
+start latency: 5462 cycles
+stop latency: 2323 cycles
+read latency: 4393 cycles
+53003c 1654
+### Perf Results 903
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50313 cycles
+start latency: 5359 cycles
+stop latency: 2174 cycles
+read latency: 4393 cycles
+53003c 1531
+### Perf Results 904
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 51531 cycles
+start latency: 5543 cycles
+stop latency: 2277 cycles
+read latency: 4186 cycles
+53003c 1622
+### Perf Results 905
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86043 cycles
+start latency: 5842 cycles
+stop latency: 2208 cycles
+read latency: 4359 cycles
+53003c 1725
+### Perf Results 906
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85986 cycles
+start latency: 5347 cycles
+stop latency: 2346 cycles
+read latency: 4393 cycles
+53003c 1686
+### Perf Results 907
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50197 cycles
+start latency: 5612 cycles
+stop latency: 2220 cycles
+read latency: 4335 cycles
+53003c 1725
+### Perf Results 908
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85732 cycles
+start latency: 5371 cycles
+stop latency: 2346 cycles
+read latency: 4335 cycles
+53003c 1707
+### Perf Results 909
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50750 cycles
+start latency: 5416 cycles
+stop latency: 2220 cycles
+read latency: 4289 cycles
+53003c 1567
+### Perf Results 910
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50462 cycles
+start latency: 5405 cycles
+stop latency: 2334 cycles
+read latency: 4255 cycles
+53003c 1696
+### Perf Results 911
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85882 cycles
+start latency: 5578 cycles
+stop latency: 2196 cycles
+read latency: 4301 cycles
+53003c 1704
+### Perf Results 912
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86250 cycles
+start latency: 5451 cycles
+stop latency: 2311 cycles
+read latency: 4278 cycles
+53003c 1676
+### Perf Results 913
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5578 cycles
+stop latency: 2254 cycles
+read latency: 4393 cycles
+53003c 1748
+### Perf Results 914
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50635 cycles
+start latency: 5474 cycles
+stop latency: 2323 cycles
+read latency: 4358 cycles
+53003c 1677
+### Perf Results 915
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5635 cycles
+stop latency: 2254 cycles
+read latency: 4232 cycles
+53003c 1762
+### Perf Results 916
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50266 cycles
+start latency: 5405 cycles
+stop latency: 2369 cycles
+read latency: 4312 cycles
+53003c 1705
+### Perf Results 917
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50427 cycles
+start latency: 5336 cycles
+stop latency: 2196 cycles
+read latency: 4370 cycles
+53003c 1534
+### Perf Results 918
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86031 cycles
+start latency: 5348 cycles
+stop latency: 2288 cycles
+read latency: 4347 cycles
+53003c 1653
+### Perf Results 919
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5566 cycles
+stop latency: 2220 cycles
+read latency: 4393 cycles
+53003c 1727
+### Perf Results 920
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 139506 cycles
+start latency: 5968 cycles
+stop latency: 2323 cycles
+read latency: 4347 cycles
+53003c 1826
+### Perf Results 921
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85997 cycles
+start latency: 5566 cycles
+stop latency: 2208 cycles
+read latency: 4278 cycles
+53003c 1710
+### Perf Results 922
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 92287 cycles
+start latency: 5750 cycles
+stop latency: 2312 cycles
+read latency: 4381 cycles
+53003c 1657
+### Perf Results 923
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50830 cycles
+start latency: 5624 cycles
+stop latency: 2277 cycles
+read latency: 4416 cycles
+53003c 1783
+### Perf Results 924
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85284 cycles
+start latency: 5416 cycles
+stop latency: 2266 cycles
+read latency: 4289 cycles
+53003c 1624
+### Perf Results 925
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50945 cycles
+start latency: 5601 cycles
+stop latency: 2231 cycles
+read latency: 4301 cycles
+53003c 1735
+### Perf Results 926
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5416 cycles
+stop latency: 2335 cycles
+read latency: 4335 cycles
+53003c 1675
+### Perf Results 927
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86457 cycles
+start latency: 5359 cycles
+stop latency: 2289 cycles
+read latency: 4335 cycles
+53003c 1616
+### Perf Results 928
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5394 cycles
+stop latency: 2334 cycles
+read latency: 4186 cycles
+53003c 1678
+### Perf Results 929
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50474 cycles
+start latency: 5624 cycles
+stop latency: 2254 cycles
+read latency: 4427 cycles
+53003c 1733
+### Perf Results 930
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5520 cycles
+stop latency: 2311 cycles
+read latency: 4474 cycles
+53003c 1655
+### Perf Results 931
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5635 cycles
+stop latency: 2242 cycles
+read latency: 4301 cycles
+53003c 1736
+### Perf Results 932
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50382 cycles
+start latency: 5428 cycles
+stop latency: 2334 cycles
+read latency: 4301 cycles
+53003c 1696
+### Perf Results 933
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50255 cycles
+start latency: 5566 cycles
+stop latency: 2185 cycles
+read latency: 4336 cycles
+53003c 1695
+### Perf Results 934
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85790 cycles
+start latency: 5348 cycles
+stop latency: 2334 cycles
+read latency: 4497 cycles
+53003c 1683
+### Perf Results 935
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50163 cycles
+start latency: 5543 cycles
+stop latency: 2265 cycles
+read latency: 4290 cycles
+53003c 1766
+### Perf Results 936
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50795 cycles
+start latency: 5428 cycles
+stop latency: 2288 cycles
+read latency: 4313 cycles
+53003c 1638
+### Perf Results 937
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85744 cycles
+start latency: 5301 cycles
+stop latency: 2231 cycles
+read latency: 4313 cycles
+53003c 1575
+### Perf Results 938
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5428 cycles
+stop latency: 2335 cycles
+read latency: 4243 cycles
+53003c 1687
+### Perf Results 939
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50163 cycles
+start latency: 5508 cycles
+stop latency: 2243 cycles
+read latency: 4289 cycles
+53003c 1743
+### Perf Results 940
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 47690 cycles
+start latency: 5382 cycles
+stop latency: 2312 cycles
+read latency: 4266 cycles
+53003c 1675
+### Perf Results 941
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5566 cycles
+stop latency: 2196 cycles
+read latency: 4566 cycles
+53003c 1703
+### Perf Results 942
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5578 cycles
+stop latency: 2288 cycles
+read latency: 4290 cycles
+53003c 1788
+### Perf Results 943
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5543 cycles
+stop latency: 2197 cycles
+read latency: 4324 cycles
+53003c 1716
+### Perf Results 944
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85974 cycles
+start latency: 5451 cycles
+stop latency: 2312 cycles
+read latency: 4381 cycles
+53003c 1670
+### Perf Results 945
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50531 cycles
+start latency: 5566 cycles
+stop latency: 2208 cycles
+read latency: 4347 cycles
+53003c 1709
+### Perf Results 946
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50623 cycles
+start latency: 5486 cycles
+stop latency: 2242 cycles
+read latency: 4313 cycles
+53003c 1614
+### Perf Results 947
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50635 cycles
+start latency: 5624 cycles
+stop latency: 2231 cycles
+read latency: 4370 cycles
+53003c 1738
+### Perf Results 948
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50358 cycles
+start latency: 5554 cycles
+stop latency: 2346 cycles
+read latency: 4209 cycles
+53003c 1833
+### Perf Results 949
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50439 cycles
+start latency: 5600 cycles
+stop latency: 2231 cycles
+read latency: 4336 cycles
+53003c 1740
+### Perf Results 950
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85962 cycles
+start latency: 5416 cycles
+stop latency: 2277 cycles
+read latency: 4347 cycles
+53003c 1636
+### Perf Results 951
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50082 cycles
+start latency: 5589 cycles
+stop latency: 2196 cycles
+read latency: 4359 cycles
+53003c 1714
+### Perf Results 952
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50393 cycles
+start latency: 5405 cycles
+stop latency: 2311 cycles
+read latency: 4359 cycles
+53003c 1672
+### Perf Results 953
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85825 cycles
+start latency: 5543 cycles
+stop latency: 2300 cycles
+read latency: 4266 cycles
+53003c 1795
+### Perf Results 954
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85928 cycles
+start latency: 5313 cycles
+stop latency: 2300 cycles
+read latency: 4301 cycles
+53003c 1670
+### Perf Results 955
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50370 cycles
+start latency: 5658 cycles
+stop latency: 2231 cycles
+read latency: 4370 cycles
+53003c 1736
+### Perf Results 956
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 40100 cycles
+start latency: 5416 cycles
+stop latency: 2289 cycles
+read latency: 4347 cycles
+53003c 1650
+### Perf Results 957
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86204 cycles
+start latency: 5347 cycles
+stop latency: 2231 cycles
+read latency: 4324 cycles
+53003c 1578
+### Perf Results 958
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50278 cycles
+start latency: 5370 cycles
+stop latency: 2323 cycles
+read latency: 4267 cycles
+53003c 1674
+### Perf Results 959
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85997 cycles
+start latency: 5451 cycles
+stop latency: 2208 cycles
+read latency: 4358 cycles
+53003c 1709
+### Perf Results 960
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85848 cycles
+start latency: 5382 cycles
+stop latency: 2254 cycles
+read latency: 4335 cycles
+53003c 1617
+### Perf Results 961
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50243 cycles
+start latency: 5554 cycles
+stop latency: 2220 cycles
+read latency: 4289 cycles
+53003c 1724
+### Perf Results 962
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50451 cycles
+start latency: 5543 cycles
+stop latency: 2311 cycles
+read latency: 4347 cycles
+53003c 1816
+### Perf Results 963
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 76555 cycles
+start latency: 5773 cycles
+stop latency: 2231 cycles
+read latency: 4450 cycles
+53003c 1592
+### Perf Results 964
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5451 cycles
+stop latency: 2300 cycles
+read latency: 4278 cycles
+53003c 1671
+### Perf Results 965
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50416 cycles
+start latency: 5497 cycles
+stop latency: 2277 cycles
+read latency: 4381 cycles
+53003c 1786
+### Perf Results 966
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85847 cycles
+start latency: 5693 cycles
+stop latency: 2323 cycles
+read latency: 4312 cycles
+53003c 1819
+### Perf Results 967
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50910 cycles
+start latency: 5371 cycles
+stop latency: 2219 cycles
+read latency: 4313 cycles
+53003c 1559
+### Perf Results 968
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 146406 cycles
+start latency: 5589 cycles
+stop latency: 2254 cycles
+read latency: 4220 cycles
+53003c 1604
+### Perf Results 969
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86066 cycles
+start latency: 5509 cycles
+stop latency: 2208 cycles
+read latency: 4358 cycles
+53003c 1703
+### Perf Results 970
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85974 cycles
+start latency: 5416 cycles
+stop latency: 2323 cycles
+read latency: 4324 cycles
+53003c 1675
+### Perf Results 971
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50427 cycles
+start latency: 5497 cycles
+stop latency: 2231 cycles
+read latency: 4336 cycles
+53003c 1580
+### Perf Results 972
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85733 cycles
+start latency: 5290 cycles
+stop latency: 2335 cycles
+read latency: 4312 cycles
+53003c 1674
+### Perf Results 973
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50255 cycles
+start latency: 5589 cycles
+stop latency: 2208 cycles
+read latency: 4324 cycles
+53003c 1712
+### Perf Results 974
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50485 cycles
+start latency: 5417 cycles
+stop latency: 2277 cycles
+read latency: 4266 cycles
+53003c 1625
+### Perf Results 975
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86204 cycles
+start latency: 5520 cycles
+stop latency: 2208 cycles
+read latency: 4289 cycles
+53003c 1702
+### Perf Results 976
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86054 cycles
+start latency: 5416 cycles
+stop latency: 2312 cycles
+read latency: 4266 cycles
+53003c 1679
+### Perf Results 977
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 76406 cycles
+start latency: 5773 cycles
+stop latency: 2231 cycles
+read latency: 4658 cycles
+53003c 1601
+### Perf Results 978
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50600 cycles
+start latency: 5440 cycles
+stop latency: 2369 cycles
+read latency: 4301 cycles
+53003c 1706
+### Perf Results 979
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50359 cycles
+start latency: 5612 cycles
+stop latency: 2231 cycles
+read latency: 4439 cycles
+53003c 1732
+### Perf Results 980
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50968 cycles
+start latency: 5497 cycles
+stop latency: 2334 cycles
+read latency: 4301 cycles
+53003c 1683
+### Perf Results 981
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5532 cycles
+stop latency: 2231 cycles
+read latency: 4404 cycles
+53003c 1736
+### Perf Results 982
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85917 cycles
+start latency: 5543 cycles
+stop latency: 2369 cycles
+read latency: 4313 cycles
+53003c 1861
+### Perf Results 983
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50704 cycles
+start latency: 5601 cycles
+stop latency: 2208 cycles
+read latency: 4370 cycles
+53003c 1713
+### Perf Results 984
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50312 cycles
+start latency: 5428 cycles
+stop latency: 2334 cycles
+read latency: 4336 cycles
+53003c 1704
+### Perf Results 985
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85491 cycles
+start latency: 5555 cycles
+stop latency: 2288 cycles
+read latency: 4324 cycles
+53003c 1803
+### Perf Results 986
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86054 cycles
+start latency: 5382 cycles
+stop latency: 2300 cycles
+read latency: 4335 cycles
+53003c 1675
+### Perf Results 987
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50347 cycles
+start latency: 5646 cycles
+stop latency: 2266 cycles
+read latency: 4324 cycles
+53003c 1774
+### Perf Results 988
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 40618 cycles
+start latency: 5509 cycles
+stop latency: 2277 cycles
+read latency: 4404 cycles
+53003c 1636
+### Perf Results 989
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86078 cycles
+start latency: 5900 cycles
+stop latency: 2242 cycles
+read latency: 4485 cycles
+53003c 1747
+### Perf Results 990
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50451 cycles
+start latency: 5463 cycles
+stop latency: 2334 cycles
+read latency: 4232 cycles
+53003c 1680
+### Perf Results 991
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 86089 cycles
+start latency: 5463 cycles
+stop latency: 2254 cycles
+read latency: 4542 cycles
+53003c 1603
+### Perf Results 992
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85801 cycles
+start latency: 5577 cycles
+stop latency: 2323 cycles
+read latency: 4255 cycles
+53003c 1828
+### Perf Results 993
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50427 cycles
+start latency: 5589 cycles
+stop latency: 2174 cycles
+read latency: 4197 cycles
+53003c 1676
+### Perf Results 994
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50278 cycles
+start latency: 5520 cycles
+stop latency: 2277 cycles
+read latency: 4359 cycles
+53003c 1781
+### Perf Results 995
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50611 cycles
+start latency: 5589 cycles
+stop latency: 2197 cycles
+read latency: 4301 cycles
+53003c 1675
+### Perf Results 996
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50324 cycles
+start latency: 5555 cycles
+stop latency: 2265 cycles
+read latency: 4439 cycles
+53003c 1756
+### Perf Results 997
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50175 cycles
+start latency: 5612 cycles
+stop latency: 2220 cycles
+read latency: 4312 cycles
+53003c 1708
+### Perf Results 998
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85905 cycles
+start latency: 5520 cycles
+stop latency: 2289 cycles
+read latency: 4439 cycles
+53003c 1766
+### Perf Results 999
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50129 cycles
+start latency: 5509 cycles
+stop latency: 2219 cycles
+read latency: 4336 cycles
+53003c 1729
+### Perf Results 1000
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5612 cycles
+stop latency: 2323 cycles
+read latency: 4163 cycles
+53003c 1817
+### Perf Results 1001
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85560 cycles
+start latency: 6003 cycles
+stop latency: 2174 cycles
+read latency: 4381 cycles
+53003c 1675
+### Perf Results 1002
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85951 cycles
+start latency: 5428 cycles
+stop latency: 2323 cycles
+read latency: 4336 cycles
+53003c 1684
+### Perf Results 1003
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50566 cycles
+start latency: 5566 cycles
+stop latency: 2219 cycles
+read latency: 4347 cycles
+53003c 1727
+### Perf Results 1004
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 89527 cycles
+start latency: 5819 cycles
+stop latency: 2289 cycles
+read latency: 4324 cycles
+53003c 1639
+### Perf Results 1005
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 85962 cycles
+start latency: 5531 cycles
+stop latency: 2208 cycles
+read latency: 4301 cycles
+53003c 1716
+### Perf Results 1006
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50473 cycles
+start latency: 5336 cycles
+stop latency: 2277 cycles
+read latency: 4370 cycles
+53003c 1623
+### Perf Results 1007
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85985 cycles
+start latency: 5624 cycles
+stop latency: 2231 cycles
+read latency: 4347 cycles
+53003c 1735
+### Perf Results 1008
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86066 cycles
+start latency: 5382 cycles
+stop latency: 2300 cycles
+read latency: 4336 cycles
+53003c 1660
+### Perf Results 1009
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 50450 cycles
+start latency: 5623 cycles
+stop latency: 2231 cycles
+read latency: 4255 cycles
+53003c 1737
+### Perf Results 1010
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50359 cycles
+start latency: 5359 cycles
+stop latency: 2312 cycles
+read latency: 4370 cycles
+53003c 1671
+### Perf Results 1011
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50451 cycles
+start latency: 5624 cycles
+stop latency: 2231 cycles
+read latency: 4450 cycles
+53003c 1738
+### Perf Results 1012
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50531 cycles
+start latency: 5405 cycles
+stop latency: 2311 cycles
+read latency: 4393 cycles
+53003c 1671
+### Perf Results 1013
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50381 cycles
+start latency: 5520 cycles
+stop latency: 2208 cycles
+read latency: 4359 cycles
+53003c 1717
+### Perf Results 1014
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85710 cycles
+start latency: 5532 cycles
+stop latency: 2265 cycles
+read latency: 4278 cycles
+53003c 1775
+### Perf Results 1015
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 50359 cycles
+start latency: 5497 cycles
+stop latency: 2173 cycles
+read latency: 4382 cycles
+53003c 1695
+### Perf Results 1016
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50531 cycles
+start latency: 5508 cycles
+stop latency: 2300 cycles
+read latency: 4359 cycles
+53003c 1642
+### Perf Results 1017
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85813 cycles
+start latency: 5451 cycles
+stop latency: 2219 cycles
+read latency: 4313 cycles
+53003c 1568
+### Perf Results 1018
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 86169 cycles
+start latency: 5474 cycles
+stop latency: 2254 cycles
+read latency: 4347 cycles
+53003c 1617
+### Perf Results 1019
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50887 cycles
+start latency: 5474 cycles
+stop latency: 2220 cycles
+read latency: 4301 cycles
+53003c 1566
+### Perf Results 1020
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 46495 cycles
+start latency: 5451 cycles
+stop latency: 2335 cycles
+read latency: 4209 cycles
+53003c 1680
+### Perf Results 1021
+Kernel: 2.6.34
+init_latency: 23 cycles
+Eventset_creation_1: 85916 cycles
+start latency: 5566 cycles
+stop latency: 2219 cycles
+read latency: 4290 cycles
+53003c 1733
+### Perf Results 1022
+Kernel: 2.6.34
+init_latency: 35 cycles
+Eventset_creation_1: 50795 cycles
+start latency: 5658 cycles
+stop latency: 2358 cycles
+read latency: 4381 cycles
+53003c 1684
+### Perf Results 1023
+Kernel: 2.6.34
+init_latency: 34 cycles
+Eventset_creation_1: 85468 cycles
+start latency: 5416 cycles
+stop latency: 2185 cycles
+read latency: 4186 cycles
+53003c 1542
