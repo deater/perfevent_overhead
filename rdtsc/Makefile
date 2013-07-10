@@ -128,6 +128,7 @@ make_graphs_kernel_rdtsc_all.o:	make_graphs_kernel_rdtsc_all.c
 
 
 clean:
+	cd results && make clean
 	rm -f *.o core *~ \
 	convert_results \
 	generate_results \
