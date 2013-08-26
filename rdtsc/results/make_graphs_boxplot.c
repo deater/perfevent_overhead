@@ -14,17 +14,17 @@
 int comp(const void *av,const void *bv) {
 
   const long long *a,*b;
-  
+
   a=av; b=bv;
 
   if (*a==*b) {
     return 0;
   }
-   
+
   if (*a < *b) {
       return -1;
   }
-   
+
   return 1;
 }
 
@@ -104,7 +104,15 @@ int main(int argc, char **argv) {
      }
   }
 
-  maxy=((((long long)maxy)/10000)+1)*10000;
+	if (maxy>10000) {
+		maxy=((((long long)maxy)/10000)+1)*10000;
+	}
+	else if (maxy>1000) {
+		maxy=((((long long)maxy)/1000)+1)*1000;
+	}
+	else {
+		maxy=((((long long)maxy)/100)+1)*100;
+	}
 
   printf("(* Begin Graph *)\n");
   printf("newgraph\n");

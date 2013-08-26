@@ -22,14 +22,22 @@ struct kernel_info kernels[NUM_KERNELS]={
    {"3.2.0",		INTERFACE_PERF_EVENT,},
    {"3.3.0",		INTERFACE_PERF_EVENT,},
    {"3.4.0",		INTERFACE_PERF_EVENT,},
-   {"3.4.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
    {"3.5.0",		INTERFACE_PERF_EVENT,},
-   {"3.5.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
    {"3.6.0",		INTERFACE_PERF_EVENT,},
    {"3.7.0",		INTERFACE_PERF_EVENT,},
    {"3.8.0",		INTERFACE_PERF_EVENT,},
    {"3.9.0",		INTERFACE_PERF_EVENT,},
    {"3.10.0",		INTERFACE_PERF_EVENT,},
+};
+
+struct kernel_info rdpmc_kernels[NUM_RDPMC_KERNELS]={
+   {"3.4.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.5.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.6.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.7.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.8.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.9.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.10.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
 };
 
 char colors[NUM_KERNELS][64]={
