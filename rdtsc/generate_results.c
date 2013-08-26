@@ -83,6 +83,15 @@ struct event_table_t atom_event_table = {{
 }};
 
 struct event_table_t core2_event_table = {{
+// outliers research
+//  { 0x5300c8, "HW_INT_RCV",			"PAPI_HW_INT",  },
+//  { 0x5300c5, "MISPREDICTED_BRANCH_RETIRED",	"PAPI_BR_MSP",  },
+//  { 0x537024, "L2_LINES_IN:SELF:ANY",		"PAPI_L2_TCM",  },
+//  { 0x530f45, "L1D_REPL",			"PAPI_L1_DCM",  },
+//  { 0x530081, "L1I_MISSES",			"PAPI_L1_ICM",  },
+//  { 0x530108, "DTLB_MISSES:ANY",		"PAPI_TLB_DM",  },
+//  { 0x531282, "ITLB:MISSES",			"PAPI_TLB_IM",  },
+
   { 0x53003c, "UNHALTED_CORE_CYCLES",		"PAPI_TOT_CYC", },
   { 0x5300c0, "INSTRUCTIONS_RETIRED",		"PAPI_TOT_INS", },
   { 0x5300c4, "BRANCH_INSTRUCTIONS_RETIRED",	"PAPI_BR_INS",  },
