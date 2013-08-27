@@ -48,3 +48,12 @@ struct cpuinfo_t {
 
 int read_data(char *machine, int which, char *plot_name,
 		int type, long long *times);
+long long *get_runs(long long *pointer,int kernel, int event);
+int sort_data(long long *times, int events);
+int calculate_boxplot_data(long long *times, int events,
+			double *median, double *twentyfive,
+			double *seventyfive);
+int calculate_deviation(long long *times, int events,
+			double *deviation);
+int calculate_maxy(double *average, double *deviation);
+

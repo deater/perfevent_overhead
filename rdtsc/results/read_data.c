@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #include "../version.h"
 
@@ -68,7 +69,7 @@ static int debug=0;
 
 struct cpuinfo_t cpuinfo;
 
-static long long *get_runs(long long *pointer,int kernel, int event) {
+long long *get_runs(long long *pointer,int kernel, int event) {
 
         return pointer+ (kernel*NUM_EVENTS*NUM_RUNS)+(event*NUM_RUNS);
 
@@ -281,6 +282,106 @@ loop:
   }
 
   return plot_type;
+}
+
+
+//#include <string.h>
+
+static int comp(const void *av,const void *bv) {
+
+	const long long *a,*b;
+
+	a=av; b=bv;
+
+	if (*a==*b) {
+		return 0;
+	}
+
+	if (*a < *b) {
+		return -1;
+	}
+
+	return 1;
+}
+
+int sort_data(long long *times, int events) {
+
+	int kernel;
+
+  	/* sort data */
+
+	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
+		qsort(get_runs(times,kernel,events),NUM_RUNS,
+			sizeof(long long),comp);
+  	}
+	return 0;
+}
+
+int calculate_boxplot_data(long long *times, int events,
+			double *median, double *twentyfive,
+			double *seventyfive) {
+
+
+	int kernel;
+
+	/* calculate median, twentyfive, seventyfive */
+	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
+		median[kernel]=*(get_runs(times,kernel,events)+(NUM_RUNS/2));
+		twentyfive[kernel]=*(get_runs(times,kernel,events)+(NUM_RUNS/4));
+		seventyfive[kernel]=*(get_runs(times,kernel,events)+((NUM_RUNS*3)/4));
+	}
+
+	return 0;
+
+}
+
+int calculate_deviation(long long *times, int events,
+			double *deviation) {
+
+	/* Calculate averages */
+	double dev,temp;
+	int kernel,run;
+	double total;
+	double average[NUM_KERNELS];
+
+	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
+		total=0.0;
+		for(run=0;run<NUM_RUNS;run++) {
+			total+=(double)*(get_runs(times,kernel,events)+run);
+		}
+		average[kernel]=total/(double)NUM_RUNS;
+		// printf("%s: avg=%.2f\n",kernel_names[kernel],average[kernel]);
+	}
+
+	/* Calculate Deviation */
+	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
+		dev=0.0;
+		for(run=0;run<NUM_RUNS;run++) {
+			temp=(double)(*(get_runs(times,kernel,events)+run))-
+				average[kernel];
+			temp*=temp;
+			dev+=temp;
+		}
+		deviation[kernel]=dev/(double)(NUM_RUNS-1);
+		deviation[kernel]=sqrt(deviation[kernel]);
+	}
+	return 0;
+}
+
+
+int calculate_maxy(double *average, double *deviation) {
+
+	/* calculate mins and maxes */
+	int maxy=0;
+	int kernel;
+
+	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
+		if (average[kernel]+deviation[kernel]>maxy) {
+			maxy=average[kernel]+deviation[kernel];
+		}
+	}
+
+	return maxy;
 }
 
 

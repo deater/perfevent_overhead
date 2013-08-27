@@ -14,12 +14,6 @@
 long long *times=NULL;
 
 
-static long long *get_runs(long long *pointer,int kernel, int event) {
-
-        return pointer+ (kernel*NUM_EVENTS*NUM_RUNS)+(event*NUM_RUNS);
-
-}
-
 
 int main(int argc, char **argv) {
 
