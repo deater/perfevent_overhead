@@ -11,34 +11,20 @@
 
 #define EVENT_TO_PLOT 1
 
-int comp(const void *av,const void *bv) {
-
-	const long long *a,*b;
-
-	a=av; b=bv;
-
-	if (*a==*b) {
-		return 0;
-	}
-
-	if (*a < *b) {
-		return -1;
-	}
-
-	return 1;
-}
-
-long long *times=NULL;
 
 int main(int argc, char **argv) {
 
-	int events,run,kernel,i;
+	int events,kernel,i;
 	int plot_type=PLOT_TYPE_START;
 	int machine_num=0;
 	double maxy;
-	double total;
-	double average[NUM_KERNELS];
+	double average[NUM_KERNELS],deviation[NUM_KERNELS];
+	double median[NUM_KERNELS],twentyfive[NUM_KERNELS],
+		seventyfive[NUM_KERNELS];
 
+	long long *times=NULL;
+
+	/* parse command line args */
 	if (argc<4) {
 		printf("Must specify machine type, machine num, "
 			"and start/stop/read/total\n");
@@ -66,65 +52,20 @@ int main(int argc, char **argv) {
 	events=EVENT_TO_PLOT;
 
   	/* sort data */
+	sort_data(times,events);
 
-	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
-		qsort(get_runs(times,kernel,events),NUM_RUNS,sizeof(long long),comp);
-  	}
-
-	double median[NUM_KERNELS],twentyfive[NUM_KERNELS],
-		seventyfive[NUM_KERNELS];
 
 	/* calculate median, twentyfive, seventyfive */
-	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
-		median[kernel]=*(get_runs(times,kernel,events)+(NUM_RUNS/2));
-		twentyfive[kernel]=*(get_runs(times,kernel,events)+(NUM_RUNS/4));
-		seventyfive[kernel]=*(get_runs(times,kernel,events)+((NUM_RUNS*3)/4));
-	}
+	calculate_boxplot_data(times,events,
+                        median, twentyfive,
+                        seventyfive);
 
+	/* Calculate averages and deviation */
+	calculate_deviation(times,events,average,deviation);
 
-	/* Calculate averages */
-	double deviation[NUM_KERNELS],dev,temp;
-
-	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
-		total=0.0;
-		for(run=0;run<NUM_RUNS;run++) {
-			total+=(double)*(get_runs(times,kernel,events)+run);
-		}
-		average[kernel]=total/(double)NUM_RUNS;
-		// printf("%s: avg=%.2f\n",kernel_names[kernel],average[kernel]);
-	}
-
-	/* Calculate Deviation */
-	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
-		dev=0.0;
-		for(run=0;run<NUM_RUNS;run++) {
-			temp=(double)(*(get_runs(times,kernel,events)+run))-
-				average[kernel];
-			temp*=temp;
-			dev+=temp;
-		}
-		deviation[kernel]=dev/(double)(NUM_RUNS-1);
-		deviation[kernel]=sqrt(deviation[kernel]);
-	}
 
 	/* calculate mins and maxes */
-	maxy=0;
-
-	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
-		if (average[kernel]+deviation[kernel]>maxy) {
-			maxy=average[kernel]+deviation[kernel];
-		}
-	}
-
-	if (maxy>10000) {
-		maxy=((((long long)maxy)/10000)+1)*10000;
-	}
-	else if (maxy>1000) {
-		maxy=((((long long)maxy)/1000)+1)*1000;
-	}
-	else {
-		maxy=((((long long)maxy)/100)+1)*100;
-	}
+	maxy=calculate_maxy(average,deviation);
 
 	/* Make graph */
 	printf("(* Begin Graph *)\n");

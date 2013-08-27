@@ -54,6 +54,6 @@ int calculate_boxplot_data(long long *times, int events,
 			double *median, double *twentyfive,
 			double *seventyfive);
 int calculate_deviation(long long *times, int events,
-			double *deviation);
+			double *average,double *deviation);
 int calculate_maxy(double *average, double *deviation);
 

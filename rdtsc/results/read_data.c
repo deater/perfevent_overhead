@@ -336,13 +336,12 @@ int calculate_boxplot_data(long long *times, int events,
 }
 
 int calculate_deviation(long long *times, int events,
-			double *deviation) {
+			double *average,double *deviation) {
 
 	/* Calculate averages */
 	double dev,temp;
 	int kernel,run;
 	double total;
-	double average[NUM_KERNELS];
 
 	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
 		total=0.0;
@@ -380,6 +379,17 @@ int calculate_maxy(double *average, double *deviation) {
 			maxy=average[kernel]+deviation[kernel];
 		}
 	}
+
+        if (maxy>10000) {
+                maxy=((((long long)maxy)/10000)+1)*10000;
+        }
+        else if (maxy>1000) {
+                maxy=((((long long)maxy)/1000)+1)*1000;
+        }
+        else {
+                maxy=((((long long)maxy)/100)+1)*100;
+        }
+
 
 	return maxy;
 }
