@@ -21,6 +21,16 @@ static int kernels_to_plot[KERNELS_TO_PLOT]={
   KERNEL_3_5_0_RDPMC,
 };
 
+long long *times=NULL;
+
+
+static long long *get_runs(long long *pointer,int kernel, int event) {
+
+        return pointer+ (kernel*NUM_EVENTS*NUM_RUNS)+(event*NUM_RUNS);
+
+}
+
+
 int main(int argc, char **argv) {
 
   int events,run,kernel,i,k;
@@ -34,6 +44,14 @@ int main(int argc, char **argv) {
      printf("Must specify machine and start/stop/read/total\n");
      exit(1);
   }
+
+        /* allocate memory */
+        times=calloc(NUM_KERNELS*NUM_EVENTS*NUM_RUNS,sizeof(long long));
+        if (times==NULL) {
+                fprintf(stderr,"Error allocating!\n");
+                return -1;
+        }
+
 
   if (!strncmp(argv[1],"core2",4)) {
      minx=1; maxx=4;
@@ -51,7 +69,8 @@ int main(int argc, char **argv) {
      minx=1; maxx=4;
   }
 
-  plot_type=read_data(argv[1],0,argv[2]);
+	/* read data */
+  plot_type=read_data(argv[1],0,argv[2],STANDARD_KERNELS,times);
   if (plot_type<0) {
      fprintf(stderr,"Some sort of error reading!\n");
      return -1;
@@ -64,7 +83,7 @@ int main(int argc, char **argv) {
     for(events=0;events<MAX_EVENTS;events++) {
        total=0.0;
        for(run=0;run<NUM_RUNS;run++) {
-          total+=(double)times[kernel][events][run];
+          total+=(double)*(get_runs(times,kernel,events)+run);
        }
        average[kernel][events]=total/(double)NUM_RUNS;
 //     printf("%s: avg=%.2f\n",kernel_names[kernel],average[kernel]);
@@ -76,7 +95,7 @@ int main(int argc, char **argv) {
      for(events=0;events<MAX_EVENTS;events++) {
         dev=0.0;
         for(run=0;run<NUM_RUNS;run++) {
-           temp=(double)times[kernel][events][run]-average[kernel][events];
+           temp=(double)*(get_runs(times,kernel,events)+run)-average[kernel][events];
 	   temp*=temp;
            dev+=temp;
         }

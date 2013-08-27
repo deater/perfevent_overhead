@@ -61,13 +61,25 @@ char colors[NUM_KERNELS][64]={
   "0.5 1.0   0.0",   /* ??? */
 };
 
-long long times[NUM_KERNELS][NUM_EVENTS][NUM_RUNS];
+//long long times[NUM_KERNELS][NUM_EVENTS][NUM_RUNS];
+//long long rdpmc_times[NUM_RDPMC_KERNELS][NUM_EVENTS][NUM_RUNS];
 
 static int debug=0;
 
 struct cpuinfo_t cpuinfo;
 
-int read_data(char *machine, int which, char *plot_name) {
+static long long *get_runs(long long *pointer,int kernel, int event) {
+
+        return pointer+ (kernel*NUM_EVENTS*NUM_RUNS)+(event*NUM_RUNS);
+
+}
+
+
+int read_data(char *machine,
+		int which,
+		char *plot_name,
+		int type,
+		long long *times) {
 
   int events,run,kernel,runs;
   char filename[BUFSIZ];
@@ -98,7 +110,7 @@ int read_data(char *machine, int which, char *plot_name) {
   for(kernel=0;kernel<NUM_KERNELS;kernel++) {
      for(events=0;events<NUM_EVENTS;events++) {
         for(run=0;run<NUM_RUNS;run++) {
-	   times[kernel][events][run]=0LL;
+	   *(get_runs(times,kernel,events)+run)=0LL;
 	}
      }
   }
@@ -248,16 +260,16 @@ loop:
        //       printf("%d %lld\n",run,times_start);
 
        if (plot_type==PLOT_TYPE_START) {
-	  times[kernel][events][run]=times_start;
+	  *(get_runs(times,kernel,events)+run)=times_start;
        }
        if (plot_type==PLOT_TYPE_STOP) {
-	  times[kernel][events][run]=times_stop;
+	  *(get_runs(times,kernel,events)+run)=times_stop;
        }
        if (plot_type==PLOT_TYPE_READ) {
-	  times[kernel][events][run]=times_read;
+	  *(get_runs(times,kernel,events)+run)=times_read;
        }
        if (plot_type==PLOT_TYPE_TOTAL) {
-	  times[kernel][events][run]=times_start+times_stop+times_read;
+	  *(get_runs(times,kernel,events)+run)=times_start+times_stop+times_read;
        }
        run++;
 

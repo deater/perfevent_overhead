@@ -11,6 +11,16 @@
 
 #define EVENT_TO_PLOT 1
 
+long long *times=NULL;
+
+
+static long long *get_runs(long long *pointer,int kernel, int event) {
+
+        return pointer+ (kernel*NUM_EVENTS*NUM_RUNS)+(event*NUM_RUNS);
+
+}
+
+
 int main(int argc, char **argv) {
 
   int events,run,kernel,i;
@@ -24,7 +34,17 @@ int main(int argc, char **argv) {
      exit(1);
   }
 
-  plot_type=read_data(argv[1],0,argv[2]);
+        /* allocate memory */
+        times=calloc(NUM_KERNELS*NUM_EVENTS*NUM_RUNS,sizeof(long long));
+        if (times==NULL) {
+                fprintf(stderr,"Error allocating!\n");
+                return -1;
+        }
+
+
+	/* read data */
+
+  plot_type=read_data(argv[1],0,argv[2],STANDARD_KERNELS,times);
   if (plot_type<0) {
      fprintf(stderr,"Some sort of error reading!\n");
      return -1;
@@ -38,7 +58,7 @@ int main(int argc, char **argv) {
   for(kernel=0;kernel<NUM_KERNELS;kernel++) {
      total=0.0;
      for(run=0;run<NUM_RUNS;run++) {
-        total+=(double)times[kernel][events][run];
+        total+=(double)*(get_runs(times,kernel,events)+run);
      }
      average[kernel]=total/(double)NUM_RUNS;
 //     printf("%s: avg=%.2f\n",kernel_names[kernel],average[kernel]);
@@ -48,7 +68,7 @@ int main(int argc, char **argv) {
   for(kernel=0;kernel<NUM_KERNELS;kernel++) {
      dev=0.0;
      for(run=0;run<NUM_RUNS;run++) {
-        temp=(double)times[kernel][events][run]-average[kernel];
+        temp=(double)*(get_runs(times,kernel,events)+run)-average[kernel];
 	temp*=temp;
         dev+=temp;
      }

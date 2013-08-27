@@ -17,6 +17,16 @@ struct freq_list {
   struct freq_list *next;
 };
 
+long long *times=NULL;
+
+
+static long long *get_runs(long long *pointer,int kernel, int event) {
+
+        return pointer+ (kernel*NUM_EVENTS*NUM_RUNS)+(event*NUM_RUNS);
+
+}
+
+
 int main(int argc, char **argv) {
 
   int events,run,kernel;
@@ -30,7 +40,16 @@ int main(int argc, char **argv) {
      exit(1);
   }
 
-  plot_type=read_data(argv[1],0,argv[2]);
+        /* allocate memory */
+        times=calloc(NUM_KERNELS*NUM_EVENTS*NUM_RUNS,sizeof(long long));
+        if (times==NULL) {
+                fprintf(stderr,"Error allocating!\n");
+                return -1;
+        }
+
+	/* read data */
+
+  plot_type=read_data(argv[1],0,argv[2],STANDARD_KERNELS,times);
 
   events=EVENT_TO_PLOT;
 
@@ -49,16 +68,16 @@ int main(int argc, char **argv) {
 
 	while(1) {
 
-	   if (tmp->value==times[kernel][events][run]) {
+	   if (tmp->value==*(get_runs(times,kernel,events)+run)) {
               /* 0 shouldn't count */
 	      if (tmp->value!=0) tmp->count++;
 	      break;
 	   }
 
-	   if (times[kernel][events][run] < tmp->value) {
+	   if ( *(get_runs(times,kernel,events)+run) < tmp->value) {
 	      last->next=calloc(1,sizeof(struct freq_list));
 	      last->next->count=1;
-	      last->next->value=times[kernel][events][run];
+	      last->next->value=*(get_runs(times,kernel,events)+run);
 	      last->next->next=tmp;
 	      break;
 	   }
@@ -66,7 +85,7 @@ int main(int argc, char **argv) {
 	   if (tmp->next==NULL) {
 	      tmp->next=calloc(1,sizeof(struct freq_list));
 	      tmp->next->count=1;
-	      tmp->next->value=times[kernel][events][run];
+	      tmp->next->value=*(get_runs(times,kernel,events)+run);
 	      tmp->next->next=NULL;
 	      break;
 	   }

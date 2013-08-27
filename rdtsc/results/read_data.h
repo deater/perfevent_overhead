@@ -20,7 +20,7 @@ struct kernel_info {
 
 extern struct kernel_info kernels[NUM_KERNELS];
 extern char colors[NUM_KERNELS][64];
-extern long long times[NUM_KERNELS][NUM_EVENTS][NUM_RUNS];
+//extern long long times[NUM_KERNELS][NUM_EVENTS][NUM_RUNS];
 
 #define PLOT_TYPE_START 0
 #define PLOT_TYPE_STOP  1
@@ -43,5 +43,8 @@ struct cpuinfo_t {
    int num_cpus;
 };
 
+#define STANDARD_KERNELS 0
+#define RDPMC_KERNELS    1
 
-int read_data(char *machine, int which, char *plot_name);
+int read_data(char *machine, int which, char *plot_name,
+		int type, long long *times);
