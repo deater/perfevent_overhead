@@ -75,153 +75,179 @@ long long *get_runs(long long *pointer,int kernel, int event) {
 
 }
 
-
 int read_data(char *machine,
 		int which,
 		char *plot_name,
 		int type,
 		long long *times) {
 
-  int events,run,kernel,runs;
-  char filename[BUFSIZ];
-  FILE *fff;
-  char string[BUFSIZ];
-  char *result;
-  int plot_type=PLOT_TYPE_START;
-  long long times_start,times_stop,times_read;
+	int events,run,kernel,runs;
+	char filename[BUFSIZ];
+	FILE *fff;
+	char string[BUFSIZ];
+	char *result;
+	int plot_type=PLOT_TYPE_START;
+	long long times_start,times_stop,times_read;
+	int num_kernels;
 
-  char hostname[BUFSIZ]="Unknown",kernel_name[BUFSIZ]="Unknown";
-  char gathered_version[BUFSIZ]="Unknown";
-  int interface=INTERFACE_PERF_EVENT;
+	char hostname[BUFSIZ]="Unknown",kernel_name[BUFSIZ]="Unknown";
+	char gathered_version[BUFSIZ]="Unknown";
+	int interface=INTERFACE_PERF_EVENT;
 
-  if (!strcmp(plot_name,"start")) {
-     plot_type=PLOT_TYPE_START;
-  } else if (!strcmp(plot_name,"stop")) {
-     plot_type=PLOT_TYPE_STOP;
-  } else if (!strcmp(plot_name,"read")) {
-     plot_type=PLOT_TYPE_READ;
-  } else if (!strcmp(plot_name,"total")) {
-     plot_type=PLOT_TYPE_TOTAL;
-  }
-  else {
-    printf("Unknown plot type %s\n",plot_name);
-    exit(1);
-  }
-
-  for(kernel=0;kernel<NUM_KERNELS;kernel++) {
-     for(events=0;events<NUM_EVENTS;events++) {
-        for(run=0;run<NUM_RUNS;run++) {
-	   *(get_runs(times,kernel,events)+run)=0LL;
+	if (type==STANDARD_KERNELS) {
+		num_kernels=NUM_KERNELS;
 	}
-     }
-  }
+	else {
+		num_kernels=NUM_RDPMC_KERNELS;
+	}
 
-  fprintf(stderr,"Reading in data for %s...\n",machine);
+	if (!strcmp(plot_name,"start")) {
+		plot_type=PLOT_TYPE_START;
+	} else if (!strcmp(plot_name,"stop")) {
+		plot_type=PLOT_TYPE_STOP;
+	} else if (!strcmp(plot_name,"read")) {
+		plot_type=PLOT_TYPE_READ;
+	} else if (!strcmp(plot_name,"total")) {
+		plot_type=PLOT_TYPE_TOTAL;
+	}
+	else {
+		printf("Unknown plot type %s\n",plot_name);
+		exit(1);
+	}
 
-  for(kernel=0;kernel<NUM_KERNELS;kernel++) {
-     fprintf(stderr,"\tReading data for kernel %s\n",kernels[kernel].name); 
-     for(events=0;events<NUM_EVENTS;events++) {
-        fprintf(stderr,"%d ",events);
+	for(kernel=0;kernel<num_kernels;kernel++) {
+		for(events=0;events<NUM_EVENTS;events++) {
+			for(run=0;run<NUM_RUNS;run++) {
+				*(get_runs(times,kernel,events)+run)=0LL;
+			}
+     		}
+  	}
 
-        sprintf(filename,"%s/%d/%s/%d/results",
-		machine,which,kernels[kernel].name,events);
-        fff=fopen(filename,"r");
-        if (fff==NULL) {
-	   fprintf(stderr,"Can't open %s\n",filename);
-	   break;
-        }
+	fprintf(stderr,"Reading in data for %s...\n",machine);
 
-        /**********************/
-        /* Find System Header */
-        /**********************/
-        while(1) {
-           result=fgets(string,BUFSIZ,fff);
-           if (result==NULL) return -1;
+	for(kernel=0;kernel<num_kernels;kernel++) {
+		if (type==STANDARD_KERNELS) {
+			fprintf(stderr,"\tReading data for kernel %s\n",
+				kernels[kernel].name);
+		}
+		else {
+			fprintf(stderr,"\tReading data for kernel %s\n",
+				rdpmc_kernels[kernel].name);
+		}
+     		for(events=0;events<NUM_EVENTS;events++) {
+			fprintf(stderr,"%d ",events);
 
-           if (!strncmp(string,"### System info",15)) {
-              break;
-           }
-        }
-        /**********************/
-        /* Read System Header */
-        /**********************/
-        while(1) {
-           result=fgets(string,BUFSIZ,fff);
-           if (result==NULL) return -1;
+			if (type==STANDARD_KERNELS) {
+				sprintf(filename,"%s/%d/%s/%d/results",
+					machine,which,
+					kernels[kernel].name,
+					events);
+			}
+			else {
+				sprintf(filename,"%s/%d/%s/%d/results",
+					machine,which,
+					rdpmc_kernels[kernel].name,
+					events);
+			}
 
-           /* Break if reach end of header */
-           if (!strncmp(string,"###",3)) {
-              break;
-           }
-           if (!strncmp(string,"Kernel:",7)) {
-              strcpy(kernel_name,string+8);
-              kernel_name[strlen(kernel_name)-1]=0;
-           }
-           if (!strncmp(string,"Hostname:",9)) {
-              sscanf(string,"%*s %s",hostname);
-           }
-           if (!strncmp(string,"Family:",7)) {
-              sscanf(string,"%*s %d",&cpuinfo.family);
-           }
-           if (!strncmp(string,"Model:",6)) {
-              sscanf(string,"%*s %d",&cpuinfo.model);
-           }
-           if (!strncmp(string,"Stepping:",9)) {
-              sscanf(string,"%*s %d",&cpuinfo.stepping);
-           }
-           if (!strncmp(string,"Modelname:",10)) {
-              strcpy(cpuinfo.modelname,string+11);
-              cpuinfo.modelname[strlen(cpuinfo.modelname)-1]=0;
-           }
-           if (!strncmp(string,"Generic:",8)) {
-              /* should check that this matches */
-              strcpy(cpuinfo.generic_modelname,string+9);
-              cpuinfo.generic_modelname[strlen(cpuinfo.generic_modelname)-1]=0;
-           }
-           if (!strncmp(string,"generate_results version:",25)) {
-              sscanf(string,"%*s %*s %s",gathered_version);
-           }
-           if (!strncmp(string,"Interface:",10)) {
-              if (strstr(string,"perf_event_rdpmc")) {
-                 interface=INTERFACE_PERF_EVENT_RDPMC;
-              } else if (strstr(string,"perf_event")) {
-                 interface=INTERFACE_PERF_EVENT;
-              } else if (strstr(string,"perfmon")) {
-                 interface=INTERFACE_PERFMON2;
-              } else if (strstr(string,"perfctr")) {
-                 interface=INTERFACE_PERFCTR;
-              } else {
-                 fprintf(stderr,"Unknown interface!\n");
-                 interface=INTERFACE_UNKNOWN;
-              }
-          }
-          if (!strncmp(string,"Counters:",7)) {
-          }
-          if (!strncmp(string,"Runs:",4)) {
-             sscanf(string,"%*s %d",&runs);
-          }
-       }
+			fff=fopen(filename,"r");
+			if (fff==NULL) {
+				fprintf(stderr,"Can't open %s\n",filename);
+				break;
+        		}
 
-       /* Print header if first time through */
-       if (debug) {
-          printf("#### Events %d\n",events);
-          printf("\tHostname:  %s\n",hostname);
-          printf("\tKernel:    %s\n",kernel_name);
-          printf("\tInterface: ");
-          if (interface==INTERFACE_PERF_EVENT) printf("perf_event\n");
-          else if (interface==INTERFACE_PERFMON2) printf("perfmon2\n");
-          else if (interface==INTERFACE_PERFCTR) printf("perfctr\n");
-          else if (interface==INTERFACE_PERF_EVENT_RDPMC) printf("perf_event_rdpmc\n");
-          else printf("Unknown\n");
-          printf("\tCPU:       %d/%d/%d\n",
-             cpuinfo.family,cpuinfo.model,cpuinfo.stepping);
-          printf("\tCPU type:  %s\n",cpuinfo.generic_modelname);
-          printf("\tCPU name:  %s\n",cpuinfo.modelname);
-          printf("\tdata gathered with tool version: %s\n",gathered_version);
-          printf("\truns: %d\n",runs);
-          printf("\tdata analyzed with tool version: %s\n",
-             PERF_EVENT_OVERHEAD_VERSION);
-       }
+			/**********************/
+			/* Find System Header */
+			/**********************/
+			while(1) {
+				result=fgets(string,BUFSIZ,fff);
+				if (result==NULL) return -1;
+
+				if (!strncmp(string,"### System info",15)) {
+					break;
+				}
+			}
+
+			/**********************/
+			/* Read System Header */
+			/**********************/
+			while(1) {
+				result=fgets(string,BUFSIZ,fff);
+				if (result==NULL) return -1;
+
+				/* Break if reach end of header */
+				if (!strncmp(string,"###",3)) {
+					break;
+				}
+				if (!strncmp(string,"Kernel:",7)) {
+					strcpy(kernel_name,string+8);
+					kernel_name[strlen(kernel_name)-1]=0;
+				}
+				if (!strncmp(string,"Hostname:",9)) {
+					sscanf(string,"%*s %s",hostname);
+				}
+				if (!strncmp(string,"Family:",7)) {
+					sscanf(string,"%*s %d",&cpuinfo.family);
+				}
+				if (!strncmp(string,"Model:",6)) {
+					sscanf(string,"%*s %d",&cpuinfo.model);
+				}
+				if (!strncmp(string,"Stepping:",9)) {
+					sscanf(string,"%*s %d",&cpuinfo.stepping);
+				}
+				if (!strncmp(string,"Modelname:",10)) {
+					strcpy(cpuinfo.modelname,string+11);
+					cpuinfo.modelname[strlen(cpuinfo.modelname)-1]=0;
+				}
+				if (!strncmp(string,"Generic:",8)) {
+					/* should check that this matches */
+					strcpy(cpuinfo.generic_modelname,string+9);
+					cpuinfo.generic_modelname[strlen(cpuinfo.generic_modelname)-1]=0;
+				}
+				if (!strncmp(string,"generate_results version:",25)) {
+					sscanf(string,"%*s %*s %s",gathered_version);
+				}
+				if (!strncmp(string,"Interface:",10)) {
+					if (strstr(string,"perf_event_rdpmc")) {
+						interface=INTERFACE_PERF_EVENT_RDPMC;
+					} else if (strstr(string,"perf_event")) {
+						interface=INTERFACE_PERF_EVENT;
+					} else if (strstr(string,"perfmon")) {
+						interface=INTERFACE_PERFMON2;
+					} else if (strstr(string,"perfctr")) {
+						interface=INTERFACE_PERFCTR;
+					} else {
+						fprintf(stderr,"Unknown interface!\n");
+						interface=INTERFACE_UNKNOWN;
+					}
+				}
+				if (!strncmp(string,"Counters:",7)) {
+				}
+				if (!strncmp(string,"Runs:",4)) {
+					sscanf(string,"%*s %d",&runs);
+				}
+			}
+
+			/* Print header if first time through */
+			if (debug) {
+				printf("#### Events %d\n",events);
+				printf("\tHostname:  %s\n",hostname);
+				printf("\tKernel:    %s\n",kernel_name);
+				printf("\tInterface: ");
+				if (interface==INTERFACE_PERF_EVENT) printf("perf_event\n");
+				else if (interface==INTERFACE_PERFMON2) printf("perfmon2\n");
+				else if (interface==INTERFACE_PERFCTR) printf("perfctr\n");
+				else if (interface==INTERFACE_PERF_EVENT_RDPMC) printf("perf_event_rdpmc\n");
+				else printf("Unknown\n");
+				printf("\tCPU:       %d/%d/%d\n",
+					cpuinfo.family,cpuinfo.model,cpuinfo.stepping);
+				printf("\tCPU type:  %s\n",cpuinfo.generic_modelname);
+				printf("\tCPU name:  %s\n",cpuinfo.modelname);
+				printf("\tdata gathered with tool version: %s\n",gathered_version);
+				printf("\truns: %d\n",runs);
+				printf("\tdata analyzed with tool version: %s\n",
+					PERF_EVENT_OVERHEAD_VERSION);
+			}
 
 /*
 ### Perf Results 0
@@ -237,51 +263,51 @@ read latency: 12282 cycles
 */
 
        /* read data */
-       run=0;
+			run=0;
 loop:
-       while(1) {
-	   if (fgets(string,BUFSIZ,fff)==NULL) break;
+			while(1) {
+				if (fgets(string,BUFSIZ,fff)==NULL) break;
 
-           if (!strncmp(string,"###",3)) break;
+				if (!strncmp(string,"###",3)) break;
 
-           if (!strncmp(string,"start latency",13)) {
-              sscanf(string,"%*s %*s %lld",&times_start);
-           }
+				if (!strncmp(string,"start latency",13)) {
+					sscanf(string,"%*s %*s %lld",&times_start);
+				}
 
-           if (!strncmp(string,"stop latency",12)) {
-              sscanf(string,"%*s %*s %lld",&times_stop);
-           }
+				if (!strncmp(string,"stop latency",12)) {
+					sscanf(string,"%*s %*s %lld",&times_stop);
+				}
 
-           if (!strncmp(string,"read latency",12)) {
-              sscanf(string,"%*s %*s %lld",&times_read);
-           }
+				if (!strncmp(string,"read latency",12)) {
+					sscanf(string,"%*s %*s %lld",&times_read);
+				}
 
-       }
+			}
 
-       //       printf("%d %lld\n",run,times_start);
+			// printf("%d %lld\n",run,times_start);
 
-       if (plot_type==PLOT_TYPE_START) {
-	  *(get_runs(times,kernel,events)+run)=times_start;
-       }
-       if (plot_type==PLOT_TYPE_STOP) {
-	  *(get_runs(times,kernel,events)+run)=times_stop;
-       }
-       if (plot_type==PLOT_TYPE_READ) {
-	  *(get_runs(times,kernel,events)+run)=times_read;
-       }
-       if (plot_type==PLOT_TYPE_TOTAL) {
-	  *(get_runs(times,kernel,events)+run)=times_start+times_stop+times_read;
-       }
-       run++;
+			if (plot_type==PLOT_TYPE_START) {
+				*(get_runs(times,kernel,events)+run)=times_start;
+			}
+			if (plot_type==PLOT_TYPE_STOP) {
+				*(get_runs(times,kernel,events)+run)=times_stop;
+			}
+			if (plot_type==PLOT_TYPE_READ) {
+				*(get_runs(times,kernel,events)+run)=times_read;
+			}
+			if (plot_type==PLOT_TYPE_TOTAL) {
+				*(get_runs(times,kernel,events)+run)=times_start+times_stop+times_read;
+			}
+			run++;
 
-       if (run<runs) goto loop;
+			if (run<runs) goto loop;
 
-       fclose(fff);
-     }
-     fprintf(stderr,"\n");
-  }
+			fclose(fff);
+		}
+		fprintf(stderr,"\n");
+	}
 
-  return plot_type;
+	return plot_type;
 }
 
 
@@ -304,13 +330,21 @@ static int comp(const void *av,const void *bv) {
 	return 1;
 }
 
-int sort_data(long long *times, int events) {
+int sort_data(long long *times, int events, int type) {
 
-	int kernel;
+	int kernel,num_kernels;
+
+	if (type==STANDARD_KERNELS) {
+		num_kernels=NUM_KERNELS;
+	}
+	else {
+		num_kernels=NUM_RDPMC_KERNELS;
+	}
+
 
   	/* sort data */
 
-	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
+	for(kernel=0;kernel<num_kernels;kernel++) {
 		qsort(get_runs(times,kernel,events),NUM_RUNS,
 			sizeof(long long),comp);
   	}
@@ -319,13 +353,22 @@ int sort_data(long long *times, int events) {
 
 int calculate_boxplot_data(long long *times, int events,
 			double *median, double *twentyfive,
-			double *seventyfive) {
+			double *seventyfive,
+			int type) {
 
 
-	int kernel;
+	int kernel,num_kernels;
+
+	if (type==STANDARD_KERNELS) {
+		num_kernels=NUM_KERNELS;
+	}
+	else {
+		num_kernels=NUM_RDPMC_KERNELS;
+	}
+
 
 	/* calculate median, twentyfive, seventyfive */
-	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
+	for(kernel=0;kernel<num_kernels;kernel++) {
 		median[kernel]=*(get_runs(times,kernel,events)+(NUM_RUNS/2));
 		twentyfive[kernel]=*(get_runs(times,kernel,events)+(NUM_RUNS/4));
 		seventyfive[kernel]=*(get_runs(times,kernel,events)+((NUM_RUNS*3)/4));
@@ -336,14 +379,23 @@ int calculate_boxplot_data(long long *times, int events,
 }
 
 int calculate_deviation(long long *times, int events,
-			double *average,double *deviation) {
+			double *average,double *deviation,
+			int type) {
 
 	/* Calculate averages */
 	double dev,temp;
 	int kernel,run;
 	double total;
+	int num_kernels;
 
-	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
+	if (type==STANDARD_KERNELS) {
+		num_kernels=NUM_KERNELS;
+	}
+	else {
+		num_kernels=NUM_RDPMC_KERNELS;
+	}
+
+	for(kernel=0;kernel<num_kernels;kernel++) {
 		total=0.0;
 		for(run=0;run<NUM_RUNS;run++) {
 			total+=(double)*(get_runs(times,kernel,events)+run);
@@ -353,7 +405,7 @@ int calculate_deviation(long long *times, int events,
 	}
 
 	/* Calculate Deviation */
-	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
+	for(kernel=0;kernel<num_kernels;kernel++) {
 		dev=0.0;
 		for(run=0;run<NUM_RUNS;run++) {
 			temp=(double)(*(get_runs(times,kernel,events)+run))-
@@ -368,13 +420,22 @@ int calculate_deviation(long long *times, int events,
 }
 
 
-int calculate_maxy(double *average, double *deviation) {
+int calculate_maxy(double *average, double *deviation, int type) {
 
 	/* calculate mins and maxes */
 	int maxy=0;
 	int kernel;
+	int num_kernels;
 
-	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
+	if (type==STANDARD_KERNELS) {
+		num_kernels=NUM_KERNELS;
+	}
+	else {
+		num_kernels=NUM_RDPMC_KERNELS;
+	}
+
+
+	for(kernel=0;kernel<num_kernels;kernel++) {
 		if (average[kernel]+deviation[kernel]>maxy) {
 			maxy=average[kernel]+deviation[kernel];
 		}
