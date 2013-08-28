@@ -5,6 +5,7 @@ LFLAGS  = -lrt -lm
 
 all:	\
 	make_graphs_boxplot \
+	make_graphs_boxplot_gcc \
 	make_graphs_boxplot_rdpmc \
 	make_graphs_colorful \
 	make_graphs_errorbars \
@@ -127,6 +128,14 @@ make_graphs_boxplot.o:	make_graphs_boxplot.c read_data.h
 
 #####
 
+make_graphs_boxplot_gcc:	make_graphs_boxplot_gcc.o read_data.o
+	$(CC) -g $(LFLAGS) -o make_graphs_boxplot_gcc make_graphs_boxplot_gcc.o read_data.o
+
+make_graphs_boxplot_gcc.o:	make_graphs_boxplot_gcc.c read_data.h
+	$(CC) $(CFLAGS) -c make_graphs_boxplot_gcc.c
+
+#####
+
 make_graphs_boxplot_rdpmc:	make_graphs_boxplot_rdpmc.o read_data.o
 	$(CC) -g $(LFLAGS) -o make_graphs_boxplot_rdpmc make_graphs_boxplot_rdpmc.o read_data.o
 
@@ -153,6 +162,7 @@ clean:
 	make_rdtsc_perfmon2_null_results \
         make_graphs_kernel_rdtsc \
 	make_graphs_boxplot \
+	make_graphs_boxplot_gcc \
 	make_graphs_boxplot_rdpmc \
         make_graphs_colorful \
 	make_graphs_errorbars \

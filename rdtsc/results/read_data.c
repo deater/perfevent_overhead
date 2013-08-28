@@ -41,6 +41,15 @@ struct kernel_info rdpmc_kernels[NUM_RDPMC_KERNELS]={
    {"3.10.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
 };
 
+struct kernel_info gcc_kernels[NUM_GCC_KERNELS]={
+   {"3.10.0gcc44",	INTERFACE_PERF_EVENT,},
+   {"3.10.0gcc45",	INTERFACE_PERF_EVENT,},
+   {"3.10.0gcc46",	INTERFACE_PERF_EVENT,},
+   {"3.10.0gcc47",	INTERFACE_PERF_EVENT,},
+   {"3.10.0gcc48",	INTERFACE_PERF_EVENT,},
+};
+
+
 char colors[NUM_KERNELS][64]={
   "0.0 0.0   1.0",   /* blue */
   "1.0 0.0   0.0",   /* red */
@@ -75,6 +84,26 @@ long long *get_runs(long long *pointer,int kernel, int event) {
 
 }
 
+static int get_num_kernels(int type) {
+
+	int num_kernels;
+
+	if (type==STANDARD_KERNELS) {
+		num_kernels=NUM_KERNELS;
+	}
+	else if (type==RDPMC_KERNELS) {
+		num_kernels=NUM_RDPMC_KERNELS;
+	}
+	else if (type==GCC_KERNELS) {
+		num_kernels=NUM_GCC_KERNELS;
+	}
+	else {
+		fprintf(stderr,"UNKNOWN TYPE!\n");
+		exit(1);
+	}
+	return num_kernels;
+}
+
 int read_data(char *machine,
 		int which,
 		char *plot_name,
@@ -94,12 +123,7 @@ int read_data(char *machine,
 	char gathered_version[BUFSIZ]="Unknown";
 	int interface=INTERFACE_PERF_EVENT;
 
-	if (type==STANDARD_KERNELS) {
-		num_kernels=NUM_KERNELS;
-	}
-	else {
-		num_kernels=NUM_RDPMC_KERNELS;
-	}
+	num_kernels=get_num_kernels(type);
 
 	if (!strcmp(plot_name,"start")) {
 		plot_type=PLOT_TYPE_START;
@@ -130,10 +154,14 @@ int read_data(char *machine,
 			fprintf(stderr,"\tReading data for kernel %s\n",
 				kernels[kernel].name);
 		}
-		else {
+		else if (type==RDPMC_KERNELS) {
 			fprintf(stderr,"\tReading data for kernel %s\n",
 				rdpmc_kernels[kernel].name);
+		} else if (type==GCC_KERNELS) {
+			fprintf(stderr,"\tReading data for kernel %s\n",
+				gcc_kernels[kernel].name);
 		}
+
      		for(events=0;events<NUM_EVENTS;events++) {
 			fprintf(stderr,"%d ",events);
 
@@ -143,10 +171,15 @@ int read_data(char *machine,
 					kernels[kernel].name,
 					events);
 			}
-			else {
+			else if (type==RDPMC_KERNELS) {
 				sprintf(filename,"%s/%d/%s/%d/results",
 					machine,which,
 					rdpmc_kernels[kernel].name,
+					events);
+			} else if (type==GCC_KERNELS) {
+				sprintf(filename,"%s/%d/%s/%d/results",
+					machine,which,
+					gcc_kernels[kernel].name,
 					events);
 			}
 
@@ -334,13 +367,7 @@ int sort_data(long long *times, int events, int type) {
 
 	int kernel,num_kernels;
 
-	if (type==STANDARD_KERNELS) {
-		num_kernels=NUM_KERNELS;
-	}
-	else {
-		num_kernels=NUM_RDPMC_KERNELS;
-	}
-
+	num_kernels=get_num_kernels(type);
 
   	/* sort data */
 
@@ -359,12 +386,7 @@ int calculate_boxplot_data(long long *times, int events,
 
 	int kernel,num_kernels;
 
-	if (type==STANDARD_KERNELS) {
-		num_kernels=NUM_KERNELS;
-	}
-	else {
-		num_kernels=NUM_RDPMC_KERNELS;
-	}
+	num_kernels=get_num_kernels(type);
 
 
 	/* calculate median, twentyfive, seventyfive */
@@ -388,12 +410,7 @@ int calculate_deviation(long long *times, int events,
 	double total;
 	int num_kernels;
 
-	if (type==STANDARD_KERNELS) {
-		num_kernels=NUM_KERNELS;
-	}
-	else {
-		num_kernels=NUM_RDPMC_KERNELS;
-	}
+	num_kernels=get_num_kernels(type);
 
 	for(kernel=0;kernel<num_kernels;kernel++) {
 		total=0.0;
@@ -427,13 +444,7 @@ int calculate_maxy(double *average, double *deviation, int type) {
 	int kernel;
 	int num_kernels;
 
-	if (type==STANDARD_KERNELS) {
-		num_kernels=NUM_KERNELS;
-	}
-	else {
-		num_kernels=NUM_RDPMC_KERNELS;
-	}
-
+	num_kernels=get_num_kernels(type);
 
 	for(kernel=0;kernel<num_kernels;kernel++) {
 		if (average[kernel]+deviation[kernel]>maxy) {
