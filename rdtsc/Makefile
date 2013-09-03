@@ -1,7 +1,7 @@
 CC	= gcc
 CC_R	= $(CC) -pthread
 CFLAGS	= -g -O2 -Wall -I..
-LFLAGS  = -lrt -lm
+LFLAGS  = -lrt -lm -static
 LFLAGS_BORING =
 
 all:	\
