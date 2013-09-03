@@ -84,7 +84,7 @@ int main(int argc, char **argv) {
       events[i]=strtol(argv[2+i],NULL,0);
    }
 
-   
+
    /* measure init latency */
 
    before=rdtsc();
@@ -148,33 +148,39 @@ int main(int argc, char **argv) {
 
    #define BUFFER_SIZE 256
    long long buffer[BUFFER_SIZE];
-     
-   ret3=read(fd[0],buffer,BUFFER_SIZE*sizeof(long long));
-   
-   read_after=rdtsc();
 
-   stop_before=start_after;
-   read_before=stop_after;
+   ret3=syscall(__NR_read,fd[0],buffer,BUFFER_SIZE*sizeof(long long));
+//   ret3=read(fd[0],buffer,BUFFER_SIZE*sizeof(long long));
 
-   if (ret3<0) {
-      printf("start latency: %lld cycles\n",0LL);
-      printf("stop latency: %lld cycles\n",0LL);
-      printf("read latency: %lld cycles\n",0LL);
-      printf("Unexpected read result %d %s\n",ret3,strerror(errno));
-      exit(0);
-   }
+	read_after=rdtsc();
 
-   if (buffer[0]!=count){
-      printf("start latency: %lld cycles\n",0LL);
-      printf("stop/read latency: %lld cycles\n",0LL);
-      printf("read latency: %lld cycles\n",0LL);
-      printf("Error!  buffer count is %lld!\n",buffer[0]);
-      exit(0);
-   }
-   
-   printf("start latency: %lld cycles\n",start_after-start_before);
-   printf("stop latency: %lld cycles\n",stop_after-stop_before);
-   printf("read latency: %lld cycles\n",read_after-read_before);
+	stop_before=start_after;
+	read_before=stop_after;
+
+	if (ret3<0) {
+		printf("start latency: %lld cycles\n",0LL);
+		printf("stop latency: %lld cycles\n",0LL);
+		printf("read latency: %lld cycles\n",0LL);
+		printf("Unexpected read result %d %s\n",ret3,strerror(errno));
+		exit(0);
+	}
+
+	/* Can indiate an error */
+	/* Also can indicate we've hacked the syscall to return early */
+	/* for timing purposes.                                       */
+	buffer[0]=count;
+
+	if (buffer[0]!=count){
+		printf("start latency: %lld cycles\n",0LL);
+		printf("stop/read latency: %lld cycles\n",0LL);
+		printf("read latency: %lld cycles\n",0LL);
+		printf("Error!  buffer count is %lld!\n",buffer[0]);
+		exit(0);
+	}
+
+	printf("start latency: %lld cycles\n",start_after-start_before);
+	printf("stop latency: %lld cycles\n",stop_after-stop_before);
+	printf("read latency: %lld cycles\n",read_after-read_before);
 
    if (ret1<0) {
       printf("Error starting!\n");
