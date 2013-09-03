@@ -6,6 +6,7 @@
 #define NUM_KERNELS		21
 #define NUM_RDPMC_KERNELS 	7
 #define NUM_GCC_KERNELS		5
+#define NUM_BREAKDOWN_KERNELS	8
 
 #define KERNEL_2_6_30_PERFMON2 0
 #define KERNEL_2_6_32_PERFCTR  1
@@ -21,6 +22,7 @@ struct kernel_info {
 extern struct kernel_info kernels[NUM_KERNELS];
 extern struct kernel_info rdpmc_kernels[NUM_RDPMC_KERNELS];
 extern struct kernel_info gcc_kernels[NUM_GCC_KERNELS];
+extern struct kernel_info breakdown_kernels[NUM_BREAKDOWN_KERNELS];
 
 
 extern char colors[NUM_KERNELS][64];
@@ -50,6 +52,7 @@ struct cpuinfo_t {
 #define STANDARD_KERNELS	0
 #define RDPMC_KERNELS		1
 #define GCC_KERNELS		2
+#define BREAKDOWN_KERNELS	3
 
 int read_data(char *machine, int which, char *plot_name,
 		int type, long long *times);

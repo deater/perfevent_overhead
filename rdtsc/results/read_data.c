@@ -50,6 +50,18 @@ struct kernel_info gcc_kernels[NUM_GCC_KERNELS]={
 };
 
 
+struct kernel_info breakdown_kernels[NUM_BREAKDOWN_KERNELS]={
+   {"3.10.0-static-perf_read",	INTERFACE_PERF_EVENT,},
+   {"3.10.0-static-perf_read_hw",	INTERFACE_PERF_EVENT,},
+   {"3.10.0-static-perf_read_value",	INTERFACE_PERF_EVENT,},
+   {"3.10.0-static-perf_event_read",	INTERFACE_PERF_EVENT,},
+   {"3.10.0-static-__perf_event_read",	INTERFACE_PERF_EVENT,},
+   {"3.10.0-static-x86_pmu_read",	INTERFACE_PERF_EVENT,},
+   {"3.10.0-static-rdpmcl",	INTERFACE_PERF_EVENT,},
+   {"3.10.0-static",	INTERFACE_PERF_EVENT,},
+};
+
+
 char colors[NUM_KERNELS][64]={
   "0.0 0.0   1.0",   /* blue */
   "1.0 0.0   0.0",   /* red */
@@ -96,6 +108,9 @@ static int get_num_kernels(int type) {
 	}
 	else if (type==GCC_KERNELS) {
 		num_kernels=NUM_GCC_KERNELS;
+	}
+	else if (type==BREAKDOWN_KERNELS) {
+		num_kernels=NUM_BREAKDOWN_KERNELS;
 	}
 	else {
 		fprintf(stderr,"UNKNOWN TYPE!\n");
@@ -160,6 +175,9 @@ int read_data(char *machine,
 		} else if (type==GCC_KERNELS) {
 			fprintf(stderr,"\tReading data for kernel %s\n",
 				gcc_kernels[kernel].name);
+		} else if (type==BREAKDOWN_KERNELS) {
+			fprintf(stderr,"\tReading data for kernel %s\n",
+				breakdown_kernels[kernel].name);
 		}
 
      		for(events=0;events<NUM_EVENTS;events++) {
@@ -180,6 +198,11 @@ int read_data(char *machine,
 				sprintf(filename,"%s/%d/%s/%d/results",
 					machine,which,
 					gcc_kernels[kernel].name,
+					events);
+			} else if (type==BREAKDOWN_KERNELS) {
+				sprintf(filename,"%s/%d/%s/%d/results",
+					machine,which,
+					breakdown_kernels[kernel].name,
 					events);
 			}
 
