@@ -1,0 +1,11 @@
+
+Direct read code:
+
+  rdmsr using the /dev/cpu/?/msr devices
+
+Likwid
+
+  doesn't really support self-monitoring
+  system-wide only
+  "marker" system where you stay start and end, and it communicates
+  with a named pipe to the monitoring thread?
