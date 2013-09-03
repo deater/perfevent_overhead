@@ -111,29 +111,54 @@ static unsigned long long mmap_read_self(void *addr,
 
 #endif
 
+/* __perf_event_sync_stat()    */
+/* or perf_mmap() */
+/* or perf_event_reset() */
+/*  |  */
+/* \./ */
+/* perf_event_update_userpage() */
+/* arch_perf_update_userpage() */
+/*	userpg->index = perf_event_index(event);
+        userpg->offset = perf_event_count(event);
+        if (userpg->index)
+                userpg->offset -= local64_read(&event->hw.prev_count);
+*/
+
 /* Ingo's code */
+/* also found in tools/perf/design.txt */
+
 static inline unsigned long long mmap_read_self(void *addr) {
-  
-    struct perf_event_mmap_page *pc = addr;
-    unsigned int seq,idx;
 
-    unsigned long long count;
+	struct perf_event_mmap_page *pc = addr;
+	unsigned int seq;
 
-    do {
-      seq=pc->lock;
-      barrier();
+	unsigned long long count=0;
 
-      idx=pc->index;
-      count=pc->offset;
+	/* this spins 10,000+ times? */
+	do {
+		/* This attempts to avoid the problem */
+		/* where the mmap() page was updated */
+		/* while we were calculating values */
+		/* it's unclear why this should happen so frequently? */
+		seq=pc->lock;
+//		printf("%d\n",seq);
 
-      if (idx) {
-	count+=rdpmc(pc->index-1);
-      }
-      barrier();
-    } while (pc->lock != seq);
-  
+		barrier();
 
-  return count;
+		if (pc->index) {
+			count = rdpmc(pc->index - 1);
+			count += pc->offset;
+		}
+		else {
+			/* can't use rdpmc */
+		}
+
+		barrier();
+
+	} while (pc->lock != seq);
+
+
+	return count;
 }
 
 
@@ -142,7 +167,7 @@ int main(int argc, char **argv) {
 
    int i;
    static long page_size=4096;
-   
+
    long long before,after;
    long long start_before,start_after;
    long long stop_before,stop_after;
@@ -219,13 +244,29 @@ int main(int argc, char **argv) {
 	 exit(1);
       }
    
+#if 1
+	 addr[i]=mmap(NULL,page_size, PROT_READ, MAP_SHARED|MAP_POPULATE,fd[i],0);
+	if (addr[i] == (void *)(-1)) {
+		printf("Error mmaping!\n");
+		exit(1);
+	}
+#else
+	 addr[i]=mmap(NULL,page_size, PROT_READ, MAP_SHARED,fd[i],0);
+	if (addr[i] == (void *)(-1)) {
+		printf("Error mmaping!\n");
+		exit(1);
+	}
 
-      addr[i]=mmap(NULL,page_size, PROT_READ, MAP_SHARED,fd[i],0);
-      if (addr[i] == (void *)(-1)) {
-        printf("Error mmaping!\n");
-        exit(1);
-      }
+	/* touch mmap page to make sure in cache? */
+	struct perf_event_mmap_page *pc;
+	pc = addr[i];
+	(void)pc->index;
+	printf("%d\n",pc->index);
+#endif
    }
+//	usleep(10000);
+
+
 
    after=rdtsc();
 
@@ -239,15 +280,16 @@ int main(int argc, char **argv) {
 
    ret1=ioctl(fd[0], PERF_EVENT_IOC_ENABLE,0);
 
+
    start_after=rdtsc();
 
    /* read */
 
-
+//for(j=0;j<10;j++) {
    for(i=0;i<count;i++) {
      stamp[i] = mmap_read_self(addr[i]);
    }
-
+//}
    /* NULL */
 
    for(i=0;i<count;i++) {
