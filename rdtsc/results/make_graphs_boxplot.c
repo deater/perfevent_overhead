@@ -91,8 +91,8 @@ int main(int argc, char **argv) {
 	printf("grid_gray 0.9 grid_lines\n");
 	printf("hash_labels font Helvetica fontsize %d  vjc hjr rotate 45\n",
 		FONTSIZE);
-	printf("(* label font Helvetica fontsize %d  : Kernels *)\n",
-		FONTSIZE);
+	printf("label font Helvetica fontsize %d y %lf : Linux Version\n",
+		FONTSIZE,-(maxy/5));
 	printf("no_auto_hash_marks\n");
 	for(i=0;i<NUM_KERNELS;i++) {
 		printf("hash_at %d\n",i);
