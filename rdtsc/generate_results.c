@@ -13,11 +13,14 @@
 #define VENDOR_AMD     1
 #define VENDOR_INTEL   2
 
-#define KERNEL_PERF_EVENT       0
-#define KERNEL_PERF_EVENT_RDPMC 1
-#define KERNEL_PERFCTR          2
-#define KERNEL_PERFMON2         3
-#define KERNEL_UNKNOWN         99
+#define KERNEL_PERF_EVENT		0
+#define KERNEL_PERF_EVENT_RDPMC		1
+#define KERNEL_PERFCTR			2
+#define KERNEL_PERFMON2			3
+#define KERNEL_PERF_EVENT_STATIC	4
+#define KERNEL_PERF_EVENT_SYSCALL	5
+#define KERNEL_PERF_EVENT_SYSCALL_STATIC	6
+#define KERNEL_UNKNOWN			99
 
 static char dirname[BUFSIZ];
 
@@ -461,23 +464,30 @@ static int create_output_dir(void) {
 
 static int generate_results(char *directory, int type, int num) {
 
-   int i,result;
-   char dirname[BUFSIZ],filename[BUFSIZ],temp_string[BUFSIZ],temp_string2[BUFSIZ];
-   FILE *fff;
-   struct utsname uname_buf;
- 
-   uname(&uname_buf);
+	int i,result;
+	char dirname[BUFSIZ],filename[BUFSIZ],
+		temp_string[BUFSIZ],temp_string2[BUFSIZ];
+	FILE *fff;
+	struct utsname uname_buf;
 
-   if (type==KERNEL_PERF_EVENT_RDPMC) {
-      sprintf(dirname,"%s/%s-rdpmc",directory,uname_buf.release);
-   } else if (type==KERNEL_PERFCTR) {
-      sprintf(dirname,"%s/%s-perfctr",directory,uname_buf.release);
-   } else if (type==KERNEL_PERFMON2) {
-      sprintf(dirname,"%s/%s-perfmon2",directory,uname_buf.release);
-   } else { 
-      sprintf(dirname,"%s/%s",directory,uname_buf.release);
-   } 
-   result=mkdir(dirname,0755);
+	uname(&uname_buf);
+
+	if (type==KERNEL_PERF_EVENT_RDPMC) {
+		sprintf(dirname,"%s/%s-rdpmc",directory,uname_buf.release);
+	} else if (type==KERNEL_PERFCTR) {
+		sprintf(dirname,"%s/%s-perfctr",directory,uname_buf.release);
+	} else if (type==KERNEL_PERFMON2) {
+		sprintf(dirname,"%s/%s-perfmon2",directory,uname_buf.release);
+	} else if (type==KERNEL_PERF_EVENT_STATIC) {
+		sprintf(dirname,"%s/%s-static",directory,uname_buf.release);
+	} else if (type==KERNEL_PERF_EVENT_SYSCALL) {
+		sprintf(dirname,"%s/%s-syscall",directory,uname_buf.release);
+	} else if (type==KERNEL_PERF_EVENT_SYSCALL_STATIC) {
+		sprintf(dirname,"%s/%s-syscall_static",directory,uname_buf.release);
+	} else {
+		sprintf(dirname,"%s/%s",directory,uname_buf.release);
+	}
+	result=mkdir(dirname,0755);
    if (result<0) {
       if (errno==EEXIST) {
          /* this is OK */
@@ -503,32 +513,62 @@ static int generate_results(char *directory, int type, int num) {
    fprintf(fff,"### System info\n");
    fprintf(fff,"Kernel:    %s %s\n",uname_buf.sysname,uname_buf.release);
    fprintf(fff,"Interface: ");
-   switch(type) {
-      case KERNEL_PERF_EVENT: 
-	   fprintf(fff,"perf_event");
-           break;
-      case KERNEL_PERF_EVENT_RDPMC: 
-	   fprintf(fff,"perf_event_rdpmc");
-           break;
-      case KERNEL_PERFCTR: 
-	   fprintf(fff,"perfctr");
-           break;
-      case KERNEL_PERFMON2: 
-	   fprintf(fff,"perfmon");
-           break;
-      default: 
-	   fprintf(fff,"unknown");
-           break;
-   }
-   fprintf(fff,"\n");
-   fprintf(fff,"Hostname:  %s\n",uname_buf.nodename);
-   fprintf(fff,"Family:    %d\n",cpuinfo.family);
-   fprintf(fff,"Model:     %d\n",cpuinfo.model);
-   fprintf(fff,"Stepping:  %d\n",cpuinfo.stepping);
-   fprintf(fff,"Frequency: %lf\n",cpuinfo.frequency);
-   fprintf(fff,"Uptime:    %lf\n",cpuinfo.uptime);
-   fprintf(fff,"Modelname: %s\n",cpuinfo.modelname);
-   fprintf(fff,"Generic:   %s\n",cpuinfo.generic_modelname);
+
+	switch(type) {
+		case KERNEL_PERF_EVENT:
+		case KERNEL_PERF_EVENT_STATIC:
+		case KERNEL_PERF_EVENT_SYSCALL:
+		case KERNEL_PERF_EVENT_SYSCALL_STATIC:
+			fprintf(fff,"perf_event");
+			break;
+		case KERNEL_PERF_EVENT_RDPMC:
+			fprintf(fff,"perf_event_rdpmc");
+			break;
+		case KERNEL_PERFCTR:
+			fprintf(fff,"perfctr");
+			break;
+		case KERNEL_PERFMON2:
+			fprintf(fff,"perfmon");
+			break;
+		default:
+			fprintf(fff,"unknown");
+			break;
+	}
+	fprintf(fff,"\n");
+
+	fprintf(fff,"Library interface: ");
+
+	switch(type) {
+		case KERNEL_PERF_EVENT_RDPMC:
+		case KERNEL_PERFCTR:
+		case KERNEL_PERFMON2:
+		case KERNEL_PERF_EVENT:
+			fprintf(fff,"dynamic");
+			break;
+		case KERNEL_PERF_EVENT_STATIC:
+			fprintf(fff,"static");
+			break;
+		case KERNEL_PERF_EVENT_SYSCALL:
+			fprintf(fff,"syscall");
+			break;
+		case KERNEL_PERF_EVENT_SYSCALL_STATIC:
+			fprintf(fff,"syscall static");
+			break;
+		default:
+			fprintf(fff,"unknown");
+			break;
+	}
+	fprintf(fff,"\n");
+
+	fprintf(fff,"Hostname:  %s\n",uname_buf.nodename);
+	fprintf(fff,"Family:    %d\n",cpuinfo.family);
+	fprintf(fff,"Model:     %d\n",cpuinfo.model);
+	fprintf(fff,"Stepping:  %d\n",cpuinfo.stepping);
+	fprintf(fff,"Frequency: %lf\n",cpuinfo.frequency);
+	fprintf(fff,"Uptime:    %lf\n",cpuinfo.uptime);
+	fprintf(fff,"Modelname: %s\n",cpuinfo.modelname);
+	fprintf(fff,"Generic:   %s\n",cpuinfo.generic_modelname);
+
    for(i=0;i<num;i++) {
       fprintf(fff,"Event %d %x %s\n",i,
              event_table->event[i].event,
@@ -540,6 +580,27 @@ static int generate_results(char *directory, int type, int num) {
 
    if (type==KERNEL_PERF_EVENT) {
       sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe %d ",num);
+      for(i=0;i<num;i++) {
+         sprintf(temp_string,"0x%x ",event_table->event[i].event);
+         strcat(temp_string2,temp_string);
+      }
+   }
+   else if (type==KERNEL_PERF_EVENT_STATIC) {
+      sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe_static %d ",num);
+      for(i=0;i<num;i++) {
+         sprintf(temp_string,"0x%x ",event_table->event[i].event);
+         strcat(temp_string2,temp_string);
+      }
+   }
+   else if (type==KERNEL_PERF_EVENT_SYSCALL) {
+      sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe_syscall %d ",num);
+      for(i=0;i<num;i++) {
+         sprintf(temp_string,"0x%x ",event_table->event[i].event);
+         strcat(temp_string2,temp_string);
+      }
+   }
+   else if (type==KERNEL_PERF_EVENT_SYSCALL_STATIC) {
+      sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe_syscall_static %d ",num);
       for(i=0;i<num;i++) {
          sprintf(temp_string,"0x%x ",event_table->event[i].event);
          strcat(temp_string2,temp_string);
@@ -598,6 +659,15 @@ int main(int argc, char **argv) {
   if (argc>1) {
      if (!strncmp(argv[1],"perf_event_rdpmc",16)) {
         type=KERNEL_PERF_EVENT_RDPMC;
+     }
+     else if (!strncmp(argv[1],"perf_event_syscall_static",25)) {
+        type=KERNEL_PERF_EVENT_SYSCALL_STATIC;
+     }
+     else if (!strncmp(argv[1],"perf_event_syscall",18)) {
+        type=KERNEL_PERF_EVENT_SYSCALL;
+     }
+     else if (!strncmp(argv[1],"perf_event_static",19)) {
+        type=KERNEL_PERF_EVENT_STATIC;
      }
      else if (!strncmp(argv[1],"perf_event",10)) {
         type=KERNEL_PERF_EVENT;
