@@ -12,15 +12,10 @@ all:	\
 	rdtsc_null_pe_syscall \
 	rdtsc_null_pe_syscall_static \
 	rdtsc_null_pe_rdpmc \
+	rdtsc_null_pe_rdpmc-map_populate \
+	rdtsc_null_pe_rdpmc-touch \
 	rdtsc_null_perfctr \
 	rdtsc_null_perfmon2 
-#	make_rdtsc_pe_null_results \
-#	make_rdtsc_pe_rdpmc_null_results \
-#	make_rdtsc_perfctr_null_results \
-#	make_rdtsc_perfmon2_null_results \
-#       make_graphs_kernel_rdtsc \
-#        make_graphs_kernel_rdtsc_all \
-#        make_graphs_kernel_rdtsc_vary_events
 
 
 convert_results:	convert_results.o
@@ -38,38 +33,6 @@ generate_results:	generate_results.o
 generate_results.o:	generate_results.c
 	$(CC) $(CFLAGS) -c generate_results.c
 
-
-###
-
-make_rdtsc_pe_null_results:	make_rdtsc_pe_null_results.o
-	$(CC) $(LFLAGS) -o make_rdtsc_pe_null_results make_rdtsc_pe_null_results.o
-
-make_rdtsc_pe_null_results.o:	make_rdtsc_pe_null_results.c
-	$(CC) $(CFLAGS) -c make_rdtsc_pe_null_results.c
-
-###
-
-make_rdtsc_pe_rdpmc_null_results:	make_rdtsc_pe_rdpmc_null_results.o
-	$(CC) $(LFLAGS) -o make_rdtsc_pe_rdpmc_null_results make_rdtsc_pe_rdpmc_null_results.o
-
-make_rdtsc_pe_rdpmc_null_results.o:	make_rdtsc_pe_rdpmc_null_results.c
-	$(CC) $(CFLAGS) -c make_rdtsc_pe_rdpmc_null_results.c
-
-###
-
-make_rdtsc_perfctr_null_results:	make_rdtsc_perfctr_null_results.o
-	$(CC) $(LFLAGS) -o make_rdtsc_perfctr_null_results make_rdtsc_perfctr_null_results.o
-
-make_rdtsc_perfctr_null_results.o:	make_rdtsc_perfctr_null_results.c
-	$(CC) $(CFLAGS) -c make_rdtsc_perfctr_null_results.c
-
-###
-
-make_rdtsc_perfmon2_null_results:	make_rdtsc_perfmon2_null_results.o
-	$(CC) $(LFLAGS) -o make_rdtsc_perfmon2_null_results make_rdtsc_perfmon2_null_results.o
-
-make_rdtsc_perfmon2_null_results.o:	make_rdtsc_perfmon2_null_results.c
-	$(CC) $(CFLAGS) -c make_rdtsc_perfmon2_null_results.c
 
 ####
 
@@ -103,6 +66,21 @@ rdtsc_null_pe_rdpmc:	rdtsc_null_pe_rdpmc.o
 
 rdtsc_null_pe_rdpmc.o:	rdtsc_null_pe_rdpmc.c
 	$(CC) $(CFLAGS) -c rdtsc_null_pe_rdpmc.c
+#####
+
+rdtsc_null_pe_rdpmc-map_populate:	rdtsc_null_pe_rdpmc-map_populate.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe_rdpmc-map_populate rdtsc_null_pe_rdpmc-map_populate.o
+
+rdtsc_null_pe_rdpmc-map_populate.o:	rdtsc_null_pe_rdpmc.c
+	$(CC) $(CFLAGS) -DMAPPOPULATE -o rdtsc_null_pe_rdpmc-map_populate.o -c rdtsc_null_pe_rdpmc.c
+
+#####
+
+rdtsc_null_pe_rdpmc-touch:	rdtsc_null_pe_rdpmc-touch.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe_rdpmc-touch rdtsc_null_pe_rdpmc-touch.o
+
+rdtsc_null_pe_rdpmc-touch.o:	rdtsc_null_pe_rdpmc.c
+	$(CC) $(CFLAGS) -DTOUCH -o rdtsc_null_pe_rdpmc-touch.o -c rdtsc_null_pe_rdpmc.c
 
 ####
 
@@ -158,15 +136,13 @@ clean:
 	rdtsc_null_syscall \
 	rdtsc_null_syscall_static \
 	rdtsc_null_pe_rdpmc \
+	rdtsc_null_pe_rdpmc-map_populate \
+	rdtsc_null_pe_rdpmc-touch \
 	rdtsc_null_perfctr \
 	rdtsc_null_perfmon2 \
-	make_rdtsc_pe_null_results \
-	make_rdtsc_pe_rdpmc_null_results \
-	make_rdtsc_perfctr_null_results \
-	make_rdtsc_perfmon2_null_results \
-        make_graphs_kernel_rdtsc \
-        make_graphs_kernel_rdtsc_all \
-        make_graphs_kernel_rdtsc_vary_events
+	rdtsc_null_pe_static \
+	rdtsc_null_pe_syscall \
+	rdtsc_null_pe_syscall_static 
 
 
 

@@ -20,6 +20,8 @@
 #define KERNEL_PERF_EVENT_STATIC	4
 #define KERNEL_PERF_EVENT_SYSCALL	5
 #define KERNEL_PERF_EVENT_SYSCALL_STATIC	6
+#define KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE	7
+#define KERNEL_PERF_EVENT_RDPMC_TOUCH		8
 #define KERNEL_UNKNOWN			99
 
 static char dirname[BUFSIZ];
@@ -474,6 +476,10 @@ static int generate_results(char *directory, int type, int num) {
 
 	if (type==KERNEL_PERF_EVENT_RDPMC) {
 		sprintf(dirname,"%s/%s-rdpmc",directory,uname_buf.release);
+	} else if (type==KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE) {
+		sprintf(dirname,"%s/%s-rdpmc-map_populate",directory,uname_buf.release);
+	} else if (type==KERNEL_PERF_EVENT_RDPMC_TOUCH) {
+		sprintf(dirname,"%s/%s-rdpmc-touch",directory,uname_buf.release);
 	} else if (type==KERNEL_PERFCTR) {
 		sprintf(dirname,"%s/%s-perfctr",directory,uname_buf.release);
 	} else if (type==KERNEL_PERFMON2) {
@@ -523,6 +529,8 @@ static int generate_results(char *directory, int type, int num) {
 			fprintf(fff,"perf_event");
 			break;
 		case KERNEL_PERF_EVENT_RDPMC:
+		case KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE:
+		case KERNEL_PERF_EVENT_RDPMC_TOUCH:
 			fprintf(fff,"perf_event_rdpmc");
 			break;
 		case KERNEL_PERFCTR:
@@ -554,6 +562,12 @@ static int generate_results(char *directory, int type, int num) {
 			break;
 		case KERNEL_PERF_EVENT_SYSCALL_STATIC:
 			fprintf(fff,"syscall static");
+			break;
+		case KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE:
+			fprintf(fff,"map_populate");
+			break;
+		case KERNEL_PERF_EVENT_RDPMC_TOUCH:
+			fprintf(fff,"touch");
 			break;
 		default:
 			fprintf(fff,"unknown");
@@ -614,6 +628,20 @@ static int generate_results(char *directory, int type, int num) {
          strcat(temp_string2,temp_string);
       }
    }
+   else if (type==KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE) {
+      sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe_rdpmc-map_populate %d ",num);
+      for(i=0;i<num;i++) {
+         sprintf(temp_string,"0x%x ",event_table->event[i].event);
+         strcat(temp_string2,temp_string);
+      }
+   }
+   else if (type==KERNEL_PERF_EVENT_RDPMC_TOUCH) {
+      sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe_rdpmc-touch %d ",num);
+      for(i=0;i<num;i++) {
+         sprintf(temp_string,"0x%x ",event_table->event[i].event);
+         strcat(temp_string2,temp_string);
+      }
+   }
    else if (type==KERNEL_PERFCTR) {
       sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_perfctr %d ",num);
       for(i=0;i<num;i++) {
@@ -658,8 +686,14 @@ int main(int argc, char **argv) {
 	}
 
 	if (argc>1) {
-		if (!strncmp(argv[1],"perf_event_rdpmc",16)) {
+		if (!strcmp(argv[1],"perf_event_rdpmc")) {
 			type=KERNEL_PERF_EVENT_RDPMC;
+		}
+		else if (!strcmp(argv[1],"perf_event_rdpmc-map_populate")) {
+			type=KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE;
+		}
+		else if (!strcmp(argv[1],"perf_event_rdpmc-touch")) {
+			type=KERNEL_PERF_EVENT_RDPMC_TOUCH;
 		}
 		else if (!strcmp(argv[1],"perf_event-syscall_static")) {
 			type=KERNEL_PERF_EVENT_SYSCALL_STATIC;

@@ -63,13 +63,15 @@ struct kernel_info breakdown_kernels[NUM_BREAKDOWN_KERNELS]={
 
 
 struct kernel_info final_kernels[NUM_FINAL_KERNELS]={
-   {"2.6.30-perfmon2",			INTERFACE_PERFMON2,},
-   {"2.6.32-perfctr",			INTERFACE_PERFCTR,},
    {"3.10.0",				INTERFACE_PERF_EVENT,},
+   {"3.10.0-syscall",			INTERFACE_PERF_EVENT,},
    {"3.10.0-static",			INTERFACE_PERF_EVENT,},
+   {"3.10.0-syscall_static",		INTERFACE_PERF_EVENT,},
+   {"2.6.30-perfmon2",			INTERFACE_PERFMON2,},
    {"3.10.0-rdpmc",			INTERFACE_PERF_EVENT_RDPMC,},
    {"3.10.0-rdpmc-map_populate",	INTERFACE_PERF_EVENT_RDPMC,},
    {"3.10.0-rdpmc-touch",		INTERFACE_PERF_EVENT_RDPMC,},
+   {"2.6.32-perfctr",			INTERFACE_PERFCTR,},
 };
 
 
@@ -221,7 +223,7 @@ int read_data(char *machine,
 					machine,which,
 					breakdown_kernels[kernel].name,
 					events);
-			} else if (type==BREAKDOWN_KERNELS) {
+			} else if (type==FINAL_KERNELS) {
 				sprintf(filename,"%s/%d/%s/%d/results",
 					machine,which,
 					final_kernels[kernel].name,

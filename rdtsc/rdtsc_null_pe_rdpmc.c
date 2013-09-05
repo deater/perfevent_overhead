@@ -35,9 +35,9 @@
 
 int perf_event_open(struct perf_event_attr *hw_event_uptr,
                     pid_t pid, int cpu, int group_fd, unsigned long flags) {
-   
-  return syscall(__NR_perf_event_open,hw_event_uptr, pid, cpu,
-                 group_fd, flags);
+
+	return syscall(__NR_perf_event_open,hw_event_uptr, pid, cpu,
+			group_fd, flags);
 }
 
 #define MAX_EVENTS 16
@@ -243,19 +243,24 @@ int main(int argc, char **argv) {
 	 printf("start/stop/read latency: %lld cycles\n",0LL);
 	 exit(1);
       }
-   
-#if 1
-	 addr[i]=mmap(NULL,page_size, PROT_READ, MAP_SHARED|MAP_POPULATE,fd[i],0);
+
+#ifdef MAPPOPULATE
+
+	addr[i]=mmap(NULL,page_size, PROT_READ, MAP_SHARED|MAP_POPULATE,fd[i],0);
 	if (addr[i] == (void *)(-1)) {
 		printf("Error mmaping!\n");
 		exit(1);
 	}
 #else
-	 addr[i]=mmap(NULL,page_size, PROT_READ, MAP_SHARED,fd[i],0);
+
+	addr[i]=mmap(NULL,page_size, PROT_READ, MAP_SHARED,fd[i],0);
 	if (addr[i] == (void *)(-1)) {
 		printf("Error mmaping!\n");
 		exit(1);
 	}
+#endif
+
+#ifdef TOUCH
 
 	/* touch mmap page to make sure in cache? */
 	struct perf_event_mmap_page *pc;
@@ -264,7 +269,6 @@ int main(int argc, char **argv) {
 	printf("%d\n",pc->index);
 #endif
    }
-//	usleep(10000);
 
 
 
@@ -285,13 +289,13 @@ int main(int argc, char **argv) {
 
    /* read */
 
-//for(j=0;j<10;j++) {
+	/* get initial values */
    for(i=0;i<count;i++) {
      stamp[i] = mmap_read_self(addr[i]);
    }
-//}
    /* NULL */
 
+	/* get final values */
    for(i=0;i<count;i++) {
      now[i] = mmap_read_self(addr[i]);
    }
@@ -316,7 +320,7 @@ int main(int argc, char **argv) {
       exit(0);
    }
 #endif
-   
+
    printf("start latency: %lld cycles\n",start_after-start_before);
    printf("stop latency: %lld cycles\n",stop_after-stop_before);
    printf("read latency: %lld cycles\n",read_after-read_before);
@@ -325,13 +329,13 @@ int main(int argc, char **argv) {
       printf("Error starting!\n");
       exit(1);
    }
-   
+
    if (ret2<0) {
       printf("Error stopping!\n");
       exit(1);
    }
-   
-   
+
+
    for(i=0;i<count;i++) {
      printf("%x %lld\n",
 	    events[i],now[i]-stamp[i]);
