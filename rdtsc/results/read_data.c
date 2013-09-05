@@ -62,6 +62,17 @@ struct kernel_info breakdown_kernels[NUM_BREAKDOWN_KERNELS]={
 };
 
 
+struct kernel_info final_kernels[NUM_FINAL_KERNELS]={
+   {"2.6.30-perfmon2",			INTERFACE_PERFMON2,},
+   {"2.6.32-perfctr",			INTERFACE_PERFCTR,},
+   {"3.10.0",				INTERFACE_PERF_EVENT,},
+   {"3.10.0-static",			INTERFACE_PERF_EVENT,},
+   {"3.10.0-rdpmc",			INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.10.0-rdpmc-map_populate",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.10.0-rdpmc-touch",		INTERFACE_PERF_EVENT_RDPMC,},
+};
+
+
 char colors[NUM_KERNELS][64]={
   "0.0 0.0   1.0",   /* blue */
   "1.0 0.0   0.0",   /* red */
@@ -111,6 +122,9 @@ static int get_num_kernels(int type) {
 	}
 	else if (type==BREAKDOWN_KERNELS) {
 		num_kernels=NUM_BREAKDOWN_KERNELS;
+	}
+	else if (type==FINAL_KERNELS) {
+		num_kernels=NUM_FINAL_KERNELS;
 	}
 	else {
 		fprintf(stderr,"UNKNOWN TYPE!\n");
@@ -178,6 +192,9 @@ int read_data(char *machine,
 		} else if (type==BREAKDOWN_KERNELS) {
 			fprintf(stderr,"\tReading data for kernel %s\n",
 				breakdown_kernels[kernel].name);
+		} else if (type==FINAL_KERNELS) {
+			fprintf(stderr,"\tReading data for kernel %s\n",
+				final_kernels[kernel].name);
 		}
 
      		for(events=0;events<NUM_EVENTS;events++) {
@@ -203,6 +220,11 @@ int read_data(char *machine,
 				sprintf(filename,"%s/%d/%s/%d/results",
 					machine,which,
 					breakdown_kernels[kernel].name,
+					events);
+			} else if (type==BREAKDOWN_KERNELS) {
+				sprintf(filename,"%s/%d/%s/%d/results",
+					machine,which,
+					final_kernels[kernel].name,
 					events);
 			}
 
