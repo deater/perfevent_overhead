@@ -661,16 +661,16 @@ int main(int argc, char **argv) {
 		if (!strncmp(argv[1],"perf_event_rdpmc",16)) {
 			type=KERNEL_PERF_EVENT_RDPMC;
 		}
-		else if (!strncmp(argv[1],"perf_event_syscall_static",25)) {
+		else if (!strcmp(argv[1],"perf_event-syscall_static")) {
 			type=KERNEL_PERF_EVENT_SYSCALL_STATIC;
 		}
-		else if (!strncmp(argv[1],"perf_event_syscall",18)) {
+		else if (!strcmp(argv[1],"perf_event-syscall")) {
 			type=KERNEL_PERF_EVENT_SYSCALL;
 		}
-		else if (!strncmp(argv[1],"perf_event_static",19)) {
+		else if (!strcmp(argv[1],"perf_event-static")) {
 			type=KERNEL_PERF_EVENT_STATIC;
 		}
-		else if (!strncmp(argv[1],"perf_event",10)) {
+		else if (!strcmp(argv[1],"perf_event")) {
 			type=KERNEL_PERF_EVENT;
 		}
 		else if (!strncmp(argv[1],"perfctr",7)) {
@@ -686,6 +686,8 @@ int main(int argc, char **argv) {
 			return -1;
 		}
 	}
+
+	printf("Type: %d\n",type);
 
 	for(i=0;i<NUM_EVENTS;i++) {
 		generate_results(dirname,type,i);
