@@ -487,16 +487,17 @@ static int generate_results(char *directory, int type, int num) {
 	} else {
 		sprintf(dirname,"%s/%s",directory,uname_buf.release);
 	}
+
 	result=mkdir(dirname,0755);
-   if (result<0) {
-      if (errno==EEXIST) {
-         /* this is OK */
-      }
-      else {
-         fprintf(stderr,"Can't create directory %s\n",dirname);
-         return -1;
-      }
-   }
+	if (result<0) {
+		if (errno==EEXIST) {
+			/* this is OK */
+		}
+		else {
+			fprintf(stderr,"Can't create directory %s\n",dirname);
+			return -1;
+		}
+	}
 
    sprintf(dirname,"%s/%d",dirname,num);
    result=mkdir(dirname,0755);
@@ -646,48 +647,49 @@ static int generate_results(char *directory, int type, int num) {
 
 int main(int argc, char **argv) {
 
-  int i;
-  int type=KERNEL_PERF_EVENT;
+	int i;
+	int type=KERNEL_PERF_EVENT;
 
-  create_output_dir();
+	create_output_dir();
 
-  if (event_table==NULL) {
-     fprintf(stderr,"Error!  Unknown machine type!\n");
-     return -1;
-  }
+	if (event_table==NULL) {
+		fprintf(stderr,"Error!  Unknown machine type!\n");
+		return -1;
+	}
 
-  if (argc>1) {
-     if (!strncmp(argv[1],"perf_event_rdpmc",16)) {
-        type=KERNEL_PERF_EVENT_RDPMC;
-     }
-     else if (!strncmp(argv[1],"perf_event_syscall_static",25)) {
-        type=KERNEL_PERF_EVENT_SYSCALL_STATIC;
-     }
-     else if (!strncmp(argv[1],"perf_event_syscall",18)) {
-        type=KERNEL_PERF_EVENT_SYSCALL;
-     }
-     else if (!strncmp(argv[1],"perf_event_static",19)) {
-        type=KERNEL_PERF_EVENT_STATIC;
-     }
-     else if (!strncmp(argv[1],"perf_event",10)) {
-        type=KERNEL_PERF_EVENT;
-     }
-     else if (!strncmp(argv[1],"perfctr",7)) {
-        type=KERNEL_PERFCTR;
-     }
-     else if (!strncmp(argv[1],"perfmon",7)) {
-        type=KERNEL_PERFMON2;
-     }
-     else {
-        type=KERNEL_UNKNOWN;
-	fprintf(stderr,"Error!  Unknown kernel type %s\n",argv[1]);
-	return -1;
-     }
-  }
+	if (argc>1) {
+		if (!strncmp(argv[1],"perf_event_rdpmc",16)) {
+			type=KERNEL_PERF_EVENT_RDPMC;
+		}
+		else if (!strncmp(argv[1],"perf_event_syscall_static",25)) {
+			type=KERNEL_PERF_EVENT_SYSCALL_STATIC;
+		}
+		else if (!strncmp(argv[1],"perf_event_syscall",18)) {
+			type=KERNEL_PERF_EVENT_SYSCALL;
+		}
+		else if (!strncmp(argv[1],"perf_event_static",19)) {
+			type=KERNEL_PERF_EVENT_STATIC;
+		}
+		else if (!strncmp(argv[1],"perf_event",10)) {
+			type=KERNEL_PERF_EVENT;
+		}
+		else if (!strncmp(argv[1],"perfctr",7)) {
+			type=KERNEL_PERFCTR;
+		}
+		else if (!strncmp(argv[1],"perfmon",7)) {
+			type=KERNEL_PERFMON2;
+		}
+		else {
+			type=KERNEL_UNKNOWN;
+			fprintf(stderr,"Error!  Unknown kernel type %s\n",
+				argv[1]);
+			return -1;
+		}
+	}
 
-  for(i=0;i<NUM_EVENTS;i++) {
-     generate_results(dirname,type,i);
-  }
+	for(i=0;i<NUM_EVENTS;i++) {
+		generate_results(dirname,type,i);
+	}
 
-  return 0;
+	return 0;
 }
