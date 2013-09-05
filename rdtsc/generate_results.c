@@ -68,6 +68,25 @@ struct event_table_t fam10h_event_table = { {
   { 0x53037e, "L2_CACHE_MISS:INSTRUCTIONS:DATA","PAPI_L2_TCM" },
 }};
 
+struct event_table_t bobcat_event_table = { {
+  { 0x530076, "CPU_CLK_UNHALTED",		"PAPI_TOT_CYC", },
+  { 0x5300c0, "RETIRED_INSTRUCTIONS",		"PAPI_TOT_INS", },
+  { 0x5300c2, "RETIRED_BRANCH_INSTRUCTIONS",	"PAPI_BR_INS"  },
+  { 0x5300c3, "RETIRED_MISPREDICTED_BRANCH_INSTRUCTIONS", "PAPI_BR_MSP" },
+  { 0x530385, "L1_ITLB_MISS_AND_L2_ITLB_MISS", "PAPI_TLB_IM" },
+  { 0x530f46, "DTLB_MISS",	"PAPI_TLB_DM" },
+  { 0x530080, "INSTRUCTION_CACHE_FETCHES",	"PAPI_L1_ICA" },
+  { 0x530081, "INSTRUCTION_CACHE_MISSES",	"PAPI_L1_ICM" },
+  { 0x530040, "DATA_CACHE_ACCESSES",		"PAPI_L1_DCA" },
+  { 0x530041, "DATA_CACHE_MISSES",		"PAPI_L1_DCM" },
+  { 0x5300cf, "INTERRUPTS_TAKEN",		"PAPI_HW_INT" },
+  { 0x530300, "DISPATCHED_FPU:ANY", "PAPI_FP_OPS" },
+  { 0x537f03, "RETIRED_SSE_OPERATIONS:ALL",			"PAPI_LD_INS" }, /* nope */
+  { 0x530001, "CYCLES_NO_FPU_OPS_RETIRED",		"PAPI_SR_INS" }, /* nope */
+  { 0x530b7d, "REQUESTS_TO_L2:ALL",		"PAPI_L2_TCA" },
+  { 0x53037e, "L2_CACHE_MISS:INSTRUCTIONS:DATA","PAPI_L2_TCM" },
+}};
+
 struct event_table_t atom_event_table = {{
   { 0x53003c, "UNHALTED_CORE_CYCLES",		"PAPI_TOT_CYC", },
   { 0x5300c0, "INSTRUCTIONS_RETIRED",		"PAPI_TOT_INS", },
@@ -210,7 +229,7 @@ static int set_generic_modelname(int vendor, int family, int model) {
     /* 14h */
     else if (family==20) {
       strcpy(cpuinfo.generic_modelname,"bobcat");
-      //event_table=&bobcat_event_table;
+      event_table=&bobcat_event_table;
     }
     /* 15h */
     else if (family==21) {
