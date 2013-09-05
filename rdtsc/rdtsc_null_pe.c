@@ -21,7 +21,7 @@
 
 #if defined(__i386__)
 #define __NR_perf_event_open    336
-#elif defined(__x86_64__) 
+#elif defined(__x86_64__)
 #define __NR_perf_event_open    298
 #elif defined __powerpc__
 #define __NR_perf_event_open    319
@@ -33,7 +33,7 @@
 
 int perf_event_open(struct perf_event_attr *hw_event_uptr,
                     pid_t pid, int cpu, int group_fd, unsigned long flags) {
-   
+
   return syscall(__NR_perf_event_open,hw_event_uptr, pid, cpu,
                  group_fd, flags);
 }
@@ -43,17 +43,17 @@ int perf_event_open(struct perf_event_attr *hw_event_uptr,
 int events[MAX_EVENTS];
 
 unsigned long long rdtsc(void) {
-  unsigned a,d;
+	unsigned a,d;
 
-  __asm__ volatile("rdtsc" : "=a" (a), "=d" (d));
+	__asm__ volatile("rdtsc" : "=a" (a), "=d" (d));
 
-  return ((unsigned long long)a) | (((unsigned long long)d) << 32);
+	return ((unsigned long long)a) | (((unsigned long long)d) << 32);
 }
 
 int main(int argc, char **argv) {
 
    int i;
-   
+
    long long before,after;
    long long start_before,start_after;
    long long stop_before,stop_after;
@@ -146,12 +146,14 @@ int main(int argc, char **argv) {
 
    stop_after=rdtsc();
 
-   #define BUFFER_SIZE 256
-   long long buffer[BUFFER_SIZE];
+	#define BUFFER_SIZE 256
+	long long buffer[BUFFER_SIZE];
 
-   ret3=syscall(__NR_read,fd[0],buffer,BUFFER_SIZE*sizeof(long long));
-//   ret3=read(fd[0],buffer,BUFFER_SIZE*sizeof(long long));
-
+#ifdef USE_SYSCALL
+	ret3=syscall(__NR_read,fd[0],buffer,BUFFER_SIZE*sizeof(long long));
+#else
+	ret3=read(fd[0],buffer,BUFFER_SIZE*sizeof(long long));
+#endif
 	read_after=rdtsc();
 
 	stop_before=start_after;

@@ -1,12 +1,16 @@
 CC	= gcc
 CC_R	= $(CC) -pthread
 CFLAGS	= -g -O2 -Wall -I..
-LFLAGS  = -lrt -lm -static
+LFLAGS_STATIC  = -lrt -lm -static
+LFLAGS  = -lrt -lm
 LFLAGS_BORING =
 
 all:	\
 	generate_results \
 	rdtsc_null_pe \
+	rdtsc_null_pe_static \
+	rdtsc_null_pe_syscall \
+	rdtsc_null_pe_syscall_static \
 	rdtsc_null_pe_rdpmc \
 	rdtsc_null_perfctr \
 	rdtsc_null_perfmon2 
@@ -74,8 +78,25 @@ rdtsc_null_pe:	rdtsc_null_pe.o
 
 rdtsc_null_pe.o:	rdtsc_null_pe.c
 	$(CC) $(CFLAGS) -c rdtsc_null_pe.c
+####
+
+rdtsc_null_pe_static:	rdtsc_null_pe.o
+	$(CC) $(LFLAGS_STATIC) -o rdtsc_null_pe_static rdtsc_null_pe.o
 
 ####
+
+rdtsc_null_pe_syscall:	rdtsc_null_pe_syscall.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe_syscall rdtsc_null_pe_syscall.o
+
+rdtsc_null_pe_syscall.o:	rdtsc_null_pe.c
+	$(CC) $(CFLAGS) -DUSE_SYSCALL=1 -o rdtsc_null_pe_syscall.o -c rdtsc_null_pe.c
+
+#####
+
+rdtsc_null_pe_syscall_static:	rdtsc_null_pe_syscall.o
+	$(CC) $(LFLAGS_STATIC) -o rdtsc_null_pe_syscall_static rdtsc_null_pe_syscall.o
+
+#####
 
 rdtsc_null_pe_rdpmc:	rdtsc_null_pe_rdpmc.o
 	$(CC) $(LFLAGS) -o rdtsc_null_pe_rdpmc rdtsc_null_pe_rdpmc.o
@@ -133,6 +154,9 @@ clean:
 	convert_results \
 	generate_results \
 	rdtsc_null_pe \
+	rdtsc_null_static \
+	rdtsc_null_syscall \
+	rdtsc_null_syscall_static \
 	rdtsc_null_pe_rdpmc \
 	rdtsc_null_perfctr \
 	rdtsc_null_perfmon2 \
