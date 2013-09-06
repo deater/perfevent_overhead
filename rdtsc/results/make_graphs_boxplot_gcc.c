@@ -142,7 +142,7 @@ int main(int argc, char **argv) {
 			kernel,average[kernel],
 			average[kernel]-deviation[kernel],
 			average[kernel]+deviation[kernel],
-			kernels[kernel].name);
+			gcc_kernels[kernel].name);
 
 		/* plot 25th to 75th box */
 		printf("newcurve ");
