@@ -38,7 +38,7 @@ done
 
 # Boxplot final
 
-for MACHINE in core2; do
+for MACHINE in atom-cedarview bobcat core2 ivybridge; do
 for TYPE in start stop read total; do
 ./make_graphs_boxplot_final $MACHINE 0 $TYPE > "$DIR"/"$MACHINE"_boxplot_final_"$TYPE".jgr
 jgraph < "$DIR"/"$MACHINE"_boxplot_final_"$TYPE".jgr > "$DIR"/"$MACHINE"_boxplot_final_"$TYPE".eps
