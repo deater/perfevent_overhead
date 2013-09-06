@@ -45,3 +45,13 @@ jgraph < "$DIR"/"$MACHINE"_boxplot_final_"$TYPE".jgr > "$DIR"/"$MACHINE"_boxplot
 convert "$DIR"/"$MACHINE"_boxplot_final_"$TYPE".eps "$DIR"/"$MACHINE"_boxplot_final_"$TYPE".png
 done
 done
+
+# Varying Plot
+for MACHINE in bobcat core2 ivybridge atom-cedarview; do
+for TYPE in start stop read total; do
+./make_graphs_varying $MACHINE 0 $TYPE > "$DIR"/"$MACHINE"_varying_"$TYPE".jgr
+jgraph < "$DIR"/"$MACHINE"_varying_"$TYPE".jgr > "$DIR"/"$MACHINE"_varying_"$TYPE".eps
+convert "$DIR"/"$MACHINE"_varying_"$TYPE".eps "$DIR"/"$MACHINE"_varying_"$TYPE".png
+done
+done
+

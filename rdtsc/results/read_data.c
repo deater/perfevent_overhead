@@ -74,6 +74,14 @@ struct kernel_info final_kernels[NUM_FINAL_KERNELS]={
    {"2.6.32-perfctr",			INTERFACE_PERFCTR,},
 };
 
+struct kernel_info varying_kernels[NUM_VARYING_KERNELS]={
+   {"3.10.0-static",			INTERFACE_PERF_EVENT,},
+   {"3.10.0-rdpmc-touch",		INTERFACE_PERF_EVENT_RDPMC,},
+   {"2.6.30-perfmon2",			INTERFACE_PERFMON2,},
+   {"2.6.32-perfctr",			INTERFACE_PERFCTR,},
+};
+
+
 
 char colors[NUM_KERNELS][64]={
   "0.0 0.0   1.0",   /* blue */
@@ -127,6 +135,9 @@ static int get_num_kernels(int type) {
 	}
 	else if (type==FINAL_KERNELS) {
 		num_kernels=NUM_FINAL_KERNELS;
+	}
+	else if (type==VARYING_KERNELS) {
+		num_kernels=NUM_VARYING_KERNELS;
 	}
 	else {
 		fprintf(stderr,"UNKNOWN TYPE!\n");
@@ -197,6 +208,9 @@ int read_data(char *machine,
 		} else if (type==FINAL_KERNELS) {
 			fprintf(stderr,"\tReading data for kernel %s\n",
 				final_kernels[kernel].name);
+		} else if (type==VARYING_KERNELS) {
+			fprintf(stderr,"\tReading data for kernel %s\n",
+				varying_kernels[kernel].name);
 		}
 
      		for(events=0;events<NUM_EVENTS;events++) {
@@ -227,6 +241,11 @@ int read_data(char *machine,
 				sprintf(filename,"%s/%d/%s/%d/results",
 					machine,which,
 					final_kernels[kernel].name,
+					events);
+			} else if (type==VARYING_KERNELS) {
+				sprintf(filename,"%s/%d/%s/%d/results",
+					machine,which,
+					varying_kernels[kernel].name,
 					events);
 			}
 
