@@ -690,11 +690,35 @@ static int generate_results(char *directory, int type, int num) {
    return 0;
 }
 
+#define NUM_RUN_TYPES 9
 
+struct run_types_ {
+	char name[BUFSIZ];
+	int type;
+} run_types[NUM_RUN_TYPES] = {
+	{ "perf_event_rdpmc", KERNEL_PERF_EVENT_RDPMC },
+	{ "perf_event_rdpmc-map_populate", KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE },
+	{ "perf_event_rdpmc-touch", KERNEL_PERF_EVENT_RDPMC_TOUCH},
+	{ "perf_event-syscall_static", KERNEL_PERF_EVENT_SYSCALL_STATIC},
+	{ "perf_event-syscall", KERNEL_PERF_EVENT_SYSCALL},
+	{ "perf_event-static", KERNEL_PERF_EVENT_STATIC},
+	{ "perf_event", KERNEL_PERF_EVENT},
+	{ "perfctr", KERNEL_PERFCTR},
+	{ "perfmon", KERNEL_PERFMON2},
+};
+
+
+void list_supported(void) {
+
+	int i;
+	for(i=0;i<NUM_RUN_TYPES;i++) {
+		fprintf(stderr,"\t%s\n",run_types[i].name);
+	}
+}
 
 int main(int argc, char **argv) {
 
-	int i;
+	int i,found=0;
 	int type=KERNEL_PERF_EVENT;
 
 	create_output_dir();
@@ -705,37 +729,19 @@ int main(int argc, char **argv) {
 	}
 
 	if (argc>1) {
-		if (!strcmp(argv[1],"perf_event_rdpmc")) {
-			type=KERNEL_PERF_EVENT_RDPMC;
+		for(i=0;i<NUM_RUN_TYPES;i++) {
+			if (!strcmp(argv[1],run_types[i].name)) {
+				type=run_types[i].type;
+				found=1;
+				break;
+			}
 		}
-		else if (!strcmp(argv[1],"perf_event_rdpmc-map_populate")) {
-			type=KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE;
-		}
-		else if (!strcmp(argv[1],"perf_event_rdpmc-touch")) {
-			type=KERNEL_PERF_EVENT_RDPMC_TOUCH;
-		}
-		else if (!strcmp(argv[1],"perf_event-syscall_static")) {
-			type=KERNEL_PERF_EVENT_SYSCALL_STATIC;
-		}
-		else if (!strcmp(argv[1],"perf_event-syscall")) {
-			type=KERNEL_PERF_EVENT_SYSCALL;
-		}
-		else if (!strcmp(argv[1],"perf_event-static")) {
-			type=KERNEL_PERF_EVENT_STATIC;
-		}
-		else if (!strcmp(argv[1],"perf_event")) {
-			type=KERNEL_PERF_EVENT;
-		}
-		else if (!strncmp(argv[1],"perfctr",7)) {
-			type=KERNEL_PERFCTR;
-		}
-		else if (!strncmp(argv[1],"perfmon",7)) {
-			type=KERNEL_PERFMON2;
-		}
-		else {
+
+		if (!found) {
 			type=KERNEL_UNKNOWN;
 			fprintf(stderr,"Error!  Unknown kernel type %s\n",
 				argv[1]);
+			list_supported();
 			return -1;
 		}
 	}

@@ -8,12 +8,15 @@ LFLAGS_BORING =
 all:	\
 	generate_results \
 	rdtsc_null_pe \
-	rdtsc_null_pe_static \
 	rdtsc_null_pe_syscall \
-	rdtsc_null_pe_syscall_static \
 	rdtsc_null_pe_rdpmc \
 	rdtsc_null_pe_rdpmc-map_populate \
 	rdtsc_null_pe_rdpmc-touch \
+	rdtsc_null_pe_static \
+	rdtsc_null_pe_syscall_static \
+	rdtsc_null_pe_rdpmc_static \
+	rdtsc_null_pe_rdpmc-map_populate_static \
+	rdtsc_null_pe_rdpmc-touch_static \
 	rdtsc_null_perfctr \
 	rdtsc_null_perfmon2 
 
@@ -68,6 +71,11 @@ rdtsc_null_pe_rdpmc.o:	rdtsc_null_pe_rdpmc.c
 	$(CC) $(CFLAGS) -c rdtsc_null_pe_rdpmc.c
 #####
 
+rdtsc_null_pe_rdpmc_static:	rdtsc_null_pe_rdpmc.o
+	$(CC) $(LFLAGS_STATIC) -o rdtsc_null_pe_rdpmc_static rdtsc_null_pe_rdpmc.o
+
+#####
+
 rdtsc_null_pe_rdpmc-map_populate:	rdtsc_null_pe_rdpmc-map_populate.o
 	$(CC) $(LFLAGS) -o rdtsc_null_pe_rdpmc-map_populate rdtsc_null_pe_rdpmc-map_populate.o
 
@@ -76,11 +84,21 @@ rdtsc_null_pe_rdpmc-map_populate.o:	rdtsc_null_pe_rdpmc.c
 
 #####
 
+rdtsc_null_pe_rdpmc-map_populate_static:	rdtsc_null_pe_rdpmc-map_populate.o
+	$(CC) $(LFLAGS_STATIC) -o rdtsc_null_pe_rdpmc-map_populate_static rdtsc_null_pe_rdpmc-map_populate.o
+
+#####
+
 rdtsc_null_pe_rdpmc-touch:	rdtsc_null_pe_rdpmc-touch.o
 	$(CC) $(LFLAGS) -o rdtsc_null_pe_rdpmc-touch rdtsc_null_pe_rdpmc-touch.o
 
 rdtsc_null_pe_rdpmc-touch.o:	rdtsc_null_pe_rdpmc.c
 	$(CC) $(CFLAGS) -DTOUCH -o rdtsc_null_pe_rdpmc-touch.o -c rdtsc_null_pe_rdpmc.c
+
+####
+
+rdtsc_null_pe_rdpmc-touch_static:	rdtsc_null_pe_rdpmc-touch.o
+	$(CC) $(LFLAGS_STATIC) -o rdtsc_null_pe_rdpmc-touch_static rdtsc_null_pe_rdpmc-touch.o
 
 ####
 
@@ -142,7 +160,10 @@ clean:
 	rdtsc_null_perfmon2 \
 	rdtsc_null_pe_static \
 	rdtsc_null_pe_syscall \
-	rdtsc_null_pe_syscall_static 
+	rdtsc_null_pe_syscall_static  \
+	rdtsc_null_pe_rdpmc-map_populate_static \
+	rdtsc_null_pe_rdpmc-touch_static
+
 
 
 
