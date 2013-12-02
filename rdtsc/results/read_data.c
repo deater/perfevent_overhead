@@ -29,6 +29,8 @@ struct kernel_info kernels[NUM_KERNELS]={
    {"3.8.0",		INTERFACE_PERF_EVENT,},
    {"3.9.0",		INTERFACE_PERF_EVENT,},
    {"3.10.0",		INTERFACE_PERF_EVENT,},
+   {"3.11.0",		INTERFACE_PERF_EVENT,},
+   {"3.12.0",		INTERFACE_PERF_EVENT,},
 };
 
 struct kernel_info rdpmc_kernels[NUM_RDPMC_KERNELS]={
@@ -39,6 +41,8 @@ struct kernel_info rdpmc_kernels[NUM_RDPMC_KERNELS]={
    {"3.8.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
    {"3.9.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
    {"3.10.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.11.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.12.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
 };
 
 struct kernel_info gcc_kernels[NUM_GCC_KERNELS]={
@@ -71,12 +75,15 @@ struct kernel_info final_kernels[NUM_FINAL_KERNELS]={
    {"3.10.0-rdpmc",			INTERFACE_PERF_EVENT_RDPMC,},
    {"3.10.0-rdpmc-map_populate",	INTERFACE_PERF_EVENT_RDPMC,},
    {"3.10.0-rdpmc-touch",		INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.10.0-rdpmc_static",			INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.10.0-rdpmc-map_populate_static",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.10.0-rdpmc-touch_static",		INTERFACE_PERF_EVENT_RDPMC,},
    {"2.6.32-perfctr",			INTERFACE_PERFCTR,},
 };
 
 struct kernel_info varying_kernels[NUM_VARYING_KERNELS]={
    {"3.10.0-static",			INTERFACE_PERF_EVENT,},
-   {"3.10.0-rdpmc-touch",		INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.10.0-rdpmc-touch_static",	INTERFACE_PERF_EVENT_RDPMC,},
    {"2.6.30-perfmon2",			INTERFACE_PERFMON2,},
    {"2.6.32-perfctr",			INTERFACE_PERFCTR,},
 };
