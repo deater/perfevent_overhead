@@ -13,15 +13,18 @@
 #define VENDOR_AMD     1
 #define VENDOR_INTEL   2
 
-#define KERNEL_PERF_EVENT		0
-#define KERNEL_PERF_EVENT_RDPMC		1
-#define KERNEL_PERFCTR			2
-#define KERNEL_PERFMON2			3
-#define KERNEL_PERF_EVENT_STATIC	4
-#define KERNEL_PERF_EVENT_SYSCALL	5
-#define KERNEL_PERF_EVENT_SYSCALL_STATIC	6
-#define KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE	7
-#define KERNEL_PERF_EVENT_RDPMC_TOUCH		8
+#define KERNEL_PERF_EVENT				0
+#define KERNEL_PERF_EVENT_RDPMC				1
+#define KERNEL_PERFCTR					2
+#define KERNEL_PERFMON2					3
+#define KERNEL_PERF_EVENT_STATIC			4
+#define KERNEL_PERF_EVENT_SYSCALL			5
+#define KERNEL_PERF_EVENT_SYSCALL_STATIC		6
+#define KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE		7
+#define KERNEL_PERF_EVENT_RDPMC_TOUCH			8
+#define KERNEL_PERF_EVENT_RDPMC_STATIC			9
+#define KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE_STATIC	10
+#define KERNEL_PERF_EVENT_RDPMC_TOUCH_STATIC		11
 #define KERNEL_UNKNOWN			99
 
 static char dirname[BUFSIZ];
@@ -509,6 +512,12 @@ static int generate_results(char *directory, int type, int num) {
 		sprintf(dirname,"%s/%s-syscall",directory,uname_buf.release);
 	} else if (type==KERNEL_PERF_EVENT_SYSCALL_STATIC) {
 		sprintf(dirname,"%s/%s-syscall_static",directory,uname_buf.release);
+	} else if (type==KERNEL_PERF_EVENT_RDPMC_STATIC) {
+		sprintf(dirname,"%s/%s-rdpmc_static",directory,uname_buf.release);
+	} else if (type==KERNEL_PERF_EVENT_RDPMC_TOUCH_STATIC) {
+		sprintf(dirname,"%s/%s-rdpmc-touch_static",directory,uname_buf.release);
+	} else if (type==KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE_STATIC) {
+		sprintf(dirname,"%s/%s-rdpmc-map_populate_static",directory,uname_buf.release);
 	} else {
 		sprintf(dirname,"%s/%s",directory,uname_buf.release);
 	}
@@ -550,6 +559,9 @@ static int generate_results(char *directory, int type, int num) {
 		case KERNEL_PERF_EVENT_RDPMC:
 		case KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE:
 		case KERNEL_PERF_EVENT_RDPMC_TOUCH:
+		case KERNEL_PERF_EVENT_RDPMC_STATIC:
+		case KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE_STATIC:
+		case KERNEL_PERF_EVENT_RDPMC_TOUCH_STATIC:
 			fprintf(fff,"perf_event_rdpmc");
 			break;
 		case KERNEL_PERFCTR:
@@ -573,6 +585,7 @@ static int generate_results(char *directory, int type, int num) {
 		case KERNEL_PERF_EVENT:
 			fprintf(fff,"dynamic");
 			break;
+		case KERNEL_PERF_EVENT_RDPMC_STATIC:
 		case KERNEL_PERF_EVENT_STATIC:
 			fprintf(fff,"static");
 			break;
@@ -585,8 +598,14 @@ static int generate_results(char *directory, int type, int num) {
 		case KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE:
 			fprintf(fff,"map_populate");
 			break;
+		case KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE_STATIC:
+			fprintf(fff,"map_populate static");
+			break;
 		case KERNEL_PERF_EVENT_RDPMC_TOUCH:
 			fprintf(fff,"touch");
+			break;
+		case KERNEL_PERF_EVENT_RDPMC_TOUCH_STATIC:
+			fprintf(fff,"touch static");
 			break;
 		default:
 			fprintf(fff,"unknown");
@@ -647,6 +666,13 @@ static int generate_results(char *directory, int type, int num) {
          strcat(temp_string2,temp_string);
       }
    }
+   else if (type==KERNEL_PERF_EVENT_RDPMC_STATIC) {
+      sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe_rdpmc_static %d ",num);
+      for(i=0;i<num;i++) {
+         sprintf(temp_string,"0x%x ",event_table->event[i].event);
+         strcat(temp_string2,temp_string);
+      }
+   }
    else if (type==KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE) {
       sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe_rdpmc-map_populate %d ",num);
       for(i=0;i<num;i++) {
@@ -656,6 +682,20 @@ static int generate_results(char *directory, int type, int num) {
    }
    else if (type==KERNEL_PERF_EVENT_RDPMC_TOUCH) {
       sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe_rdpmc-touch %d ",num);
+      for(i=0;i<num;i++) {
+         sprintf(temp_string,"0x%x ",event_table->event[i].event);
+         strcat(temp_string2,temp_string);
+      }
+   }
+   else if (type==KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE_STATIC) {
+      sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe_rdpmc-map_populate_static %d ",num);
+      for(i=0;i<num;i++) {
+         sprintf(temp_string,"0x%x ",event_table->event[i].event);
+         strcat(temp_string2,temp_string);
+      }
+   }
+   else if (type==KERNEL_PERF_EVENT_RDPMC_TOUCH_STATIC) {
+      sprintf(temp_string2,"taskset 0x1 ./rdtsc_null_pe_rdpmc-touch_static %d ",num);
       for(i=0;i<num;i++) {
          sprintf(temp_string,"0x%x ",event_table->event[i].event);
          strcat(temp_string2,temp_string);
@@ -690,21 +730,26 @@ static int generate_results(char *directory, int type, int num) {
    return 0;
 }
 
-#define NUM_RUN_TYPES 9
+#define NUM_RUN_TYPES 12
 
 struct run_types_ {
 	char name[BUFSIZ];
 	int type;
 } run_types[NUM_RUN_TYPES] = {
-	{ "perf_event_rdpmc", KERNEL_PERF_EVENT_RDPMC },
-	{ "perf_event_rdpmc-map_populate", KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE },
-	{ "perf_event_rdpmc-touch", KERNEL_PERF_EVENT_RDPMC_TOUCH},
-	{ "perf_event-syscall_static", KERNEL_PERF_EVENT_SYSCALL_STATIC},
-	{ "perf_event-syscall", KERNEL_PERF_EVENT_SYSCALL},
-	{ "perf_event-static", KERNEL_PERF_EVENT_STATIC},
-	{ "perf_event", KERNEL_PERF_EVENT},
 	{ "perfctr", KERNEL_PERFCTR},
 	{ "perfmon", KERNEL_PERFMON2},
+	{ "perf_event", KERNEL_PERF_EVENT},
+	{ "perf_event-syscall", KERNEL_PERF_EVENT_SYSCALL},
+	{ "perf_event_rdpmc", KERNEL_PERF_EVENT_RDPMC },
+	{ "perf_event_rdpmc-touch", KERNEL_PERF_EVENT_RDPMC_TOUCH},
+	{ "perf_event_rdpmc-map_populate", KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE },
+
+	{ "perf_event-static", KERNEL_PERF_EVENT_STATIC},
+	{ "perf_event-syscall_static", KERNEL_PERF_EVENT_SYSCALL_STATIC},
+	{ "perf_event_rdpmc_static", KERNEL_PERF_EVENT_RDPMC_STATIC },
+	{ "perf_event_rdpmc-touch_static", KERNEL_PERF_EVENT_RDPMC_TOUCH_STATIC},
+	{ "perf_event_rdpmc-map_populate_static", KERNEL_PERF_EVENT_RDPMC_MAP_POPULATE_STATIC },
+
 };
 
 
