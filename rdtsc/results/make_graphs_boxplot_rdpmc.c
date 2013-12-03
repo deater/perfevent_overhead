@@ -94,27 +94,27 @@ int main(int argc, char **argv) {
 	printf("(* Begin Graph *)\n");
 	printf("newgraph\n");
 	printf("\n");
-	printf("X 8.5\n");
-	printf("Y 6\n");
+	printf("X 14\n");
+	printf("Y 4.5\n");
 	printf("clip\n");
 	printf("\n");
 	printf("(* Legend *)\n");
 	printf("legend custom\n");
 	printf("\n");
 	printf("(* Y-Axis *)\n");
-	printf("yaxis size 4 min 0 max %.0f\n",maxy);
+	printf("yaxis size 2.5 min 0 max %.0f\n",maxy);
 	printf("(* grid_gray 0.9 grid_lines *)\n");
 	printf("label font Helvetica fontsize %d  : Average Overhead (Cycles)\n",
 		FONTSIZE);
 	printf("hash_labels font Helvetica fontsize %d\n",FONTSIZE);
 	printf("\n");
 	printf("(* X-Axis *)\n");
-	printf("xaxis size 6.5 min %d max %d\n",-1,NUM_KERNELS); //minx,maxx);
+	printf("xaxis size 13 min %d max %d\n",-1,NUM_KERNELS); //minx,maxx);
 	printf("grid_gray 0.9 grid_lines\n");
 	printf("hash_labels font Helvetica fontsize %d  vjc hjr rotate 45\n",
 		FONTSIZE);
-	printf("(* label font Helvetica fontsize %d  : Kernels *)\n",
-		FONTSIZE);
+	printf("label font Helvetica fontsize %d y %lf : Linux Version\n",
+		FONTSIZE,-(maxy/4));
 	printf("no_auto_hash_marks\n");
 	for(i=0;i<NUM_KERNELS;i++) {
 		printf("hash_at %d\n",i);
@@ -126,16 +126,17 @@ int main(int argc, char **argv) {
 
 	printf("\n");
 	printf("(* Title *)\n");
-	printf("title font Helvetica fontsize %d y %lf : "
-		"%s rdpmc Overhead of ", FONTSIZE,
-		(double)maxy+((double)maxy/8.0),argv[1]);
+	printf("title font Helvetica fontsize %d y %lf : rdpmc ",
+               FONTSIZE,
+               (double)maxy+((double)maxy/8.0));
 
 	if (plot_type==PLOT_TYPE_START) printf("Start");
 	if (plot_type==PLOT_TYPE_STOP) printf("Stop");
 	if (plot_type==PLOT_TYPE_READ) printf("Read");
-	if (plot_type==PLOT_TYPE_TOTAL) printf("Start/Stop/Read");
+	if (plot_type==PLOT_TYPE_TOTAL) printf("Overall Start/Stop/Read");
 
-	printf(" with %d Event%s\n",events,events==1?"":"s");
+	printf(" Overhead with %d Event%s (%s)\n",
+		events,events==1?"":"s",argv[1]);
 	printf("\n");
 
 	for(kernel=0;kernel<NUM_KERNELS;kernel++) {
@@ -149,7 +150,7 @@ int main(int argc, char **argv) {
 			printf("marktype x linetype none color 0.0 0.0 1.0\n");
 		}
 		else if (kernels[kernel].type==INTERFACE_PERF_EVENT) {
-			printf("marktype x linetype none color 0.0 0.0 0.0\n");
+			printf("marktype x linetype none color 0.8 0.8 0.8\n");
      		}
 		else if (kernels[kernel].type==INTERFACE_PERF_EVENT_RDPMC) {
 			printf("marktype x linetype none color 0.3 0.3 0.3\n");
@@ -177,7 +178,7 @@ int main(int argc, char **argv) {
 			printf("color 0.0 0.0 1.0\n");
 		}
 		else if (kernels[kernel].type==INTERFACE_PERF_EVENT) {
-			printf("color 0.0 0.0 0.0\n");
+			printf("color 0.8 0.8 0.8\n");
 		}
 		else if (kernels[kernel].type==INTERFACE_PERF_EVENT_RDPMC) {
 			printf("color 0.3 0.3 0.3\n");
@@ -207,7 +208,7 @@ int main(int argc, char **argv) {
 			printf("marktype x linetype none color 0.0 0.0 1.0\n");
 		}
 		else if (kernels[kernel].type==INTERFACE_PERF_EVENT) {
-			printf("marktype x linetype none color 0.0 0.0 0.0\n");
+			printf("marktype x linetype none color 0.8 0.8 0.8\n");
 		}
 		else if (kernels[kernel].type==INTERFACE_PERF_EVENT_RDPMC) {
 			printf("marktype x linetype none color 0.3 0.3 0.3\n");
@@ -250,10 +251,10 @@ int main(int argc, char **argv) {
 			printf("marktype x linetype none color 0.0 0.0 1.0\n");
 		}
 		else if (rdpmc_kernels[kernel].type==INTERFACE_PERF_EVENT) {
-			printf("marktype x linetype none color 0.0 0.0 0.0\n");
+			printf("marktype x linetype none color 0.8 0.8 0.8\n");
      		}
 		else if (rdpmc_kernels[kernel].type==INTERFACE_PERF_EVENT_RDPMC) {
-			printf("marktype x linetype none color 0.3 0.3 0.3\n");
+			printf("marktype x linetype none color 0.11 0.40 0.11\n");
 		}
 		else {
 			printf("marktype x linetype none color 0.3 0.3 0.0\n");
@@ -278,10 +279,10 @@ int main(int argc, char **argv) {
 			printf("color 0.0 0.0 1.0\n");
 		}
 		else if (rdpmc_kernels[kernel].type==INTERFACE_PERF_EVENT) {
-			printf("color 0.0 0.0 0.0\n");
+			printf("color 0.8 0.8 0.8\n");
 		}
 		else if (rdpmc_kernels[kernel].type==INTERFACE_PERF_EVENT_RDPMC) {
-			printf("color 0.3 0.3 0.3\n");
+			printf("color 0.11 0.40 0.11\n");
 		}
 		else {
 			printf("color 0.3 0.3 0.0\n");
@@ -308,10 +309,10 @@ int main(int argc, char **argv) {
 			printf("marktype x linetype none color 0.0 0.0 1.0\n");
 		}
 		else if (rdpmc_kernels[kernel].type==INTERFACE_PERF_EVENT) {
-			printf("marktype x linetype none color 0.0 0.0 0.0\n");
+			printf("marktype x linetype none color 0.8 0.8 0.8\n");
 		}
 		else if (rdpmc_kernels[kernel].type==INTERFACE_PERF_EVENT_RDPMC) {
-			printf("marktype x linetype none color 0.3 0.3 0.3\n");
+			printf("marktype x linetype none color 0.11 0.40 0.11\n");
 		}
 		else {
 			printf("marktype x linetype none color 0.3 0.3 0.0\n");

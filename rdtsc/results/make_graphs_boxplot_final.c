@@ -72,8 +72,8 @@ int main(int argc, char **argv) {
 	printf("(* Begin Graph *)\n");
 	printf("newgraph\n");
 	printf("\n");
-	printf("X 8.5\n");
-	printf("Y 6\n");
+	printf("X 6.5\n");
+	printf("Y 6.5\n");
 	printf("clip\n");
 	printf("\n");
 	printf("(* Legend *)\n");
@@ -118,6 +118,31 @@ int main(int argc, char **argv) {
 
 	for(kernel=0;kernel<NUM_FINAL_KERNELS;kernel++) {
 
+		if (average[kernel]==0) {
+			printf("newstring vjc x %d y %lf rotate 90 "
+				"font Helvetica fontsize 16 lcolor ",
+				kernel,maxy/10.0);
+		if (final_kernels[kernel].type==INTERFACE_PERFCTR) {
+			printf("1.0 0.0 0.0");
+		}
+		else if (final_kernels[kernel].type==INTERFACE_PERFMON2) {
+			printf("0.0 0.0 1.0");
+		}
+		else if (final_kernels[kernel].type==INTERFACE_PERF_EVENT) {
+			printf("0.0 0.0 0.0");
+     		}
+		else if (final_kernels[kernel].type==INTERFACE_PERF_EVENT_RDPMC) {
+			printf("0.11 0.40 0.11");
+		}
+		else {
+			printf("0.3 0.3 0.0");
+		}
+
+			printf(" : n/a\n");
+			continue;
+		}
+
+
 		/* plot standard deviation */
 		printf("newcurve ");
 		if (final_kernels[kernel].type==INTERFACE_PERFCTR) {
@@ -130,7 +155,7 @@ int main(int argc, char **argv) {
 			printf("marktype x linetype none color 0.0 0.0 0.0\n");
      		}
 		else if (final_kernels[kernel].type==INTERFACE_PERF_EVENT_RDPMC) {
-			printf("marktype x linetype none color 0.3 0.3 0.3\n");
+			printf("marktype x linetype none color 0.11 0.40 0.11\n");
 		}
 		else {
 			printf("marktype x linetype none color 0.3 0.3 0.0\n");
@@ -158,7 +183,7 @@ int main(int argc, char **argv) {
 			printf("color 0.0 0.0 0.0\n");
 		}
 		else if (final_kernels[kernel].type==INTERFACE_PERF_EVENT_RDPMC) {
-			printf("color 0.3 0.3 0.3\n");
+			printf("color 0.11 0.40 0.11\n");
 		}
 		else {
 			printf("color 0.3 0.3 0.0\n");
@@ -188,7 +213,7 @@ int main(int argc, char **argv) {
 			printf("marktype x linetype none color 0.0 0.0 0.0\n");
 		}
 		else if (final_kernels[kernel].type==INTERFACE_PERF_EVENT_RDPMC) {
-			printf("marktype x linetype none color 0.3 0.3 0.3\n");
+			printf("marktype x linetype none color 0.11 0.40 0.11\n");
 		}
 		else {
 			printf("marktype x linetype none color 0.3 0.3 0.0\n");
