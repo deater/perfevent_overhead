@@ -140,24 +140,34 @@ int main(int argc, char **argv) {
    ret1=ioctl(fd[0], PERF_EVENT_IOC_ENABLE,0);
 
    start_after=rdtsc();
+	#define NUM_READS 1 // 10?
+	#define BUFFER_SIZE 256
+	long long buffer[NUM_READS][BUFFER_SIZE];
+	long long read_times[NUM_READS];
+
+	int krg;
+
+	for(krg=0;krg<NUM_READS;krg++) {
+
+#ifdef USE_SYSCALL
+	ret3=syscall(__NR_read,fd[0],buffer[krg],BUFFER_SIZE*sizeof(long long));
+#else
+	ret3=read(fd[0],buffer[krg],BUFFER_SIZE*sizeof(long long));
+#endif
+		read_times[krg]=rdtsc();
+	}
+
+	read_after=rdtsc();
 
    /* stop */
    ret2=ioctl(fd[0], PERF_EVENT_IOC_DISABLE,0);
 
    stop_after=rdtsc();
 
-	#define BUFFER_SIZE 256
-	long long buffer[BUFFER_SIZE];
 
-#ifdef USE_SYSCALL
-	ret3=syscall(__NR_read,fd[0],buffer,BUFFER_SIZE*sizeof(long long));
-#else
-	ret3=read(fd[0],buffer,BUFFER_SIZE*sizeof(long long));
-#endif
-	read_after=rdtsc();
 
-	stop_before=start_after;
-	read_before=stop_after;
+	stop_before=read_after;
+	read_before=start_after;
 
 	if (ret3<0) {
 		printf("start latency: %lld cycles\n",0LL);
@@ -170,13 +180,13 @@ int main(int argc, char **argv) {
 	/* Can indiate an error */
 	/* Also can indicate we've hacked the syscall to return early */
 	/* for timing purposes.                                       */
-	buffer[0]=count;
+	buffer[0][0]=count;
 
-	if (buffer[0]!=count){
+	if (buffer[0][0]!=count){
 		printf("start latency: %lld cycles\n",0LL);
 		printf("stop/read latency: %lld cycles\n",0LL);
 		printf("read latency: %lld cycles\n",0LL);
-		printf("Error!  buffer count is %lld!\n",buffer[0]);
+		printf("Error!  buffer count is %lld!\n",buffer[0][0]);
 		exit(0);
 	}
 
@@ -184,24 +194,28 @@ int main(int argc, char **argv) {
 	printf("stop latency: %lld cycles\n",stop_after-stop_before);
 	printf("read latency: %lld cycles\n",read_after-read_before);
 
-   if (ret1<0) {
-      printf("Error starting!\n");
-      exit(1);
-   }
-   
-   if (ret2<0) {
-      printf("Error stopping!\n");
-      exit(1);
-   }
-   
-   
-   for(i=0;i<buffer[0];i++) {
-     printf("%x %lld\n",events[i],buffer[1+(i*2)]);
-   }
+	if (ret1<0) {
+		printf("Error starting!\n");
+		exit(1);
+	}
 
-   for(i=0;i<count;i++) {
-      close(fd[i]);
-   }
+	if (ret2<0) {
+		printf("Error stopping!\n");
+		exit(1);
+	}
 
-   return 0;
+	for(krg=0;krg<NUM_READS;krg++) {
+	for(i=0;i<buffer[0][0];i++) {
+		printf("%d %x %lld time %lld\n",
+			krg,events[i],buffer[krg][1+(i*2)],
+			krg==0?read_times[krg]-read_before:
+				read_times[krg]-read_times[krg-1]);
+	}
+	}
+
+	for(i=0;i<count;i++) {
+		close(fd[i]);
+	}
+
+	return 0;
 }

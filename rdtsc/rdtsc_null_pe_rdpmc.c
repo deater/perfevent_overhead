@@ -181,7 +181,8 @@ int main(int argc, char **argv) {
 
    int count=0;
 
-   unsigned long long now[MAX_EVENTS],stamp[MAX_EVENTS];
+#define NUM_READS 1 // 10?
+   unsigned long long now[NUM_READS][MAX_EVENTS],start[MAX_EVENTS];
    //   unsigned long long now2[MAX_EVENTS],stamp2[MAX_EVENTS];
 
    if (argc<2) {
@@ -284,21 +285,32 @@ int main(int argc, char **argv) {
 
    ret1=ioctl(fd[0], PERF_EVENT_IOC_ENABLE,0);
 
+	/* get initial values */
+   for(i=0;i<count;i++) {
+     start[i] = mmap_read_self(addr[i]);
+   }
 
    start_after=rdtsc();
 
    /* read */
 
-	/* get initial values */
-   for(i=0;i<count;i++) {
-     stamp[i] = mmap_read_self(addr[i]);
-   }
+
    /* NULL */
 
-	/* get final values */
-   for(i=0;i<count;i++) {
-     now[i] = mmap_read_self(addr[i]);
-   }
+
+	int krg;
+	long long read_times[NUM_READS];
+
+	for(krg=0;krg<NUM_READS;krg++) {
+
+		/* get final values */
+		for(i=0;i<count;i++) {
+			now[krg][i] = mmap_read_self(addr[i]);
+			read_times[krg]=rdtsc();
+		}
+
+
+	}
 
    read_after=rdtsc();
 
@@ -336,10 +348,14 @@ int main(int argc, char **argv) {
    }
 
 
-   for(i=0;i<count;i++) {
-     printf("%x %lld\n",
-	    events[i],now[i]-stamp[i]);
-   }
+	for(krg=0;krg<NUM_READS;krg++) {
+		for(i=0;i<count;i++) {
+			printf("%d %x %lld readtime %lld\n",
+				krg,events[i],now[krg][i]-start[i],
+				krg==0?read_times[krg]-read_before:
+				read_times[krg]-read_times[krg-1]);
+		}
+	}
 
    for(i=0;i<count;i++) {
       munmap(addr[i],page_size);
