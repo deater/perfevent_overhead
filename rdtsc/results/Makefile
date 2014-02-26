@@ -6,6 +6,7 @@ LFLAGS  = -lrt -lm
 all:	\
 	make_graphs_boxplot \
 	make_graphs_boxplot_gcc \
+	make_graphs_boxplot_many_read \
 	make_graphs_boxplot_rdpmc \
 	make_graphs_boxplot_breakdown \
 	make_graphs_boxplot_final \
@@ -155,6 +156,14 @@ make_graphs_boxplot_gcc.o:	make_graphs_boxplot_gcc.c read_data.h
 
 #####
 
+make_graphs_boxplot_many_read:	make_graphs_boxplot_many_read.o read_data_many.o
+	$(CC) -g $(LFLAGS) -o make_graphs_boxplot_many_read make_graphs_boxplot_many_read.o read_data_many.o
+
+make_graphs_boxplot_many_read.o:	make_graphs_boxplot_many_read.c read_data.h
+	$(CC) $(CFLAGS) -c make_graphs_boxplot_many_read.c
+
+#####
+
 make_graphs_boxplot_rdpmc:	make_graphs_boxplot_rdpmc.o read_data.o
 	$(CC) -g $(LFLAGS) -o make_graphs_boxplot_rdpmc make_graphs_boxplot_rdpmc.o read_data.o
 
@@ -166,6 +175,11 @@ make_graphs_boxplot_rdpmc.o:	make_graphs_boxplot_rdpmc.c read_data.h
 
 read_data.o:	read_data.c read_data.h
 	$(CC) $(CFLAGS) -c read_data.c
+
+#####
+
+read_data_many.o:	read_data_many.c read_data.h
+	$(CC) $(CFLAGS) -c read_data_many.c
 
 #####
 
@@ -184,6 +198,7 @@ clean:
 	make_graphs_boxplot_breakdown \
 	make_graphs_boxplot_final \
 	make_graphs_boxplot_gcc \
+	make_graphs_boxplot_many_read \
 	make_graphs_boxplot_rdpmc \
         make_graphs_colorful \
 	make_graphs_errorbars \

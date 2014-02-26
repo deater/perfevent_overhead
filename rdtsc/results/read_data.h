@@ -9,6 +9,7 @@
 #define NUM_BREAKDOWN_KERNELS	8
 #define NUM_FINAL_KERNELS	12
 #define NUM_VARYING_KERNELS	4
+#define NUM_MANYREAD_KERNELS	2
 
 /*
 #define KERNEL_2_6_30_PERFMON2 0
@@ -29,7 +30,7 @@ extern struct kernel_info gcc_kernels[NUM_GCC_KERNELS];
 extern struct kernel_info breakdown_kernels[NUM_BREAKDOWN_KERNELS];
 extern struct kernel_info final_kernels[NUM_FINAL_KERNELS];
 extern struct kernel_info varying_kernels[NUM_VARYING_KERNELS];
-
+extern struct kernel_info manyread_kernels[NUM_MANYREAD_KERNELS];
 
 extern char colors[NUM_KERNELS][64];
 //extern long long times[NUM_KERNELS][NUM_EVENTS][NUM_RUNS];
@@ -61,6 +62,7 @@ struct cpuinfo_t {
 #define BREAKDOWN_KERNELS	3
 #define FINAL_KERNELS		4
 #define VARYING_KERNELS		5
+#define MANYREAD_KERNELS	6
 
 int read_data(char *machine, int which, char *plot_name,
 		int type, long long *times);

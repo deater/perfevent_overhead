@@ -231,8 +231,9 @@ int read_data(char *machine,
 				manyread_kernels[kernel].name);
 		}
 
+		events=1;
 
-     		for(events=0;events<NUM_EVENTS;events++) {
+//     		for(events=0;events<NUM_EVENTS;events++) {
 			fprintf(stderr,"%d ",events);
 
 			if (type==STANDARD_KERNELS) {
@@ -388,23 +389,20 @@ read latency: 12282 cycles
        /* read data */
 			run=0;
 loop:
-			while(1) {
-				if (fgets(string,BUFSIZ,fff)==NULL) break;
 
-				if (!strncmp(string,"###",3)) break;
-
-				if (!strncmp(string,"start latency",13)) {
-					sscanf(string,"%*s %*s %lld",&times_start);
-				}
-
-				if (!strncmp(string,"stop latency",12)) {
-					sscanf(string,"%*s %*s %lld",&times_stop);
-				}
-
-				if (!strncmp(string,"read latency",12)) {
-					sscanf(string,"%*s %*s %lld",&times_read);
-				}
-
+			fgets(string,BUFSIZ,fff); // il
+			fgets(string,BUFSIZ,fff); // event create
+			fgets(string,BUFSIZ,fff); // start latency
+			if (!strncmp(string,"start latency",13)) {
+				sscanf(string,"%*s %*s %lld",&times_start);
+			}
+			fgets(string,BUFSIZ,fff); // stop latency
+			if (!strncmp(string,"stop latency",12)) {
+				sscanf(string,"%*s %*s %lld",&times_stop);
+			}
+			fgets(string,BUFSIZ,fff); // read latency
+			if (!strncmp(string,"read latency",12)) {
+				sscanf(string,"%*s %*s %lld",&times_read);
 			}
 
 			// printf("%d %lld\n",run,times_start);
@@ -421,12 +419,29 @@ loop:
 			if (plot_type==PLOT_TYPE_TOTAL) {
 				*(get_runs(times,kernel,events)+run)=times_start+times_stop+times_read;
 			}
+
+			int krg;
+
+			long long val;
+
+			for(krg=0;krg<10;krg++) {
+				if (fgets(string,BUFSIZ,fff)==NULL) break;
+
+				sscanf(string,"%*d %*x %*d %*s %lld",&val);
+
+				*(get_runs(times,kernel,krg)+run)=val;
+//				fprintf(stderr,"kernel %d count %d = %lld\n",
+//					kernel,krg,val);
+			}
+
+			fgets(string,BUFSIZ,fff);// ###
+
 			run++;
 
 			if (run<runs) goto loop;
 
 			fclose(fff);
-		}
+//		}
 		fprintf(stderr,"\n");
 	}
 
@@ -478,9 +493,18 @@ int calculate_boxplot_data(long long *times, int events,
 
 	num_kernels=get_num_kernels(type);
 
+	int run;
+	kernel=0;
+	for(run=0;run<1024;run++) {
+		fprintf(stderr,"V%d %d %lld\n",kernel,events,*(get_runs(times,kernel,events)+run));
+	}
+	
+
 
 	/* calculate median, twentyfive, seventyfive */
 	for(kernel=0;kernel<num_kernels;kernel++) {
+
+
 		median[kernel]=*(get_runs(times,kernel,events)+(NUM_RUNS/2));
 		twentyfive[kernel]=*(get_runs(times,kernel,events)+(NUM_RUNS/4));
 		seventyfive[kernel]=*(get_runs(times,kernel,events)+((NUM_RUNS*3)/4));
@@ -508,7 +532,7 @@ int calculate_deviation(long long *times, int events,
 			total+=(double)*(get_runs(times,kernel,events)+run);
 		}
 		average[kernel]=total/(double)NUM_RUNS;
-		// printf("%s: avg=%.2f\n",kernel_names[kernel],average[kernel]);
+		fprintf(stderr,"kernel %d: event %d avg=%.2f\n",kernel,events,average[kernel]);
 	}
 
 	/* Calculate Deviation */
