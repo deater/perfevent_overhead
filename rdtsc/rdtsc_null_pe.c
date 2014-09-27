@@ -66,23 +66,23 @@ int main(int argc, char **argv) {
 
    int count=0;
 
-   if (argc < 2) {
-      fprintf(stderr,"Usage: %s count event0 ... eventN\n",argv[0]);
-      return -1;
-   }
+	if (argc < 2) {
+		fprintf(stderr,"Usage: %s count event0 ... eventN\n",argv[0]);
+		return -1;
+	}
 
-   if (argc>2) {
-     count=atoi(argv[1]);
-   }
+	if (argc>2) {
+		count=atoi(argv[1]);
+	}
 
-   if (count!=argc-2) {
-      fprintf(stderr,"Error!  Count mismatch!\n");
-      return -1;
-   }
+	if (count!=argc-2) {
+		fprintf(stderr,"Error!  Count mismatch!\n");
+		return -1;
+	}
 
-   for(i=0;i<count;i++) {
-      events[i]=strtol(argv[2+i],NULL,0);
-   }
+	for(i=0;i<count;i++) {
+		events[i]=strtol(argv[2+i],NULL,0);
+	}
 
 
    /* measure init latency */
@@ -140,7 +140,8 @@ int main(int argc, char **argv) {
    ret1=ioctl(fd[0], PERF_EVENT_IOC_ENABLE,0);
 
    start_after=rdtsc();
-	#define NUM_READS 1 // 10?
+	// 10?
+	#define NUM_READS 1 
 	#define BUFFER_SIZE 256
 	long long buffer[NUM_READS][BUFFER_SIZE];
 	long long read_times[NUM_READS];
