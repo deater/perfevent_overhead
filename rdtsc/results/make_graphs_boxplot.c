@@ -87,7 +87,7 @@ int main(int argc, char **argv) {
 	printf("hash_labels font Helvetica fontsize %d\n",FONTSIZE);
 	printf("\n");
 	printf("(* X-Axis *)\n");
-	printf("xaxis size 13 min %d max %d\n",-1,NUM_KERNELS); //minx,maxx);
+	printf("xaxis size 12 min %d max %d\n",-1,NUM_KERNELS); //minx,maxx);
 	printf("grid_gray 0.9 grid_lines\n");
 	printf("hash_labels font Helvetica fontsize %d  vjc hjr rotate 45\n",
 		FONTSIZE);
