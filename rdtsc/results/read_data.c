@@ -35,6 +35,8 @@ struct kernel_info kernels[NUM_KERNELS]={
    {"3.14.0",		INTERFACE_PERF_EVENT,},
    {"3.15.0",		INTERFACE_PERF_EVENT,},
    {"3.16.0",		INTERFACE_PERF_EVENT,},
+   {"3.17.0",		INTERFACE_PERF_EVENT,},
+   {"3.18.0",		INTERFACE_PERF_EVENT,},
 };
 
 struct kernel_info rdpmc_kernels[NUM_RDPMC_KERNELS]={
@@ -51,6 +53,8 @@ struct kernel_info rdpmc_kernels[NUM_RDPMC_KERNELS]={
    {"3.14.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
    {"3.15.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
    {"3.16.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.17.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.18.0-rdpmc",	INTERFACE_PERF_EVENT_RDPMC,},
 };
 
 struct kernel_info gcc_kernels[NUM_GCC_KERNELS]={
