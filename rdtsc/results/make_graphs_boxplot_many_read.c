@@ -43,8 +43,15 @@ int main(int argc, char **argv) {
 
 
 	/* read in data */
-	plot_type=read_data(argv[1],machine_num,argv[3],MANYREAD_KERNELS,
-			times);
+
+	/* default */
+	plot_type=read_data_many(argv[1],machine_num,argv[3],MANYREAD_KERNELS,
+			times,1,0);
+
+	/* For l1 cache misses */
+//	plot_type=read_data_many(argv[1],machine_num,argv[3],MANYREAD_KERNELS,
+//			times,2,1);
+
 	if (plot_type<0) {
 		fprintf(stderr,"Some sort of error reading!\n");
 		return -1;

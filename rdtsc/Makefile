@@ -18,7 +18,7 @@ all:	\
 	rdtsc_null_pe_syscall_static \
 	rdtsc_null_pe_rdpmc_static \
 	rdtsc_null_pe_rdpmc-map_populate_static \
-	rdtsc_null_pe_rdpmc-touch_static \
+	rdtsc_null_pe_rdpmc-touch_static.10 \
 	rdtsc_null_perfctr \
 	rdtsc_null_perfmon2 
 
@@ -166,6 +166,18 @@ rdtsc_null_pe.10:	rdtsc_null_pe.10.o
 rdtsc_null_pe.10.o:	rdtsc_null_pe.c
 	$(CC) $(CFLAGS) -DNUM_READS=10 -o rdtsc_null_pe.10.o -c rdtsc_null_pe.c
 ####
+
+
+####
+
+rdtsc_null_pe_rdpmc-touch_static.10:	rdtsc_null_pe_rdpmc-touch.10.o
+	$(CC) $(LFLAGS_STATIC) -o rdtsc_null_pe_rdpmc-touch_static.10 rdtsc_null_pe_rdpmc-touch.10.o
+
+rdtsc_null_pe_rdpmc-touch.10.o:	rdtsc_null_pe_rdpmc.c
+	$(CC) $(CFLAGS) -DTOUCH -DNUM_READS=10 -o rdtsc_null_pe_rdpmc-touch.10.o -c rdtsc_null_pe_rdpmc.c
+
+#####
+
 
 
 clean:

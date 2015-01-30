@@ -66,6 +66,8 @@ struct cpuinfo_t {
 
 int read_data(char *machine, int which, char *plot_name,
 		int type, long long *times);
+int read_data_many(char *machine, int which, char *plot_name,
+		int type, long long *times, int event_count,int offset);
 long long *get_runs(long long *pointer,int kernel, int event);
 int sort_data(long long *times, int events, int type);
 int calculate_boxplot_data(long long *times, int events,

@@ -161,11 +161,13 @@ static int get_num_kernels(int type) {
 	return num_kernels;
 }
 
-int read_data(char *machine,
+int read_data_many(char *machine,
 		int which,
 		char *plot_name,
 		int type,
-		long long *times) {
+		long long *times,
+		int event_count,
+		int offset) {
 
 	int events,run,kernel,runs;
 	char filename[BUFSIZ];
@@ -231,7 +233,7 @@ int read_data(char *machine,
 				manyread_kernels[kernel].name);
 		}
 
-		events=1;
+		events=event_count;
 
 //     		for(events=0;events<NUM_EVENTS;events++) {
 			fprintf(stderr,"%d ",events);
@@ -420,18 +422,31 @@ loop:
 				*(get_runs(times,kernel,events)+run)=times_start+times_stop+times_read;
 			}
 
-			int krg;
+			int krg,esw;
 
 			long long val;
 
+			long long oldval=0,tempval;
 			for(krg=0;krg<10;krg++) {
+			for(esw=0;esw<event_count;esw++) {
 				if (fgets(string,BUFSIZ,fff)==NULL) break;
 
+				if (esw==offset) {
+				if (offset==0) {
 				sscanf(string,"%*d %*x %*d %*s %lld",&val);
+				}
+				else {
+				sscanf(string,"%*d %*x %lld %*s %*d",&val);
+				tempval=val-oldval;
+				oldval=val;
+				val=tempval;
+				}
+				}
 
 				*(get_runs(times,kernel,krg)+run)=val;
 //				fprintf(stderr,"kernel %d count %d = %lld\n",
 //					kernel,krg,val);
+			}
 			}
 
 			fgets(string,BUFSIZ,fff);// ###
@@ -493,13 +508,11 @@ int calculate_boxplot_data(long long *times, int events,
 
 	num_kernels=get_num_kernels(type);
 
-	int run;
 	kernel=0;
-	for(run=0;run<1024;run++) {
-		fprintf(stderr,"V%d %d %lld\n",kernel,events,*(get_runs(times,kernel,events)+run));
-	}
-	
-
+//	int run=0;
+//	for(run=0;run<1024;run++) {
+//		fprintf(stderr,"VMW %d %d %lld\n",kernel,events,*(get_runs(times,kernel,events)+run));
+//	}
 
 	/* calculate median, twentyfive, seventyfive */
 	for(kernel=0;kernel<num_kernels;kernel++) {
