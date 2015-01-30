@@ -99,8 +99,9 @@ struct kernel_info final_kernels[NUM_FINAL_KERNELS]={
 };
 
 struct kernel_info varying_kernels[NUM_VARYING_KERNELS]={
-   {"3.10.0-static",			INTERFACE_PERF_EVENT,},
-   {"3.10.0-rdpmc-touch_static",	INTERFACE_PERF_EVENT_RDPMC,},
+   {"3.18.0",				INTERFACE_PERF_EVENT,},
+   {"3.18.0-static",			INTERFACE_PERF_EVENT,},
+   {"3.18.0-rdpmc-touch_static",	INTERFACE_PERF_EVENT_RDPMC,},
    {"2.6.30-perfmon2",			INTERFACE_PERFMON2,},
    {"2.6.32-perfctr",			INTERFACE_PERFCTR,},
 };

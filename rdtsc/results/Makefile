@@ -12,7 +12,8 @@ all:	\
 	make_graphs_boxplot_final \
 	make_graphs_colorful \
 	make_graphs_errorbars \
-	make_graphs_varying
+	make_graphs_varying \
+	make_graphs_varying_final
 #	rdtsc_null_pe \
 #	rdtsc_null_pe_rdpmc \
 #	rdtsc_null_perfctr \
@@ -94,6 +95,14 @@ make_graphs_varying:		make_graphs_varying.o read_data.o
 
 make_graphs_varying.o:		make_graphs_varying.c read_data.h
 	$(CC) $(CFLAGS) -c make_graphs_varying.c
+
+####
+
+make_graphs_varying_final:		make_graphs_varying_final.o read_data.o
+	$(CC) $(LFLAGS) -o make_graphs_varying_final 	make_graphs_varying_final.o read_data.o
+
+make_graphs_varying_final.o:		make_graphs_varying_final.c read_data.h
+	$(CC) $(CFLAGS) -c make_graphs_varying_final.c
 
 
 ###
@@ -202,7 +211,8 @@ clean:
 	make_graphs_boxplot_rdpmc \
         make_graphs_colorful \
 	make_graphs_errorbars \
-        make_graphs_varying
+        make_graphs_varying \
+        make_graphs_varying_final
 	cd graphs && make clean
 
 
