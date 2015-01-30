@@ -1,6 +1,10 @@
 /* by Vince Weaver, vincent.weaver@maine.edu                   */
 /* Compile with gcc -O2 -o rdtsc_null_pe rdtsc_null_pe.c       */
 
+#ifndef NUM_READS
+#define NUM_READS 1 
+#endif
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -141,7 +145,7 @@ int main(int argc, char **argv) {
 
    start_after=rdtsc();
 	// 10?
-	#define NUM_READS 1 
+
 	#define BUFFER_SIZE 256
 	long long buffer[NUM_READS][BUFFER_SIZE];
 	long long read_times[NUM_READS];

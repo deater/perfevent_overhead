@@ -8,6 +8,16 @@ LFLAGS_BORING =
 all:	\
 	generate_results \
 	rdtsc_null_pe \
+	rdtsc_null_pe.1 \
+	rdtsc_null_pe.2 \
+	rdtsc_null_pe.3 \
+	rdtsc_null_pe.4 \
+	rdtsc_null_pe.5 \
+	rdtsc_null_pe.6 \
+	rdtsc_null_pe.7 \
+	rdtsc_null_pe.8 \
+	rdtsc_null_pe.9 \
+	rdtsc_null_pe.10 \
 	rdtsc_null_pe_syscall \
 	rdtsc_null_pe_rdpmc \
 	rdtsc_null_pe_rdpmc-map_populate \
@@ -144,12 +154,118 @@ make_graphs_kernel_rdtsc_all.o:	make_graphs_kernel_rdtsc_all.c
 #####
 
 
+
+####
+# HACK
+####
+
+###
+
+rdtsc_null_pe.1:	rdtsc_null_pe.1.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe.1 rdtsc_null_pe.1.o
+
+rdtsc_null_pe.1.o:	rdtsc_null_pe.c
+	$(CC) $(CFLAGS) -DNUM_READS=1 -o rdtsc_null_pe.1.o -c rdtsc_null_pe.c
+####
+
+###
+
+rdtsc_null_pe.2:	rdtsc_null_pe.2.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe.2 rdtsc_null_pe.2.o
+
+rdtsc_null_pe.2.o:	rdtsc_null_pe.c
+	$(CC) $(CFLAGS) -DNUM_READS=2 -o rdtsc_null_pe.2.o -c rdtsc_null_pe.c
+####
+
+###
+
+rdtsc_null_pe.3:	rdtsc_null_pe.3.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe.3 rdtsc_null_pe.3.o
+
+rdtsc_null_pe.3.o:	rdtsc_null_pe.c
+	$(CC) $(CFLAGS) -DNUM_READS=3 -o rdtsc_null_pe.3.o -c rdtsc_null_pe.c
+####
+
+###
+
+rdtsc_null_pe.4:	rdtsc_null_pe.4.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe.4 rdtsc_null_pe.4.o
+
+rdtsc_null_pe.4.o:	rdtsc_null_pe.c
+	$(CC) $(CFLAGS) -DNUM_READS=4 -o rdtsc_null_pe.4.o -c rdtsc_null_pe.c
+####
+
+###
+
+rdtsc_null_pe.5:	rdtsc_null_pe.5.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe.5 rdtsc_null_pe.5.o
+
+rdtsc_null_pe.5.o:	rdtsc_null_pe.c
+	$(CC) $(CFLAGS) -DNUM_READS=5 -o rdtsc_null_pe.5.o -c rdtsc_null_pe.c
+####
+
+###
+
+rdtsc_null_pe.6:	rdtsc_null_pe.6.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe.6 rdtsc_null_pe.6.o
+
+rdtsc_null_pe.6.o:	rdtsc_null_pe.c
+	$(CC) $(CFLAGS) -DNUM_READS=6 -o rdtsc_null_pe.6.o -c rdtsc_null_pe.c
+####
+
+###
+
+rdtsc_null_pe.7:	rdtsc_null_pe.7.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe.7 rdtsc_null_pe.7.o
+
+rdtsc_null_pe.7.o:	rdtsc_null_pe.c
+	$(CC) $(CFLAGS) -DNUM_READS=7 -o rdtsc_null_pe.7.o -c rdtsc_null_pe.c
+####
+
+###
+
+rdtsc_null_pe.8:	rdtsc_null_pe.8.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe.8 rdtsc_null_pe.8.o
+
+rdtsc_null_pe.8.o:	rdtsc_null_pe.c
+	$(CC) $(CFLAGS) -DNUM_READS=8 -o rdtsc_null_pe.8.o -c rdtsc_null_pe.c
+####
+
+###
+
+rdtsc_null_pe.9:	rdtsc_null_pe.9.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe.9 rdtsc_null_pe.9.o
+
+rdtsc_null_pe.9.o:	rdtsc_null_pe.c
+	$(CC) $(CFLAGS) -DNUM_READS=9 -o rdtsc_null_pe.9.o -c rdtsc_null_pe.c
+####
+
+###
+
+rdtsc_null_pe.10:	rdtsc_null_pe.10.o
+	$(CC) $(LFLAGS) -o rdtsc_null_pe.10 rdtsc_null_pe.10.o
+
+rdtsc_null_pe.10.o:	rdtsc_null_pe.c
+	$(CC) $(CFLAGS) -DNUM_READS=10 -o rdtsc_null_pe.10.o -c rdtsc_null_pe.c
+####
+
+
 clean:
 	cd results && make clean
 	rm -f *.o core *~ \
 	convert_results \
 	generate_results \
 	rdtsc_null_pe \
+	rdtsc_null_pe.1 \
+	rdtsc_null_pe.2 \
+	rdtsc_null_pe.3 \
+	rdtsc_null_pe.4 \
+	rdtsc_null_pe.5 \
+	rdtsc_null_pe.6 \
+	rdtsc_null_pe.7 \
+	rdtsc_null_pe.8 \
+	rdtsc_null_pe.9 \
+	rdtsc_null_pe.10 \
 	rdtsc_null_static \
 	rdtsc_null_syscall \
 	rdtsc_null_syscall_static \
