@@ -1,8 +1,8 @@
-/* by Vince Weaver, vincent.weaver@maine.edu                   */
-/* Compile with gcc -O2 -o rdtsc_null_pe rdtsc_null_pe.c       */
+/* by Vince Weaver, vincent.weaver@maine.edu				*/
+/* Compile with gcc -O2 -o rdtsc_null_pe rdtsc_null_pe.c		*/
 
 #ifndef NUM_READS
-#define NUM_READS 1 
+#define NUM_READS 1
 #endif
 
 #include <stdlib.h>
@@ -21,6 +21,8 @@
 #include <sys/ioctl.h>
 #include <errno.h>
 
+#include <sys/mman.h>
+
 #ifndef __NR_perf_event_open
 
 #if defined(__i386__)
@@ -38,15 +40,15 @@
 int perf_event_open(struct perf_event_attr *hw_event_uptr,
                     pid_t pid, int cpu, int group_fd, unsigned long flags) {
 
-  return syscall(__NR_perf_event_open,hw_event_uptr, pid, cpu,
-                 group_fd, flags);
+	return syscall(__NR_perf_event_open,hw_event_uptr, pid, cpu,
+			group_fd, flags);
 }
 
 #define MAX_EVENTS 16
 
 int events[MAX_EVENTS];
 
-unsigned long long rdtsc(void) {
+static unsigned long long rdtsc(void) {
 	unsigned a,d;
 
 	__asm__ volatile("rdtsc" : "=a" (a), "=d" (d));
@@ -210,12 +212,12 @@ int main(int argc, char **argv) {
 	}
 
 	for(krg=0;krg<NUM_READS;krg++) {
-	for(i=0;i<buffer[0][0];i++) {
-		printf("%d %x %lld time %lld\n",
-			krg,events[i],buffer[krg][1+(i*2)],
-			krg==0?read_times[krg]-read_before:
+		for(i=0;i<buffer[0][0];i++) {
+			printf("%d %x %lld readtime %lld\n",
+				krg,events[i],buffer[krg][1+(i*2)],
+				krg==0?read_times[krg]-read_before:
 				read_times[krg]-read_times[krg-1]);
-	}
+		}
 	}
 
 	for(i=0;i<count;i++) {

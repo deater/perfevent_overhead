@@ -1,5 +1,9 @@
-/* by Vince Weaver, vincent.weaver@maine.edu                               */
-/* Compile with gcc -O2 -o rdtsc_null_pe_rdpmc rdtsc_null_pe_rdpmc.c       */
+/* by Vince Weaver, vincent.weaver@maine.edu				*/
+/* Compile with gcc -O2 -o rdtsc_null_pe_rdpmc rdtsc_null_pe_rdpmc.c	*/
+
+#ifndef NUM_READS
+#define NUM_READS 1
+#endif
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -23,7 +27,7 @@
 
 #if defined(__i386__)
 #define __NR_perf_event_open    336
-#elif defined(__x86_64__) 
+#elif defined(__x86_64__)
 #define __NR_perf_event_open    298
 #elif defined __powerpc__
 #define __NR_perf_event_open    319
@@ -45,19 +49,19 @@ int perf_event_open(struct perf_event_attr *hw_event_uptr,
 int events[MAX_EVENTS];
 
 static unsigned long long rdtsc(void) {
-  unsigned a,d;
+	unsigned a,d;
 
-  __asm__ volatile("rdtsc" : "=a" (a), "=d" (d));
+	__asm__ volatile("rdtsc" : "=a" (a), "=d" (d));
 
-  return ((unsigned long long)a) | (((unsigned long long)d) << 32);
+	return ((unsigned long long)a) | (((unsigned long long)d) << 32);
 }
 
 static unsigned long long rdpmc(unsigned int counter) {
-  unsigned int low, high;
+	unsigned int low, high;
 
-  __asm__ volatile("rdpmc" : "=a" (low), "=d" (high) : "c" (counter));
+	__asm__ volatile("rdpmc" : "=a" (low), "=d" (high) : "c" (counter));
 
-  return (unsigned long long)low | ((unsigned long long)high) <<32;
+	return (unsigned long long)low | ((unsigned long long)high) <<32;
 }
 
 #define barrier() __asm__ volatile("" ::: "memory")
@@ -181,34 +185,29 @@ int main(int argc, char **argv) {
 
    int count=0;
 
-// 10?
-#define NUM_READS 1
-
-
    unsigned long long now[NUM_READS][MAX_EVENTS],start[MAX_EVENTS];
    //   unsigned long long now2[MAX_EVENTS],stamp2[MAX_EVENTS];
 
-   if (argc<2) {
-      fprintf(stderr,"Usage: %s count event0 ... eventN\n",argv[0]);
-      return -1;
-   }
+	if (argc < 2) {
+		fprintf(stderr,"Usage: %s count event0 ... eventN\n",argv[0]);
+		return -1;
+	}
 
-
-   if (argc>1) {
-     count=atoi(argv[1]);
-   }
+	if (argc>2) {
+		count=atoi(argv[1]);
+	}
 
 	/* 0=rdtsc 1=count 2=value */
 
-   if (count!=argc-2) {
-     fprintf(stderr,"Error!  Count mismatch! count=%d argc=%d\n",count,argc);
-     return -1;
-   }
+	if (count!=argc-2) {
+		fprintf(stderr,"Error!  Count mismatch! count=%d argc=%d\n",count,argc);
+		return -1;
+	}
 
-   for(i=0;i<count;i++) {
-     events[i]=strtol(argv[2+i],NULL,0);
-   }
-   
+	for(i=0;i<count;i++) {
+		events[i]=strtol(argv[2+i],NULL,0);
+	}
+
    /* measure init latency */
 
    before=rdtsc();
@@ -316,40 +315,40 @@ int main(int argc, char **argv) {
 
 	}
 
-   read_after=rdtsc();
+	read_after=rdtsc();
 
    /* stop */
    ret2=ioctl(fd[0], PERF_EVENT_IOC_DISABLE,0);
 
    stop_after=rdtsc();
 
-   stop_before=read_after;
-   read_before=start_after;
+	stop_before=read_after;
+	read_before=start_after;
 
 #if 0
-   /* this was the check for read, but we're using rdpmc now */
-   if (ret3<0) {
-      printf("start latency: %lld cycles\n",0LL);
-      printf("stop latency: %lld cycles\n",0LL);
-      printf("read latency: %lld cycles\n",0LL);
-      printf("Unexpected read result %d %s\n",ret3,strerror(errno));
-      exit(0);
-   }
+	/* this was the check for read, but we're using rdpmc now */
+	if (ret3<0) {
+		printf("start latency: %lld cycles\n",0LL);
+		printf("stop latency: %lld cycles\n",0LL);
+		printf("read latency: %lld cycles\n",0LL);
+		printf("Unexpected read result %d %s\n",ret3,strerror(errno));
+		exit(0);
+	}
 #endif
 
-   printf("start latency: %lld cycles\n",start_after-start_before);
-   printf("stop latency: %lld cycles\n",stop_after-stop_before);
-   printf("read latency: %lld cycles\n",read_after-read_before);
+	printf("start latency: %lld cycles\n",start_after-start_before);
+	printf("stop latency: %lld cycles\n",stop_after-stop_before);
+	printf("read latency: %lld cycles\n",read_after-read_before);
 
-   if (ret1<0) {
-      printf("Error starting!\n");
-      exit(1);
-   }
+	if (ret1<0) {
+		printf("Error starting!\n");
+		exit(1);
+	}
 
-   if (ret2<0) {
-      printf("Error stopping!\n");
-      exit(1);
-   }
+	if (ret2<0) {
+		printf("Error stopping!\n");
+		exit(1);
+	}
 
 
 	for(krg=0;krg<NUM_READS;krg++) {
@@ -361,13 +360,13 @@ int main(int argc, char **argv) {
 		}
 	}
 
-   for(i=0;i<count;i++) {
-      munmap(addr[i],page_size);
-   }
+	for(i=0;i<count;i++) {
+		munmap(addr[i],page_size);
+	}
 
-   for(i=0;i<count;i++) {
-      close(fd[i]);
-   }
+	for(i=0;i<count;i++) {
+		close(fd[i]);
+	}
 
-   return 0;
+	return 0;
 }
