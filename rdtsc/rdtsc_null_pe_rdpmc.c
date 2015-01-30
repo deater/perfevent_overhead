@@ -272,7 +272,8 @@ int main(int argc, char **argv) {
 	struct perf_event_mmap_page *pc;
 	pc = addr[i];
 	(void)pc->index;
-	printf("%d\n",pc->index);
+	/* FIXME, can we be sure to touch w/o printing? */
+	printf("touch: %d\n",pc->index);
 #endif
    }
 
