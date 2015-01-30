@@ -66,8 +66,8 @@ struct kernel_info gcc_kernels[NUM_GCC_KERNELS]={
 };
 
 struct kernel_info manyread_kernels[NUM_MANYREAD_KERNELS]={
-   {"3.14.0-read_many",	INTERFACE_PERF_EVENT,},
-   {"3.14.0-rdpmc-map_populate-read_many",	INTERFACE_PERF_EVENT,},
+   {"3.18.0-read_many",	INTERFACE_PERF_EVENT,},
+   {"3.18.0-rdpmc-touch-static-read_many",	INTERFACE_PERF_EVENT,},
 };
 
 
