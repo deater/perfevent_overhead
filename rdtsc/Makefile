@@ -18,6 +18,7 @@ all:	\
 	rdtsc_null_pe_syscall_static \
 	rdtsc_null_pe_rdpmc_static \
 	rdtsc_null_pe_rdpmc-map_populate_static \
+	rdtsc_null_pe_rdpmc-touch_static \
 	rdtsc_null_pe_rdpmc-touch_static.10 \
 	rdtsc_null_perfctr \
 	rdtsc_null_perfmon2 
@@ -209,7 +210,8 @@ clean:
 	rdtsc_null_pe_syscall \
 	rdtsc_null_pe_syscall_static  \
 	rdtsc_null_pe_rdpmc-map_populate_static \
-	rdtsc_null_pe_rdpmc-touch_static
+	rdtsc_null_pe_rdpmc-touch_static \
+	rdtsc_null_pe_rdpmc-touch_static.10
 
 
 
